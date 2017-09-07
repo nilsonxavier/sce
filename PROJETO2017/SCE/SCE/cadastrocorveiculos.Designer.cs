@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.codigo);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(0, 115);
+            this.panel1.Location = new System.Drawing.Point(0, 97);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(334, 79);
             this.panel1.TabIndex = 18;
@@ -99,7 +99,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(199, 64);
+            this.label2.Location = new System.Drawing.Point(199, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 17;
@@ -110,7 +110,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(122, 64);
+            this.label1.Location = new System.Drawing.Point(122, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 15;
@@ -121,7 +121,7 @@
             this.pictureBox1.Image = global::SCE.Properties.Resources.cars_icon;
             this.pictureBox1.Location = new System.Drawing.Point(12, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(80, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
@@ -129,7 +129,7 @@
             // fechar
             // 
             this.fechar.Image = global::SCE.Properties.Resources.saida;
-            this.fechar.Location = new System.Drawing.Point(241, 214);
+            this.fechar.Location = new System.Drawing.Point(241, 196);
             this.fechar.Name = "fechar";
             this.fechar.Size = new System.Drawing.Size(45, 43);
             this.fechar.TabIndex = 14;
@@ -140,7 +140,7 @@
             // 
             this.excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.excluir.Image = global::SCE.Properties.Resources.Excluir;
-            this.excluir.Location = new System.Drawing.Point(190, 214);
+            this.excluir.Location = new System.Drawing.Point(190, 196);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(45, 43);
             this.excluir.TabIndex = 13;
@@ -150,7 +150,7 @@
             // cancelar
             // 
             this.cancelar.Image = global::SCE.Properties.Resources.cancelar;
-            this.cancelar.Location = new System.Drawing.Point(139, 214);
+            this.cancelar.Location = new System.Drawing.Point(139, 196);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(45, 42);
             this.cancelar.TabIndex = 12;
@@ -160,7 +160,7 @@
             // gravar
             // 
             this.gravar.Image = global::SCE.Properties.Resources.salvar;
-            this.gravar.Location = new System.Drawing.Point(88, 214);
+            this.gravar.Location = new System.Drawing.Point(88, 196);
             this.gravar.Name = "gravar";
             this.gravar.Size = new System.Drawing.Size(45, 43);
             this.gravar.TabIndex = 11;
@@ -170,7 +170,7 @@
             // novo
             // 
             this.novo.Image = global::SCE.Properties.Resources.botão;
-            this.novo.Location = new System.Drawing.Point(37, 214);
+            this.novo.Location = new System.Drawing.Point(37, 196);
             this.novo.Name = "novo";
             this.novo.Size = new System.Drawing.Size(45, 42);
             this.novo.TabIndex = 10;
@@ -215,7 +215,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(334, 279);
+            this.ClientSize = new System.Drawing.Size(334, 256);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);

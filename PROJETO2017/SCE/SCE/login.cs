@@ -30,38 +30,45 @@ namespace SCE
         }
 
         private void entrar_Click(object sender, EventArgs e){
-            //validação local
-            if (nome.Text == "wisley" && senha.Text == "wisley"){
-                MessageBox.Show("Dado Informado Corretamente!");
+            //validação de login
+            String x = "";
+            String y = "";
+            conn.Open();
+            comando.CommandText = "select * FROM usuario where nome='" + nome.Text + "'and senha='" + senha.Text + "'";
+            dr = comando.ExecuteReader();
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    x = dr[1].ToString();
+                    y = dr[3].ToString();
+                }
+
+            }
+            conn.Close();
+            if (x != "" && y != "")
+            {
+                MessageBox.Show("Dados Informado Corretamente!");
                 menu frm = new menu();
                 frm.Show();
                 Visible = false;
-            }else if (nome.Text == "" && senha.Text == ""){
+            }
+            else if (nome.Text == "" && senha.Text == "")
+            {
                 MessageBox.Show("Informe Usuario e Senha!");
+                nome.Text = String.Empty;
+                senha.Text = String.Empty;
                 nome.Focus();
 
-            }else {
-                MessageBox.Show("Usuario ou senha Invalidos!");
+            }
+            else
+            {
+                MessageBox.Show("Dados do Cmapo Codigo Invalidos!");
+                nome.Text = String.Empty;
+                senha.Text = String.Empty;
                 nome.Focus();
             }
-            //validação de login via banco de dados
-            /*
-            if (nome.Text == "" && senha.Text == ""){
-                MessageBox.Show("Informe Usuario e Senha!");
-                nome.Focus();
-            }
-            else{
-                conn.Open();
-                comando.CommandText = "select * FROM usuario where nome='" + nome.Text + "'and senha='" + senha.Text + "'";
-                comando.ExecuteNonQuery();
-                
-                MessageBox.Show("Dado Informado Corretamente!");
-                menu frm = new menu();
-                frm.Show();
-                Visible = false;
-                conn.Close();
-                
-            }*/
         }
 
         private void cancelar_Click(object sender, EventArgs e){

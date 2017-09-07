@@ -17,6 +17,8 @@ namespace SCE
         SqlConnection conn = new SqlConnection("Data Source=WISLEY-PC;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
+
+
         public cadastrocorveiculos()
         {
             InitializeComponent();
@@ -37,20 +39,37 @@ namespace SCE
 
         private void excluir_Click(object sender, EventArgs e)
         {
-            if (codigo.Text == "")
-            {
-                MessageBox.Show("Informe o Codigo do usuario que Deseja Excluir!");
-                codigo.Focus();
-            }
-            else
-            {
+                //Excluir Cor
+                String x = "";
                 conn.Open();
-                comando.CommandText = "DELETE FROM tpcor where codigo='" + codigo.Text + "'";
-                comando.ExecuteNonQuery();
+                comando.CommandText = "select * FROM tpcor where codigo='" + codigo.Text+"'";
+                dr = comando.ExecuteReader();
+                
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                    x = dr [0].ToString();
+                    }
+                
+                }
                 conn.Close();
-                MessageBox.Show("Tipo de Veiculo Excluido com Sucesso!");
+                 if (x != "")
+                {
+                    conn.Open();
+                    comando.CommandText = "DELETE FROM tpcor where codigo='" + codigo.Text + "'";
+                    comando.ExecuteNonQuery();
+                    conn.Close();
+                    MessageBox.Show("Tipo de Veiculo Excluido com Sucesso!");
+                }
+                else if(codigo.Text == ""){
+                    MessageBox.Show("Prencha o Dados do Campo Codigo!");
+                    codigo.Focus();
 
-            }
+                }else {
+                    MessageBox.Show("Dados do Cmapo Codigo Invalidos!");
+                    codigo.Focus();
+                }
         }
 
         private void cancelar_Click(object sender, EventArgs e)
