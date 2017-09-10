@@ -32,8 +32,6 @@
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeVeiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.corDeVeiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tamanhoVeiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.periodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controleOperacionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeSaidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,16 +49,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -86,9 +84,7 @@
             // 
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tiposDeVeiculosToolStripMenuItem,
-            this.corDeVeiculosToolStripMenuItem,
-            this.tamanhoVeiculoToolStripMenuItem,
-            this.periodoToolStripMenuItem});
+            this.corDeVeiculosToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
@@ -106,18 +102,6 @@
             this.corDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.corDeVeiculosToolStripMenuItem.Text = "Cor de Veiculos";
             this.corDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.corDeVeiculosToolStripMenuItem_Click);
-            // 
-            // tamanhoVeiculoToolStripMenuItem
-            // 
-            this.tamanhoVeiculoToolStripMenuItem.Name = "tamanhoVeiculoToolStripMenuItem";
-            this.tamanhoVeiculoToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.tamanhoVeiculoToolStripMenuItem.Text = "Tamanho veiculo";
-            // 
-            // periodoToolStripMenuItem
-            // 
-            this.periodoToolStripMenuItem.Name = "periodoToolStripMenuItem";
-            this.periodoToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.periodoToolStripMenuItem.Text = "Periodo";
             // 
             // controleOperacionalToolStripMenuItem
             // 
@@ -250,6 +234,44 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Registro de Caixa";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(1059, 622);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(182, 18);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Seed Develops System";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(1059, 640);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Versão 1.0 (12.0) Release";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(1059, 653);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "2017 SDS Corporation.";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1059, 666);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(142, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Todos os direitos reservados";
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::SCE.Properties.Resources.marca_registrada;
@@ -297,6 +319,7 @@
             this.button1.Size = new System.Drawing.Size(80, 70);
             this.button1.TabIndex = 3;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -307,44 +330,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(1059, 622);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(182, 18);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Seed Develops System";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1059, 640);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Versão 1.0 (12.0) Release";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1059, 653);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "2017 SDS Corporation.";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1059, 666);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(142, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Todos os direitos reservados";
             // 
             // menu
             // 
@@ -388,8 +373,6 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposDeVeiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem corDeVeiculosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tamanhoVeiculoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem periodoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controleOperacionalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeEntradaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeSaidaToolStripMenuItem;

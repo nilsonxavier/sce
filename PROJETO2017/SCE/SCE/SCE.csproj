@@ -32,6 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +45,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cadastrotipoveiculos.cs">
@@ -50,6 +53,12 @@
     </Compile>
     <Compile Include="cadastrotipoveiculos.Designer.cs">
       <DependentUpon>cadastrotipoveiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cadtamanho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadtamanho.Designer.cs">
+      <DependentUpon>cadtamanho.cs</DependentUpon>
     </Compile>
     <Compile Include="consultarcor.cs">
       <SubType>Form</SubType>
@@ -83,6 +92,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
     <Compile Include="SGBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cadastrotipoveiculos.resx">
       <DependentUpon>cadastrotipoveiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadtamanho.resx">
+      <DependentUpon>cadtamanho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="consultarcor.resx">
       <DependentUpon>consultarcor.cs</DependentUpon>
@@ -116,6 +134,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

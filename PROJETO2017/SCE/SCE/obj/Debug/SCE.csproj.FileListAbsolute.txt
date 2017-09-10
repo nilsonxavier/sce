@@ -26,3 +26,5 @@ C:\Users\wisley\Source\Repos\sce4\PROJETO2017\SCE\SCE\obj\Debug\SCE.pdb
 C:\Users\wisley\Source\Repos\sce4\PROJETO2017\SCE\SCE\bin\Debug\SCE.exe.config
 C:\Users\wisley\Source\Repos\sce4\PROJETO2017\SCE\SCE\bin\Debug\SCE.exe
 C:\Users\wisley\Source\Repos\sce4\PROJETO2017\SCE\SCE\bin\Debug\SCE.pdb
+C:\Users\wisley\Source\Repos\sce4\PROJETO2017\SCE\SCE\obj\Debug\SCE.cadtamanho.resources
+C:\Users\wisley\Source\Repos\sce4\PROJETO2017\SCE\SCE\obj\Debug\SCE.Registro.resources

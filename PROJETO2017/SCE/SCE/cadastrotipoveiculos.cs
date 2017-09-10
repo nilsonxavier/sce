@@ -84,26 +84,40 @@ namespace SCE
         private void excluir_Click(object sender, EventArgs e)
                 
         {
-            
+            //Excluir tipo de veiculos
+            String x = "";
             conn.Open();
             comando.CommandText = "select * FROM tpveiculos where codigo='" + codigo.Text + "'";
-            comando.ExecuteNonQuery();
-            conn.Close();
-            if (codigo.Text == "")
+            dr = comando.ExecuteReader();
+
+            if (dr.HasRows)
             {
-                MessageBox.Show("Informe o Codigo do usuario que Deseja Excluir!");
-                codigo.Focus();
+                while (dr.Read())
+                {
+                    x = dr[0].ToString();
+                }
+
             }
-            else
+            conn.Close();
+            if (x != "")
             {
                 conn.Open();
                 comando.CommandText = "DELETE FROM tpveiculos where codigo='" + codigo.Text + "'";
                 comando.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Tipo de Veiculo Excluido com Sucesso!");
+            }
+            else if (codigo.Text == "")
+            {
+                MessageBox.Show("Prencha o Dados do Campo Codigo!");
+                codigo.Focus();
 
             }
-            
+            else
+            {
+                MessageBox.Show("Dados do Cmapo Codigo Invalidos!");
+                codigo.Focus();
+            }  
         }
 
         private void gravar_Click(object sender, EventArgs e)

@@ -43,5 +43,17 @@ namespace SCE
             cadastrocorveiculos frm = new cadastrocorveiculos();
             frm.Show();
         }
+
+        private void tamanhoVeiculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cadtamanho frm = new cadtamanho();
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Registro frm = new Registro();
+            frm.Show();
+        }
     }
 }
