@@ -225,6 +225,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "cadtamanho";
             this.Text = "cadtamanho";
+            this.Load += new System.EventHandler(this.cadtamanho_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

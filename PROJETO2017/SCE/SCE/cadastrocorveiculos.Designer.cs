@@ -30,27 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tpveiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sGBDDataSet = new SCE.SGBDDataSet();
-            this.tpcorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.codigo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.tpveiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sGBDDataSet = new SCE.SGBDDataSet();
+            this.tpcorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarTiposDeVeiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tpveiculosTableAdapter = new SCE.SGBDDataSetTableAdapters.tpveiculosTableAdapter();
+            this.tpcorTableAdapter = new SCE.SGBDDataSetTableAdapters.tpcorTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fechar = new System.Windows.Forms.Button();
             this.excluir = new System.Windows.Forms.Button();
             this.cancelar = new System.Windows.Forms.Button();
             this.gravar = new System.Windows.Forms.Button();
             this.novo = new System.Windows.Forms.Button();
-            this.tpveiculosTableAdapter = new SCE.SGBDDataSetTableAdapters.tpveiculosTableAdapter();
-            this.tpcorTableAdapter = new SCE.SGBDDataSetTableAdapters.tpcorTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tpveiculosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sGBDDataSet)).BeginInit();
@@ -71,21 +71,6 @@
             this.panel1.Size = new System.Drawing.Size(334, 79);
             this.panel1.TabIndex = 18;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // tpveiculosBindingSource
-            // 
-            this.tpveiculosBindingSource.DataMember = "tpveiculos";
-            this.tpveiculosBindingSource.DataSource = this.sGBDDataSet;
-            // 
-            // sGBDDataSet
-            // 
-            this.sGBDDataSet.DataSetName = "SGBDDataSet";
-            this.sGBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tpcorBindingSource
-            // 
-            this.tpcorBindingSource.DataMember = "tpcor";
-            this.tpcorBindingSource.DataSource = this.sGBDDataSet;
             // 
             // cor
             // 
@@ -118,6 +103,21 @@
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Codigo:";
+            // 
+            // tpveiculosBindingSource
+            // 
+            this.tpveiculosBindingSource.DataMember = "tpveiculos";
+            this.tpveiculosBindingSource.DataSource = this.sGBDDataSet;
+            // 
+            // sGBDDataSet
+            // 
+            this.sGBDDataSet.DataSetName = "SGBDDataSet";
+            this.sGBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tpcorBindingSource
+            // 
+            this.tpcorBindingSource.DataMember = "tpcor";
+            this.tpcorBindingSource.DataSource = this.sGBDDataSet;
             // 
             // label2
             // 
@@ -163,8 +163,8 @@
             // consultarTiposDeVeiculosToolStripMenuItem
             // 
             this.consultarTiposDeVeiculosToolStripMenuItem.Name = "consultarTiposDeVeiculosToolStripMenuItem";
-            this.consultarTiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.consultarTiposDeVeiculosToolStripMenuItem.Text = "Consultar Cores";
+            this.consultarTiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.consultarTiposDeVeiculosToolStripMenuItem.Text = "Consultar Cor";
             this.consultarTiposDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.consultarTiposDeVeiculosToolStripMenuItem_Click);
             // 
             // voltarToolStripMenuItem
@@ -173,6 +173,14 @@
             this.voltarToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.voltarToolStripMenuItem.Text = "Voltar";
             this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
+            // 
+            // tpveiculosTableAdapter
+            // 
+            this.tpveiculosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tpcorTableAdapter
+            // 
+            this.tpcorTableAdapter.ClearBeforeFill = true;
             // 
             // pictureBox1
             // 
@@ -234,14 +242,6 @@
             this.novo.TabIndex = 10;
             this.novo.UseVisualStyleBackColor = true;
             this.novo.Click += new System.EventHandler(this.novo_Click);
-            // 
-            // tpveiculosTableAdapter
-            // 
-            this.tpveiculosTableAdapter.ClearBeforeFill = true;
-            // 
-            // tpcorTableAdapter
-            // 
-            this.tpcorTableAdapter.ClearBeforeFill = true;
             // 
             // cadastrocorveiculos
             // 

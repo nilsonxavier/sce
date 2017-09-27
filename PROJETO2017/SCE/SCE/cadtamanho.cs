@@ -97,7 +97,7 @@ namespace SCE
                 gravar.Enabled = false;
                 cancelar.Enabled = false;
                 excluir.Enabled = true;
-
+                conn.Close();
             }
         }
 
@@ -130,6 +130,11 @@ namespace SCE
         private void fechar_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void cadtamanho_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

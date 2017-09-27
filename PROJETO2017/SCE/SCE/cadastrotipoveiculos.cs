@@ -25,7 +25,7 @@ namespace SCE
 
         private void cadastrotipoveiculos_Load(object sender, EventArgs e)
         {
-            comando.Connection = conn;
+            
             codigo.Enabled = true;
             tipo.Enabled = false;
             novo.Enabled = true;

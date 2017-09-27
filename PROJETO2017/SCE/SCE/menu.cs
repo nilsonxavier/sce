@@ -55,5 +55,22 @@ namespace SCE
             Registro frm = new Registro();
             frm.Show();
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cadastrocorveiculos frm = new cadastrocorveiculos();
+            frm.Show();
+        }
+
+        private void utilitariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            usuario frm = new usuario();
+            frm.Show();
+        }
     }
 }
