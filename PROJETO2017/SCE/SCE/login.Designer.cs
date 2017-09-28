@@ -60,7 +60,7 @@
             // 
             // nome
             // 
-            this.nome.Location = new System.Drawing.Point(204, 71);
+            this.nome.Location = new System.Drawing.Point(204, 74);
             this.nome.Name = "nome";
             this.nome.Size = new System.Drawing.Size(179, 20);
             this.nome.TabIndex = 5;
