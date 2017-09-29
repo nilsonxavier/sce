@@ -98,6 +98,9 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="SGBDDataSet.cs">
+      <DependentUpon>SGBDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SGBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
