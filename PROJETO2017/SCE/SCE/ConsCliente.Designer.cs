@@ -40,7 +40,6 @@
             this.clienteTableAdapter = new SCE.SGBDDataSetTableAdapters.clienteTableAdapter();
             this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.clienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +47,7 @@
             this.nDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sGBDDataSet)).BeginInit();
@@ -89,7 +89,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SCE.Properties.Resources.cars_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(261, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(265, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -146,11 +146,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(770, 218);
             this.dataGridView2.TabIndex = 15;
             // 
-            // clienteBindingSource2
-            // 
-            this.clienteBindingSource2.DataMember = "cliente";
-            this.clienteBindingSource2.DataSource = this.sGBDDataSet;
-            // 
             // codigoDataGridViewTextBoxColumn
             // 
             this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
@@ -199,6 +194,11 @@
             this.emailDataGridViewTextBoxColumn.HeaderText = "email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // clienteBindingSource2
+            // 
+            this.clienteBindingSource2.DataMember = "cliente";
+            this.clienteBindingSource2.DataSource = this.sGBDDataSet;
             // 
             // ConsCliente
             // 

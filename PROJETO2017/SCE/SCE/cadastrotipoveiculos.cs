@@ -144,7 +144,7 @@ namespace SCE
                 gravar.Enabled = false;
                 cancelar.Enabled = false;
                 excluir.Enabled = true;
-                conn.Close();
+                
             }
         }
 
