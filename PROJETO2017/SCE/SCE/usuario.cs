@@ -216,12 +216,62 @@ namespace SCE
 
         private void consultarTiposDeVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            consusuario frm = new consusuario();
+            frm.Show();
+            Visible = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void excluir_Click(object sender, EventArgs e)
+        {
+            //Excluir tipo de veiculos
+            String x = "";
+            conn.Open();
+            comando.CommandText = "select * FROM tpveiculos where codigo='" + codigo.Text + "'";
+            dr = comando.ExecuteReader();
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    x = dr[0].ToString();
+                }
+
+            }
+            conn.Close();
+            if (x != "")
+            {
+                conn.Open();
+                comando.CommandText = "DELETE FROM usuario where codigo='" + codigo.Text + "'";
+                comando.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Tipo de Veiculo Excluido com Sucesso!");
+            }
+            else if (codigo.Text == "")
+            {
+                MessageBox.Show("Prencha o Dados do Campo Codigo!");
+                codigo.Focus();
+
+            }
+            else
+            {
+                MessageBox.Show("Dados do Cmapo Codigo Invalidos!");
+                codigo.Focus();
+            }
+        }
+
+        private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

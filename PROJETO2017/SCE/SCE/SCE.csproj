@@ -31,6 +31,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -54,11 +63,23 @@
     <Compile Include="cadastrotipoveiculos.Designer.cs">
       <DependentUpon>cadastrotipoveiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="cadcliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadcliente.Designer.cs">
+      <DependentUpon>cadcliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="cadtamanho.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="cadtamanho.Designer.cs">
       <DependentUpon>cadtamanho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsCliente.Designer.cs">
+      <DependentUpon>ConsCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="consultarcor.cs">
       <SubType>Form</SubType>
@@ -77,6 +98,12 @@
     </Compile>
     <Compile Include="cadastrocorveiculos.Designer.cs">
       <DependentUpon>cadastrocorveiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consusuario.Designer.cs">
+      <DependentUpon>consusuario.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -118,14 +145,23 @@
     <EmbeddedResource Include="cadastrotipoveiculos.resx">
       <DependentUpon>cadastrotipoveiculos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="cadcliente.resx">
+      <DependentUpon>cadcliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cadtamanho.resx">
       <DependentUpon>cadtamanho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsCliente.resx">
+      <DependentUpon>ConsCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="consultarcor.resx">
       <DependentUpon>consultarcor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="consultipoveic.resx">
       <DependentUpon>consultipoveic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consusuario.resx">
+      <DependentUpon>consusuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -149,6 +185,7 @@
     <EmbeddedResource Include="usuario.resx">
       <DependentUpon>usuario.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

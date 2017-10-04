@@ -81,6 +81,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(496, 193);
             this.panel1.TabIndex = 27;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // funcao1
             // 
@@ -248,6 +249,7 @@
             this.excluir.Size = new System.Drawing.Size(45, 43);
             this.excluir.TabIndex = 22;
             this.excluir.UseVisualStyleBackColor = true;
+            this.excluir.Click += new System.EventHandler(this.excluir_Click);
             // 
             // cancelar
             // 
@@ -308,8 +310,9 @@
             // voltarToolStripMenuItem
             // 
             this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
-            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.voltarToolStripMenuItem.Text = "Voltar";
+            this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
             // 
             // usuario
             // 

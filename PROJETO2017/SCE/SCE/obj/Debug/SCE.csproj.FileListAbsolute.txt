@@ -47,3 +47,11 @@ C:\Users\NotXavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.csproj.Gen
 C:\Users\NotXavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.csproj.CoreCompileInputs.cache
 C:\Users\NotXavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.exe
 C:\Users\NotXavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.pdb
+C:\Users\NotXavier\Source\Repos\sce\PROJETO2017\SCE\SCE\bin\Debug\SCE.exe.manifest
+C:\Users\NotXavier\Source\Repos\sce\PROJETO2017\SCE\SCE\bin\Debug\SCE.application
+C:\Users\NotXavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.TrustInfo.xml
+C:\Users\NotXavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.exe.manifest
+C:\Users\NotXavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.application
+C:\Users\NotXavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.cadcliente.resources
+C:\Users\NotXavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.ConsCliente.resources
+C:\Users\NotXavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.consusuario.resources

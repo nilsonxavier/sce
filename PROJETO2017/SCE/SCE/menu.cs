@@ -58,7 +58,7 @@ namespace SCE
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadastrocorveiculos frm = new cadastrocorveiculos();
+            cadcliente frm = new cadcliente();
             frm.Show();
         }
 

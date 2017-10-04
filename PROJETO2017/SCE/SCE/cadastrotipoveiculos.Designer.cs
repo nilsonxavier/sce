@@ -79,7 +79,7 @@
             this.voltarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(330, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(361, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -94,14 +94,14 @@
             // consultarTiposDeVeiculosToolStripMenuItem
             // 
             this.consultarTiposDeVeiculosToolStripMenuItem.Name = "consultarTiposDeVeiculosToolStripMenuItem";
-            this.consultarTiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.consultarTiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.consultarTiposDeVeiculosToolStripMenuItem.Text = "Consultar Tipo de Veiculos";
             this.consultarTiposDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.consultarTiposDeVeiculosToolStripMenuItem_Click);
             // 
             // voltarToolStripMenuItem
             // 
             this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
-            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.voltarToolStripMenuItem.Text = "Voltar";
             this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
             // 
@@ -216,7 +216,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(330, 268);
+            this.ClientSize = new System.Drawing.Size(361, 268);
             this.Controls.Add(this.fechar);
             this.Controls.Add(this.excluir);
             this.Controls.Add(this.cancelar);

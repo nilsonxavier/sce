@@ -14,7 +14,7 @@ namespace SCE
     public partial class cadastrotipoveiculos : Form
     {
         //string de Conexão
-        SqlConnection conn = new SqlConnection("Data Source=WISLEY-PC;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-KA74H0G;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
         public cadastrotipoveiculos()
@@ -132,7 +132,7 @@ namespace SCE
             {
                 conn.Open();
 
-                comando.CommandText = "INSERT INTO tpveiculos (tipo) values ('" + tipo.Text + "')";
+                comando.CommandText = "INSERT INTO tpveiculos (tipo) VALUES ('" + tipo.Text + "')";
                 comando.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Salvo Com Sucesso!");
@@ -144,7 +144,7 @@ namespace SCE
                 gravar.Enabled = false;
                 cancelar.Enabled = false;
                 excluir.Enabled = true;
-
+                conn.Close();
             }
         }
 

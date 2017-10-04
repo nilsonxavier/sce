@@ -14,7 +14,7 @@ namespace SCE
     public partial class cadastrocorveiculos : Form
     {
         //string de Conexão
-        SqlConnection conn = new SqlConnection("Data Source=WISLEY-PC;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
+        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-KA74H0G;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
 
@@ -126,6 +126,7 @@ namespace SCE
                 gravar.Enabled = false;
                 cancelar.Enabled = false;
                 excluir.Enabled = true;
+                conn.Open();
 
             }
         }
