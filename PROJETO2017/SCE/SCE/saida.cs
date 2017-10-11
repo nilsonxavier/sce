@@ -13,6 +13,7 @@ namespace SCE
     public partial class saida : Form
     {
         public saida()
+
         {
             InitializeComponent();
         }
