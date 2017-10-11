@@ -1,4 +1,6 @@
-﻿namespace SCE
+﻿using System;
+
+namespace SCE
 {
     partial class Registro
     {
@@ -368,6 +370,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void Registro_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
