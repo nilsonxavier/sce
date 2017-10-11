@@ -28,75 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fechar = new System.Windows.Forms.Button();
-            this.excluir = new System.Windows.Forms.Button();
-            this.cancelar = new System.Windows.Forms.Button();
-            this.gravar = new System.Windows.Forms.Button();
-            this.novo = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Total = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.horaentrada = new System.Windows.Forms.TextBox();
             this.placaCarro = new System.Windows.Forms.TextBox();
             this.dataEntrada = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Total = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // fechar
-            // 
-            this.fechar.Image = global::SCE.Properties.Resources.saida;
-            this.fechar.Location = new System.Drawing.Point(381, 368);
-            this.fechar.Name = "fechar";
-            this.fechar.Size = new System.Drawing.Size(45, 43);
-            this.fechar.TabIndex = 24;
-            this.fechar.UseVisualStyleBackColor = true;
-            // 
-            // excluir
-            // 
-            this.excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.excluir.Image = global::SCE.Properties.Resources.Excluir;
-            this.excluir.Location = new System.Drawing.Point(330, 369);
-            this.excluir.Name = "excluir";
-            this.excluir.Size = new System.Drawing.Size(45, 43);
-            this.excluir.TabIndex = 23;
-            this.excluir.UseVisualStyleBackColor = true;
-            // 
-            // cancelar
-            // 
-            this.cancelar.Image = global::SCE.Properties.Resources.cancelar;
-            this.cancelar.Location = new System.Drawing.Point(279, 369);
-            this.cancelar.Name = "cancelar";
-            this.cancelar.Size = new System.Drawing.Size(45, 42);
-            this.cancelar.TabIndex = 22;
-            this.cancelar.UseVisualStyleBackColor = true;
-            // 
-            // gravar
-            // 
-            this.gravar.Image = global::SCE.Properties.Resources.salvar;
-            this.gravar.Location = new System.Drawing.Point(228, 369);
-            this.gravar.Name = "gravar";
-            this.gravar.Size = new System.Drawing.Size(45, 43);
-            this.gravar.TabIndex = 21;
-            this.gravar.UseVisualStyleBackColor = true;
-            // 
-            // novo
-            // 
-            this.novo.Image = global::SCE.Properties.Resources.botão;
-            this.novo.Location = new System.Drawing.Point(177, 369);
-            this.novo.Name = "novo";
-            this.novo.Size = new System.Drawing.Size(45, 42);
-            this.novo.TabIndex = 20;
-            this.novo.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -151,6 +107,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Total);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label7);
@@ -159,19 +122,38 @@
             this.panel1.Controls.Add(this.placaCarro);
             this.panel1.Controls.Add(this.dataEntrada);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.Location = new System.Drawing.Point(67, 108);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 172);
+            this.panel1.Size = new System.Drawing.Size(450, 216);
             this.panel1.TabIndex = 29;
+            // 
+            // Total
+            // 
+            this.Total.AutoSize = true;
+            this.Total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Total.Location = new System.Drawing.Point(50, 184);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(50, 15);
+            this.Total.TabIndex = 21;
+            this.Total.Text = "Total R$";
+            this.Total.Click += new System.EventHandler(this.Total_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(106, 181);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 22;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 87);
+            this.label7.Location = new System.Drawing.Point(40, 149);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 13);
+            this.label7.Size = new System.Drawing.Size(60, 13);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Hora Entrada";
+            this.label7.Text = "Hora Saida";
             // 
             // label2
             // 
@@ -184,7 +166,7 @@
             // 
             // horaentrada
             // 
-            this.horaentrada.Location = new System.Drawing.Point(106, 87);
+            this.horaentrada.Location = new System.Drawing.Point(106, 149);
             this.horaentrada.Name = "horaentrada";
             this.horaentrada.Size = new System.Drawing.Size(100, 20);
             this.horaentrada.TabIndex = 20;
@@ -198,7 +180,7 @@
             // 
             // dataEntrada
             // 
-            this.dataEntrada.Location = new System.Drawing.Point(106, 61);
+            this.dataEntrada.Location = new System.Drawing.Point(106, 123);
             this.dataEntrada.Name = "dataEntrada";
             this.dataEntrada.Size = new System.Drawing.Size(100, 20);
             this.dataEntrada.TabIndex = 19;
@@ -207,29 +189,74 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 64);
+            this.label6.Location = new System.Drawing.Point(25, 123);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.Size = new System.Drawing.Size(75, 13);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Data de Entrada";
+            this.label6.Text = "Data de Saida";
             // 
-            // Total
+            // textBox2
             // 
-            this.Total.AutoSize = true;
-            this.Total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Total.Location = new System.Drawing.Point(50, 139);
-            this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(50, 15);
-            this.Total.TabIndex = 21;
-            this.Total.Text = "Total R$";
-            this.Total.Click += new System.EventHandler(this.Total_Click);
+            this.textBox2.Location = new System.Drawing.Point(106, 67);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 24;
+            this.textBox2.Text = " ";
             // 
-            // textBox1
+            // label1
             // 
-            this.textBox1.Location = new System.Drawing.Point(106, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 22;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Hora Entrada";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(106, 41);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 26;
+            this.textBox3.Text = " ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(30, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Data Entrada";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(212, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(54, 20);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(212, 149);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(54, 20);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Calcular";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(212, 181);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(54, 20);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Finalizar";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // saida
             // 
@@ -241,11 +268,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.fechar);
-            this.Controls.Add(this.excluir);
-            this.Controls.Add(this.cancelar);
-            this.Controls.Add(this.gravar);
-            this.Controls.Add(this.novo);
             this.Name = "saida";
             this.Text = "saida";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -259,12 +281,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button fechar;
-        private System.Windows.Forms.Button excluir;
-        private System.Windows.Forms.Button cancelar;
-        private System.Windows.Forms.Button gravar;
-        private System.Windows.Forms.Button novo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
@@ -279,5 +295,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label Total;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label1;
     }
 }
