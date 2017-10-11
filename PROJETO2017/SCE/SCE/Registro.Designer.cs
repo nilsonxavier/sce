@@ -282,6 +282,7 @@
             this.cancelar.Size = new System.Drawing.Size(45, 42);
             this.cancelar.TabIndex = 22;
             this.cancelar.UseVisualStyleBackColor = true;
+            this.cancelar.Click += new System.EventHandler(this.cancelar_Click);
             // 
             // gravar
             // 

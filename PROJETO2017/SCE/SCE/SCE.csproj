@@ -137,6 +137,12 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="saida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="saida.Designer.cs">
+      <DependentUpon>saida.cs</DependentUpon>
+    </Compile>
     <Compile Include="SGBDDataSet.cs">
       <DependentUpon>SGBDDataSet.xsd</DependentUpon>
     </Compile>
@@ -199,6 +205,9 @@
     </Compile>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="saida.resx">
+      <DependentUpon>saida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usuario.resx">
       <DependentUpon>usuario.cs</DependentUpon>
