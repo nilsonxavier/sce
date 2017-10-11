@@ -33,20 +33,19 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.placaCarro = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dataEntrada = new System.Windows.Forms.TextBox();
+            this.horaentrada = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cod = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.fechar = new System.Windows.Forms.Button();
@@ -110,12 +109,13 @@
             this.label2.Text = "Placa";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // placaCarro
             // 
-            this.textBox1.Location = new System.Drawing.Point(76, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 15;
+            this.placaCarro.Location = new System.Drawing.Point(76, 55);
+            this.placaCarro.Name = "placaCarro";
+            this.placaCarro.Size = new System.Drawing.Size(100, 20);
+            this.placaCarro.TabIndex = 15;
+            this.placaCarro.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -154,19 +154,20 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Data de Entrada";
             // 
-            // textBox2
+            // dataEntrada
             // 
-            this.textBox2.Location = new System.Drawing.Point(303, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 19;
+            this.dataEntrada.Location = new System.Drawing.Point(303, 64);
+            this.dataEntrada.Name = "dataEntrada";
+            this.dataEntrada.Size = new System.Drawing.Size(100, 20);
+            this.dataEntrada.TabIndex = 19;
+            this.dataEntrada.Text = " ";
             // 
-            // textBox3
+            // horaentrada
             // 
-            this.textBox3.Location = new System.Drawing.Point(303, 90);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 20;
+            this.horaentrada.Location = new System.Drawing.Point(303, 90);
+            this.horaentrada.Name = "horaentrada";
+            this.horaentrada.Size = new System.Drawing.Size(100, 20);
+            this.horaentrada.TabIndex = 20;
             // 
             // label7
             // 
@@ -177,12 +178,12 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Hora Entrada";
             // 
-            // textBox4
+            // cod
             // 
-            this.textBox4.Location = new System.Drawing.Point(76, 29);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(68, 20);
-            this.textBox4.TabIndex = 14;
+            this.cod.Location = new System.Drawing.Point(76, 29);
+            this.cod.Name = "cod";
+            this.cod.Size = new System.Drawing.Size(68, 20);
+            this.cod.TabIndex = 14;
             // 
             // label8
             // 
@@ -219,7 +220,6 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarToolStripMenuItem,
             this.voltarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -227,31 +227,25 @@
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // consultarToolStripMenuItem
-            // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.consultarToolStripMenuItem.Text = "Consultar";
-            // 
             // voltarToolStripMenuItem
             // 
             this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
-            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.voltarToolStripMenuItem.Text = "Voltar";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.cod);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.comboBox4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.horaentrada);
+            this.panel1.Controls.Add(this.placaCarro);
+            this.panel1.Controls.Add(this.dataEntrada);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
@@ -307,6 +301,7 @@
             this.novo.Size = new System.Drawing.Size(45, 42);
             this.novo.TabIndex = 20;
             this.novo.UseVisualStyleBackColor = true;
+            this.novo.Click += new System.EventHandler(this.novo_Click);
             // 
             // dataGridView1
             // 
@@ -320,6 +315,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(450, 193);
             this.dataGridView1.TabIndex = 25;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // codigo
             // 
@@ -379,20 +375,19 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox placaCarro;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox dataEntrada;
+        private System.Windows.Forms.TextBox horaentrada;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox cod;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button fechar;
