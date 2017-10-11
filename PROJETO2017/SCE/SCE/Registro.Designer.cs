@@ -54,40 +54,46 @@
             this.cancelar = new System.Windows.Forms.Button();
             this.gravar = new System.Windows.Forms.Button();
             this.novo = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(92, 82);
+            this.comboBox2.Location = new System.Drawing.Point(76, 81);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 1;
+            this.comboBox2.TabIndex = 16;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(319, 34);
+            this.comboBox3.Location = new System.Drawing.Point(303, 33);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 2;
+            this.comboBox3.TabIndex = 18;
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(92, 109);
+            this.comboBox4.Location = new System.Drawing.Point(76, 108);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 3;
+            this.comboBox4.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 37);
+            this.label1.Location = new System.Drawing.Point(30, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 4;
@@ -97,7 +103,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 63);
+            this.label2.Location = new System.Drawing.Point(36, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 5;
@@ -106,15 +112,15 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 56);
+            this.textBox1.Location = new System.Drawing.Point(76, 55);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.textBox1.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 90);
+            this.label3.Location = new System.Drawing.Point(4, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 7;
@@ -124,7 +130,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 117);
+            this.label4.Location = new System.Drawing.Point(18, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 8;
@@ -133,7 +139,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(290, 42);
+            this.label5.Location = new System.Drawing.Point(274, 41);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(23, 13);
             this.label5.TabIndex = 9;
@@ -142,7 +148,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(228, 68);
+            this.label6.Location = new System.Drawing.Point(212, 67);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 10;
@@ -150,22 +156,22 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(319, 65);
+            this.textBox2.Location = new System.Drawing.Point(303, 64);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.textBox2.TabIndex = 19;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(319, 91);
+            this.textBox3.Location = new System.Drawing.Point(303, 90);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 12;
+            this.textBox3.TabIndex = 20;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(243, 91);
+            this.label7.Location = new System.Drawing.Point(227, 90);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 13);
             this.label7.TabIndex = 13;
@@ -173,7 +179,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(92, 30);
+            this.textBox4.Location = new System.Drawing.Point(76, 29);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(68, 20);
             this.textBox4.TabIndex = 14;
@@ -183,7 +189,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label8.Location = new System.Drawing.Point(232, 54);
+            this.label8.Location = new System.Drawing.Point(251, 54);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(170, 16);
             this.label8.TabIndex = 17;
@@ -192,7 +198,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SCE.Properties.Resources.cars_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(63, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(82, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -204,7 +210,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label9.Location = new System.Drawing.Point(169, 54);
+            this.label9.Location = new System.Drawing.Point(188, 54);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 16);
             this.label9.TabIndex = 15;
@@ -217,7 +223,7 @@
             this.voltarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(508, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(547, 24);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -250,15 +256,15 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(0, 97);
+            this.panel1.Location = new System.Drawing.Point(75, 112);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(507, 165);
+            this.panel1.Size = new System.Drawing.Size(450, 165);
             this.panel1.TabIndex = 19;
             // 
             // fechar
             // 
             this.fechar.Image = global::SCE.Properties.Resources.saida;
-            this.fechar.Location = new System.Drawing.Point(319, 276);
+            this.fechar.Location = new System.Drawing.Point(12, 294);
             this.fechar.Name = "fechar";
             this.fechar.Size = new System.Drawing.Size(45, 43);
             this.fechar.TabIndex = 24;
@@ -268,7 +274,7 @@
             // 
             this.excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.excluir.Image = global::SCE.Properties.Resources.Excluir;
-            this.excluir.Location = new System.Drawing.Point(268, 277);
+            this.excluir.Location = new System.Drawing.Point(12, 245);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(45, 43);
             this.excluir.TabIndex = 23;
@@ -277,7 +283,7 @@
             // cancelar
             // 
             this.cancelar.Image = global::SCE.Properties.Resources.cancelar;
-            this.cancelar.Location = new System.Drawing.Point(217, 277);
+            this.cancelar.Location = new System.Drawing.Point(12, 202);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(45, 42);
             this.cancelar.TabIndex = 22;
@@ -286,27 +292,62 @@
             // gravar
             // 
             this.gravar.Image = global::SCE.Properties.Resources.salvar;
-            this.gravar.Location = new System.Drawing.Point(166, 277);
+            this.gravar.Location = new System.Drawing.Point(12, 155);
             this.gravar.Name = "gravar";
             this.gravar.Size = new System.Drawing.Size(45, 43);
             this.gravar.TabIndex = 21;
             this.gravar.UseVisualStyleBackColor = true;
+            this.gravar.Click += new System.EventHandler(this.gravar_Click);
             // 
             // novo
             // 
             this.novo.Image = global::SCE.Properties.Resources.botão;
-            this.novo.Location = new System.Drawing.Point(115, 278);
+            this.novo.Location = new System.Drawing.Point(12, 112);
             this.novo.Name = "novo";
             this.novo.Size = new System.Drawing.Size(45, 42);
             this.novo.TabIndex = 20;
             this.novo.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigo,
+            this.placa,
+            this.data,
+            this.hora});
+            this.dataGridView1.Location = new System.Drawing.Point(75, 294);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(450, 193);
+            this.dataGridView1.TabIndex = 25;
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "codigo";
+            this.codigo.Name = "codigo";
+            // 
+            // placa
+            // 
+            this.placa.HeaderText = "placa";
+            this.placa.Name = "placa";
+            // 
+            // data
+            // 
+            this.data.HeaderText = "data";
+            this.data.Name = "data";
+            // 
+            // hora
+            // 
+            this.hora.HeaderText = "hora";
+            this.hora.Name = "hora";
             // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(508, 338);
+            this.ClientSize = new System.Drawing.Size(547, 515);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.fechar);
             this.Controls.Add(this.excluir);
             this.Controls.Add(this.cancelar);
@@ -326,6 +367,7 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,5 +400,10 @@
         private System.Windows.Forms.Button cancelar;
         private System.Windows.Forms.Button gravar;
         private System.Windows.Forms.Button novo;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn placa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn data;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hora;
     }
 }

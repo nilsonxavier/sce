@@ -75,6 +75,12 @@
     <Compile Include="cadtamanho.Designer.cs">
       <DependentUpon>cadtamanho.cs</DependentUpon>
     </Compile>
+    <Compile Include="conf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conf.Designer.cs">
+      <DependentUpon>conf.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,12 @@
     </Compile>
     <Compile Include="consusuario.Designer.cs">
       <DependentUpon>consusuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entradav.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entradav.Designer.cs">
+      <DependentUpon>Entradav.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -151,6 +163,9 @@
     <EmbeddedResource Include="cadtamanho.resx">
       <DependentUpon>cadtamanho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="conf.resx">
+      <DependentUpon>conf.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsCliente.resx">
       <DependentUpon>ConsCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="consusuario.resx">
       <DependentUpon>consusuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entradav.resx">
+      <DependentUpon>Entradav.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

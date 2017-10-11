@@ -72,5 +72,11 @@ namespace SCE
             usuario frm = new usuario();
             frm.Show();
         }
+
+        private void configuraçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            conf frm = new conf();
+            frm.Show();
+        }
     }
 }
