@@ -78,5 +78,17 @@ namespace SCE
             conf frm = new conf();
             frm.Show();
         }
+
+        private void tamanhoVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cadtamanho frm = new cadtamanho();
+            frm.Show();
+        }
+
+        private void registroDeEntradaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registro frm = new Registro();
+            frm.Show();
+        }
     }
 }

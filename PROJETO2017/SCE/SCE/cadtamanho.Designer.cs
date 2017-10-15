@@ -68,18 +68,21 @@
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
             this.consultarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.consultarToolStripMenuItem.Text = "Consultar";
+            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
             // consultarTiposDeVeiculosToolStripMenuItem
             // 
             this.consultarTiposDeVeiculosToolStripMenuItem.Name = "consultarTiposDeVeiculosToolStripMenuItem";
-            this.consultarTiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.consultarTiposDeVeiculosToolStripMenuItem.Text = "Consultar Cores";
+            this.consultarTiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.consultarTiposDeVeiculosToolStripMenuItem.Text = "Consultar Tamanhos";
+            this.consultarTiposDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.consultarTiposDeVeiculosToolStripMenuItem_Click);
             // 
             // voltarToolStripMenuItem
             // 
             this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
             this.voltarToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.voltarToolStripMenuItem.Text = "Voltar";
+            this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -160,7 +163,7 @@
             // fechar
             // 
             this.fechar.Image = global::SCE.Properties.Resources.saida;
-            this.fechar.Location = new System.Drawing.Point(241, 251);
+            this.fechar.Location = new System.Drawing.Point(251, 185);
             this.fechar.Name = "fechar";
             this.fechar.Size = new System.Drawing.Size(45, 43);
             this.fechar.TabIndex = 28;
@@ -171,7 +174,7 @@
             // 
             this.excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.excluir.Image = global::SCE.Properties.Resources.Excluir;
-            this.excluir.Location = new System.Drawing.Point(190, 251);
+            this.excluir.Location = new System.Drawing.Point(200, 185);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(45, 43);
             this.excluir.TabIndex = 27;
@@ -181,7 +184,7 @@
             // cancelar
             // 
             this.cancelar.Image = global::SCE.Properties.Resources.cancelar;
-            this.cancelar.Location = new System.Drawing.Point(139, 252);
+            this.cancelar.Location = new System.Drawing.Point(149, 186);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(45, 42);
             this.cancelar.TabIndex = 26;
@@ -191,7 +194,7 @@
             // gravar
             // 
             this.gravar.Image = global::SCE.Properties.Resources.salvar;
-            this.gravar.Location = new System.Drawing.Point(88, 251);
+            this.gravar.Location = new System.Drawing.Point(98, 185);
             this.gravar.Name = "gravar";
             this.gravar.Size = new System.Drawing.Size(45, 43);
             this.gravar.TabIndex = 25;
@@ -201,7 +204,7 @@
             // novo
             // 
             this.novo.Image = global::SCE.Properties.Resources.botão;
-            this.novo.Location = new System.Drawing.Point(37, 252);
+            this.novo.Location = new System.Drawing.Point(47, 186);
             this.novo.Name = "novo";
             this.novo.Size = new System.Drawing.Size(45, 42);
             this.novo.TabIndex = 24;
@@ -212,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 333);
+            this.ClientSize = new System.Drawing.Size(335, 260);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.fechar);
             this.Controls.Add(this.excluir);

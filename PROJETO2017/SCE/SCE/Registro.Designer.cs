@@ -69,6 +69,10 @@ namespace SCE
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Carro Pequeno",
+            "Carro Grande",
+            "Moto"});
             this.comboBox2.Location = new System.Drawing.Point(76, 81);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
@@ -78,6 +82,14 @@ namespace SCE
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Amarelo",
+            "Vermelho",
+            "Azul",
+            "Verde",
+            "Preto",
+            "Prata",
+            "Branco"});
             this.comboBox3.Location = new System.Drawing.Point(303, 33);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
@@ -86,6 +98,10 @@ namespace SCE
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "teste",
+            "teste2",
+            "teste1"});
             this.comboBox4.Location = new System.Drawing.Point(76, 108);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
@@ -232,7 +248,7 @@ namespace SCE
             // voltarToolStripMenuItem
             // 
             this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
-            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.voltarToolStripMenuItem.Text = "Voltar";
             // 
             // panel1
@@ -256,6 +272,7 @@ namespace SCE
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 165);
             this.panel1.TabIndex = 19;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // fechar
             // 
@@ -374,7 +391,9 @@ namespace SCE
 
         private void Registro_Load(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            comando.Connection = conn;
+            
+            //throw new NotImplementedException();
         }
 
         #endregion

@@ -14,7 +14,7 @@ namespace SCE
     public partial class cadcliente : Form
     {
         //string de Conexão
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-KA74H0G;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
+        SqlConnection conn = new SqlConnection("Data Source=wisley-pc;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
         public cadcliente()
@@ -42,7 +42,7 @@ namespace SCE
             cancelar.Enabled = true;
             excluir.Enabled = false;
             codigo.Enabled = false;
-            nome.Focus();
+            cpf.Focus();
         }
 
         private void cadcliente_Load(object sender, EventArgs e)
@@ -276,6 +276,11 @@ namespace SCE
             codigo.Enabled = true;
             codigo.Focus();
             Dispose();
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
    }

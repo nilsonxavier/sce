@@ -26,11 +26,22 @@ namespace SCE.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=wisley-pc;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;" +
-            "Password=123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-KA74H0G;Initial Catalog=SGBD;Persist Security Info=True;User " +
+            "ID=sa;Password=123")]
         public string SGBDConnectionString {
             get {
                 return ((string)(this["SGBDConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=wisley-pc;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;" +
+            "Password=123")]
+        public string SGBDConnectionString1 {
+            get {
+                return ((string)(this["SGBDConnectionString1"]));
             }
         }
     }

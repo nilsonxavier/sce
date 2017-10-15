@@ -14,7 +14,7 @@ namespace SCE
     public partial class cadtamanho : Form
     {
         //string de Conexão
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-KA74H0G;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
+        SqlConnection conn = new SqlConnection("Data Source=wisley-pc;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
         public cadtamanho()
@@ -27,7 +27,7 @@ namespace SCE
             //Excluir tamanho
             String x = "";
             conn.Open();
-            comando.CommandText = "select * FROM tpcor where codigo='" + codigo.Text + "'";
+            comando.CommandText = "select * FROM tptamanho where codigo='" + codigo.Text + "'";
             dr = comando.ExecuteReader();
 
             if (dr.HasRows)
@@ -42,10 +42,10 @@ namespace SCE
             if (x != "")
             {
                 conn.Open();
-                comando.CommandText = "DELETE FROM tpcor where codigo='" + codigo.Text + "'";
+                comando.CommandText = "DELETE FROM tptamanho where codigo='" + codigo.Text + "'";
                 comando.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Tipo de Veiculo Excluido com Sucesso!");
+                MessageBox.Show("Tipo de Tamanho de Veiculos Excluido com Sucesso!");
             }
             else if (codigo.Text == "")
             {
@@ -55,7 +55,7 @@ namespace SCE
             }
             else
             {
-                MessageBox.Show("Dados do Cmapo Codigo Invalidos!");
+                MessageBox.Show("Dados do Campo Codigo Invalidos!");
                 codigo.Focus();
             }
         }
@@ -77,7 +77,7 @@ namespace SCE
         {
             if (cor.Text == "")
             {
-                MessageBox.Show("O campo Tipo não pode estar Vazio, Erro Ao Salvar!");
+                MessageBox.Show("O campo Tamanho não pode estar Vazio, Erro Ao Salvar!");
                 cor.Focus();
                 return;
             }
@@ -85,7 +85,7 @@ namespace SCE
             {
                 conn.Open();
 
-                comando.CommandText = "INSERT INTO tpcor (cor) values ('" + cor.Text + "')";
+                comando.CommandText = "INSERT INTO tptamanho (tamanho) values ('" + cor.Text + "')";
                 comando.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Salvo Com Sucesso!");
@@ -134,7 +134,33 @@ namespace SCE
 
         private void cadtamanho_Load(object sender, EventArgs e)
         {
+            comando.Connection = conn;
+            codigo.Text = String.Empty;
+            cor.Text = String.Empty;
+            codigo.Enabled = true;
+            cor.Enabled = false;
+            novo.Enabled = true;
+            gravar.Enabled = false;
+            cancelar.Enabled = false;
+            excluir.Enabled = true;
+            codigo.Focus();
+        }
 
+        private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consultarTiposDeVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            constamanho frm = new constamanho();
+            frm.Show();
+            Visible = false;
         }
     }
 }

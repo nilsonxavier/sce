@@ -87,6 +87,12 @@
     <Compile Include="ConsCliente.Designer.cs">
       <DependentUpon>ConsCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="constamanho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="constamanho.Designer.cs">
+      <DependentUpon>constamanho.cs</DependentUpon>
+    </Compile>
     <Compile Include="consultarcor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,12 +116,6 @@
     </Compile>
     <Compile Include="consusuario.Designer.cs">
       <DependentUpon>consusuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Entradav.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Entradav.Designer.cs">
-      <DependentUpon>Entradav.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -142,9 +142,6 @@
     </Compile>
     <Compile Include="saida.Designer.cs">
       <DependentUpon>saida.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SGBDDataSet.cs">
-      <DependentUpon>SGBDDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SGBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -175,6 +172,9 @@
     <EmbeddedResource Include="ConsCliente.resx">
       <DependentUpon>ConsCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="constamanho.resx">
+      <DependentUpon>constamanho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="consultarcor.resx">
       <DependentUpon>consultarcor.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,9 +183,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="consusuario.resx">
       <DependentUpon>consusuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Entradav.resx">
-      <DependentUpon>Entradav.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

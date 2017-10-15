@@ -14,7 +14,7 @@ namespace SCE
     public partial class cadastrotipoveiculos : Form
     {
         //string de Conexão
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-KA74H0G;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
+        SqlConnection conn = new SqlConnection("Data Source=wisley-pc;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
         public cadastrotipoveiculos()
@@ -25,7 +25,7 @@ namespace SCE
 
         private void cadastrotipoveiculos_Load(object sender, EventArgs e)
         {
-            
+            comando.Connection = conn;
             codigo.Enabled = true;
             tipo.Enabled = false;
             novo.Enabled = true;
@@ -106,6 +106,9 @@ namespace SCE
                 comando.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Tipo de Veiculo Excluido com Sucesso!");
+                
+                codigo.Text = String.Empty;
+                codigo.Focus();
             }
             else if (codigo.Text == "")
             {

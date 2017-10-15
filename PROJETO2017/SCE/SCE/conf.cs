@@ -14,7 +14,7 @@ namespace SCE
     public partial class conf : Form
     {
         //string de Conexão
-        SqlConnection conn = new SqlConnection("Data Source=DESKTOP-KA74H0G;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
+        SqlConnection conn = new SqlConnection("Data Source=wisley-pc;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
 
@@ -36,21 +36,19 @@ namespace SCE
         private void conf_Load(object sender, EventArgs e)
         {
             comando.Connection = conn;
-            //validação de login
-            string x = "";
-            string y = "";
+            String x = "";
             conn.Open();
-            comando.CommandText = "select * FROM conf where vaga";
+            comando.CommandText = "select * FROM conf where codigo = 1";
             dr = comando.ExecuteReader();
 
             if (dr.HasRows)
             {
                 while (dr.Read())
                 {
-                    x = dr[2].ToString();
-
+                    x = dr[1].ToString();
+                    vaga.Text = x;
                 }
-                vaga = x;
+                
             }
             conn.Close();
         }
