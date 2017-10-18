@@ -69,10 +69,6 @@ namespace SCE
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Carro Pequeno",
-            "Carro Grande",
-            "Moto"});
             this.comboBox2.Location = new System.Drawing.Point(76, 81);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
@@ -82,14 +78,6 @@ namespace SCE
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Amarelo",
-            "Vermelho",
-            "Azul",
-            "Verde",
-            "Preto",
-            "Prata",
-            "Branco"});
             this.comboBox3.Location = new System.Drawing.Point(303, 33);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
@@ -98,10 +86,6 @@ namespace SCE
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "teste",
-            "teste2",
-            "teste1"});
             this.comboBox4.Location = new System.Drawing.Point(76, 108);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
@@ -178,7 +162,6 @@ namespace SCE
             this.dataEntrada.Name = "dataEntrada";
             this.dataEntrada.Size = new System.Drawing.Size(100, 20);
             this.dataEntrada.TabIndex = 19;
-            this.dataEntrada.Text = " ";
             // 
             // horaentrada
             // 
@@ -241,7 +224,7 @@ namespace SCE
             this.voltarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(547, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(552, 24);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -282,6 +265,7 @@ namespace SCE
             this.fechar.Size = new System.Drawing.Size(45, 43);
             this.fechar.TabIndex = 24;
             this.fechar.UseVisualStyleBackColor = true;
+            this.fechar.Click += new System.EventHandler(this.fechar_Click);
             // 
             // excluir
             // 
@@ -292,6 +276,7 @@ namespace SCE
             this.excluir.Size = new System.Drawing.Size(45, 43);
             this.excluir.TabIndex = 23;
             this.excluir.UseVisualStyleBackColor = true;
+            this.excluir.Click += new System.EventHandler(this.excluir_Click);
             // 
             // cancelar
             // 
@@ -362,7 +347,7 @@ namespace SCE
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(547, 515);
+            this.ClientSize = new System.Drawing.Size(552, 515);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.fechar);
             this.Controls.Add(this.excluir);
@@ -392,7 +377,27 @@ namespace SCE
         private void Registro_Load(object sender, EventArgs e)
         {
             comando.Connection = conn;
+            cod.Enabled = true;
+            cod.Text = String.Empty;
+            placaCarro.Enabled = false;
+            placaCarro.Text = String.Empty;
+            comboBox2.Enabled = false;
+            comboBox2.Text = String.Empty;
+            comboBox4.Enabled = false;
+            comboBox4.Text = String.Empty;
+            comboBox3.Enabled = false;
+            comboBox3.Text = String.Empty;
+            dataEntrada.Enabled = false;
+            dataEntrada.Text = String.Empty;
+            horaentrada.Enabled = false;
+            horaentrada.Text = String.Empty;
+            novo.Enabled = true;
+            gravar.Enabled = false;
+            cancelar.Enabled = false;
+            excluir.Enabled = true;
             
+            
+
             //throw new NotImplementedException();
         }
 
