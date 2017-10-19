@@ -17,10 +17,12 @@ namespace SCE
         SqlConnection conn = new SqlConnection("Data Source=wisley-pc;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
+        
         public Registro()
         {
             InitializeComponent();
         }
+      
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -60,7 +62,6 @@ namespace SCE
                 MessageBox.Show("O campo Tipo de Veiculos não pode estar Vazio, Erro Ao Salvar!");
                 comboBox2.Focus();
                 return;
-                
                 conn.Open();
                 comando.CommandText = "select * FROM tpveiculos where tipo='" + comboBox2.Text + "'";
                 dr = comando.ExecuteReader();
@@ -73,10 +74,10 @@ namespace SCE
                         
                     }
                 }
-                
+
                 conn.Close();
             }
-            else if (comboBox2.Text != x)
+            else if (x != "")
             {
                 MessageBox.Show("O campo Tipo de Veiculos diferente do cadastrado, Erro Ao Salvar!");
                 comboBox2.Focus();
@@ -95,13 +96,13 @@ namespace SCE
                 {
                     while (dr.Read())
                     {
-                        y = dr[1].ToString();
+                        comboBox2.Text = dr[1].ToString();
 
                     }
                 }
-                conn.Close();
+                
             }
-            else if (comboBox4.Text != y)
+            else if (y != "")
             {
                 MessageBox.Show("O campo Categoria diferente do cadastrado, Erro Ao Salvar!");
                 comboBox4.Focus();
@@ -127,7 +128,7 @@ namespace SCE
                 }
                 
                 conn.Close();
-            }else if (comboBox3.Text != z)
+            }else if (z != "")
             {
                 MessageBox.Show("O campo cor diferente do cadastrado, Erro Ao Salvar!");
                 comboBox3.Focus();
@@ -245,20 +246,12 @@ namespace SCE
 
         }
 
-        private void fillToolStripButton_Click(object sender, EventArgs e)
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.tpveiculosTableAdapter.Fill(this.sGBDDataSet.tpveiculos);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
 
         }
 
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

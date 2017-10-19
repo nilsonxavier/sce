@@ -206,6 +206,7 @@ namespace SCE
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label9
             // 
@@ -376,7 +377,9 @@ namespace SCE
 
         private void Registro_Load(object sender, EventArgs e)
         {
-            comando.Connection = conn;
+            
+             comando.Connection = conn;
+            
             cod.Enabled = true;
             cod.Text = String.Empty;
             placaCarro.Enabled = false;
