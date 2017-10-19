@@ -32,5 +32,10 @@ namespace SCE
         {
             Dispose();
         }
+
+        private void saida_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

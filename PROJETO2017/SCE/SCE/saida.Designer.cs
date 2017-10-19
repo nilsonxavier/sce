@@ -34,6 +34,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Total = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -42,13 +49,6 @@
             this.placaCarro = new System.Windows.Forms.TextBox();
             this.dataEntrada = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -128,6 +128,69 @@
             this.panel1.Size = new System.Drawing.Size(450, 216);
             this.panel1.TabIndex = 29;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(212, 181);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(54, 20);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Finalizar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(212, 149);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(54, 20);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Calcular";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(212, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(54, 20);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(106, 41);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 26;
+            this.textBox3.Text = " ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(30, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Data Entrada";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(106, 67);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 24;
+            this.textBox2.Text = " ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Hora Entrada";
+            // 
             // Total
             // 
             this.Total.AutoSize = true;
@@ -195,69 +258,6 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Data de Saida";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(106, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 24;
-            this.textBox2.Text = " ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Hora Entrada";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(106, 41);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 26;
-            this.textBox3.Text = " ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Data Entrada";
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(212, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 20);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(212, 149);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 20);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Calcular";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(212, 181);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(54, 20);
-            this.button3.TabIndex = 29;
-            this.button3.Text = "Finalizar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // saida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,6 +270,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "saida";
             this.Text = "saida";
+            this.Load += new System.EventHandler(this.saida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
