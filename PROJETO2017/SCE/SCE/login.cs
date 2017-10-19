@@ -14,7 +14,9 @@ namespace SCE
     public partial class login : Form
     {
         //string de Conexão
-        SqlConnection conn = new SqlConnection("Data Source=wisley-pc;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
+        // conexao online azure
+        SqlConnection conn = new SqlConnection("Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264");
+
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
         

@@ -148,6 +148,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SGBDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SGBDDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGBDDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +234,17 @@
     </None>
     <None Include="SGBDDataSet.xss">
       <DependentUpon>SGBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SGBDDataSet1.xsc">
+      <DependentUpon>SGBDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SGBDDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGBDDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGBDDataSet1.xss">
+      <DependentUpon>SGBDDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
