@@ -132,3 +132,4 @@ C:\Users\xavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.exe.manifest
 C:\Users\xavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.application
 C:\Users\xavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.exe
 C:\Users\xavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.pdb
+C:\Users\xavier\Source\Repos\sce\PROJETO2017\SCE\SCE\obj\Debug\SCE.caixa.resources

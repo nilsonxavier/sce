@@ -13,6 +13,7 @@ namespace SCE
 {
     public partial class login : Form
     {
+
         //string de Conexão
         // conexao online azure
         SqlConnection conn = new SqlConnection("Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264");
@@ -78,5 +79,7 @@ namespace SCE
             nome.Text = String.Empty;
             senha.Text = String.Empty;
         }
+
     }
+
 }
