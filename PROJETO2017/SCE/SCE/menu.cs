@@ -15,6 +15,7 @@ namespace SCE
         public menu()
         {
             InitializeComponent();
+            this.Text = "Sistema de Controle de Estacionameto  SCE";
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)

@@ -24,6 +24,7 @@ namespace SCE
         public login()
         {
             InitializeComponent();
+            this.Text = "Login SCE";
         }
         
         private void login_Load(object sender, EventArgs e)
