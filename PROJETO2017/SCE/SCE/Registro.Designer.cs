@@ -44,7 +44,6 @@ namespace SCE
             this.horaentrada = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cod = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -60,6 +59,9 @@ namespace SCE
             this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Datasaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horasaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -69,7 +71,7 @@ namespace SCE
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(76, 81);
+            this.comboBox2.Location = new System.Drawing.Point(97, 129);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 16;
@@ -78,7 +80,7 @@ namespace SCE
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(303, 33);
+            this.comboBox3.Location = new System.Drawing.Point(97, 183);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 18;
@@ -86,7 +88,7 @@ namespace SCE
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(76, 108);
+            this.comboBox4.Location = new System.Drawing.Point(97, 156);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
             this.comboBox4.TabIndex = 17;
@@ -94,7 +96,7 @@ namespace SCE
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 36);
+            this.label1.Location = new System.Drawing.Point(51, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 4;
@@ -104,7 +106,7 @@ namespace SCE
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 62);
+            this.label2.Location = new System.Drawing.Point(57, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 5;
@@ -113,7 +115,7 @@ namespace SCE
             // 
             // placaCarro
             // 
-            this.placaCarro.Location = new System.Drawing.Point(76, 55);
+            this.placaCarro.Location = new System.Drawing.Point(97, 103);
             this.placaCarro.Name = "placaCarro";
             this.placaCarro.Size = new System.Drawing.Size(100, 20);
             this.placaCarro.TabIndex = 15;
@@ -122,7 +124,7 @@ namespace SCE
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 89);
+            this.label3.Location = new System.Drawing.Point(25, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 7;
@@ -132,7 +134,7 @@ namespace SCE
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 116);
+            this.label4.Location = new System.Drawing.Point(39, 164);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 8;
@@ -141,7 +143,7 @@ namespace SCE
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(274, 41);
+            this.label5.Location = new System.Drawing.Point(68, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(23, 13);
             this.label5.TabIndex = 9;
@@ -150,7 +152,7 @@ namespace SCE
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(212, 67);
+            this.label6.Location = new System.Drawing.Point(6, 212);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 10;
@@ -158,14 +160,14 @@ namespace SCE
             // 
             // dataEntrada
             // 
-            this.dataEntrada.Location = new System.Drawing.Point(303, 64);
+            this.dataEntrada.Location = new System.Drawing.Point(97, 209);
             this.dataEntrada.Name = "dataEntrada";
             this.dataEntrada.Size = new System.Drawing.Size(100, 20);
             this.dataEntrada.TabIndex = 19;
             // 
             // horaentrada
             // 
-            this.horaentrada.Location = new System.Drawing.Point(303, 90);
+            this.horaentrada.Location = new System.Drawing.Point(97, 235);
             this.horaentrada.Name = "horaentrada";
             this.horaentrada.Size = new System.Drawing.Size(100, 20);
             this.horaentrada.TabIndex = 20;
@@ -173,7 +175,7 @@ namespace SCE
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(227, 90);
+            this.label7.Location = new System.Drawing.Point(21, 235);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 13);
             this.label7.TabIndex = 13;
@@ -181,26 +183,15 @@ namespace SCE
             // 
             // cod
             // 
-            this.cod.Location = new System.Drawing.Point(76, 29);
+            this.cod.Location = new System.Drawing.Point(97, 77);
             this.cod.Name = "cod";
             this.cod.Size = new System.Drawing.Size(68, 20);
             this.cod.TabIndex = 14;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label8.Location = new System.Drawing.Point(251, 54);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(170, 16);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "de Entrada de Veiculos";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SCE.Properties.Resources.cars_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(82, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(189, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -213,11 +204,11 @@ namespace SCE
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label9.Location = new System.Drawing.Point(188, 54);
+            this.label9.Location = new System.Drawing.Point(295, 54);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 16);
+            this.label9.Size = new System.Drawing.Size(154, 16);
             this.label9.TabIndex = 15;
-            this.label9.Text = "Registro";
+            this.label9.Text = "Controle De Veiculos";
             // 
             // menuStrip1
             // 
@@ -225,7 +216,7 @@ namespace SCE
             this.voltarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(552, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1086, 24);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -252,16 +243,16 @@ namespace SCE
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(75, 112);
+            this.panel1.Location = new System.Drawing.Point(12, 193);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 165);
+            this.panel1.Size = new System.Drawing.Size(266, 334);
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // fechar
             // 
             this.fechar.Image = global::SCE.Properties.Resources.saida;
-            this.fechar.Location = new System.Drawing.Point(12, 294);
+            this.fechar.Location = new System.Drawing.Point(240, 132);
             this.fechar.Name = "fechar";
             this.fechar.Size = new System.Drawing.Size(45, 43);
             this.fechar.TabIndex = 24;
@@ -272,7 +263,7 @@ namespace SCE
             // 
             this.excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.excluir.Image = global::SCE.Properties.Resources.Excluir;
-            this.excluir.Location = new System.Drawing.Point(12, 245);
+            this.excluir.Location = new System.Drawing.Point(189, 132);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(45, 43);
             this.excluir.TabIndex = 23;
@@ -282,7 +273,7 @@ namespace SCE
             // cancelar
             // 
             this.cancelar.Image = global::SCE.Properties.Resources.cancelar;
-            this.cancelar.Location = new System.Drawing.Point(12, 202);
+            this.cancelar.Location = new System.Drawing.Point(138, 133);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(45, 42);
             this.cancelar.TabIndex = 22;
@@ -292,7 +283,7 @@ namespace SCE
             // gravar
             // 
             this.gravar.Image = global::SCE.Properties.Resources.salvar;
-            this.gravar.Location = new System.Drawing.Point(12, 155);
+            this.gravar.Location = new System.Drawing.Point(87, 133);
             this.gravar.Name = "gravar";
             this.gravar.Size = new System.Drawing.Size(45, 43);
             this.gravar.TabIndex = 21;
@@ -302,9 +293,9 @@ namespace SCE
             // novo
             // 
             this.novo.Image = global::SCE.Properties.Resources.botão;
-            this.novo.Location = new System.Drawing.Point(12, 112);
+            this.novo.Location = new System.Drawing.Point(36, 133);
             this.novo.Name = "novo";
-            this.novo.Size = new System.Drawing.Size(45, 42);
+            this.novo.Size = new System.Drawing.Size(45, 43);
             this.novo.TabIndex = 20;
             this.novo.UseVisualStyleBackColor = true;
             this.novo.Click += new System.EventHandler(this.novo_Click);
@@ -316,10 +307,13 @@ namespace SCE
             this.codigo,
             this.placa,
             this.data,
-            this.hora});
-            this.dataGridView1.Location = new System.Drawing.Point(75, 294);
+            this.hora,
+            this.Datasaida,
+            this.horasaida,
+            this.Valor});
+            this.dataGridView1.Location = new System.Drawing.Point(284, 193);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(450, 193);
+            this.dataGridView1.Size = new System.Drawing.Size(762, 334);
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -343,12 +337,27 @@ namespace SCE
             this.hora.HeaderText = "hora";
             this.hora.Name = "hora";
             // 
+            // Datasaida
+            // 
+            this.Datasaida.HeaderText = "Data Saida";
+            this.Datasaida.Name = "Datasaida";
+            // 
+            // horasaida
+            // 
+            this.horasaida.HeaderText = "Hora Saida";
+            this.horasaida.Name = "horasaida";
+            // 
+            // Valor
+            // 
+            this.Valor.HeaderText = "Valor Geral";
+            this.Valor.Name = "Valor";
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(552, 515);
+            this.ClientSize = new System.Drawing.Size(1086, 541);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.fechar);
             this.Controls.Add(this.excluir);
@@ -356,12 +365,12 @@ namespace SCE
             this.Controls.Add(this.gravar);
             this.Controls.Add(this.novo);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Registro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
             this.Load += new System.EventHandler(this.Registro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -419,7 +428,6 @@ namespace SCE
         private System.Windows.Forms.TextBox horaentrada;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox cod;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -435,5 +443,8 @@ namespace SCE
         private System.Windows.Forms.DataGridViewTextBoxColumn placa;
         private System.Windows.Forms.DataGridViewTextBoxColumn data;
         private System.Windows.Forms.DataGridViewTextBoxColumn hora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Datasaida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horasaida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
     }
 }

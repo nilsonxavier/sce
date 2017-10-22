@@ -98,5 +98,17 @@ namespace SCE
             caixa frm = new caixa();
             frm.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Registro frm = new Registro();
+            frm.Show();
+        }
+
+        private void registroDeSaidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registro frm = new Registro();
+            frm.Show();
+        }
     }
 }

@@ -207,6 +207,37 @@ namespace SCE
             excluir.Enabled = false;
             dataEntrada.Text = DateTime.Now.ToString("dd/MM/yyyy");
             horaentrada.Text = DateTime.Now.ToString("HH:mm:ss");
+            conn.Open();
+            //puxando dados tipo de veiculos
+            comando.CommandText = "select codigo,tipo from tpveiculos";
+            dr = comando.ExecuteReader();
+            DataTable table = new DataTable();
+            table.Load(dr);
+            DataRow row = table.NewRow();
+            row["tipo"] = "";
+            table.Rows.InsertAt(row, 0);
+            this.comboBox2.DataSource = table;
+            this.comboBox2.ValueMember = "tipo";
+            //puxando dados categoria
+            comando.CommandText = "select codigo,modelo from categoria";
+            dr = comando.ExecuteReader();
+            DataTable table2 = new DataTable();
+            table2.Load(dr);
+            DataRow row2 = table2.NewRow();
+            row2["modelo"] = "";
+            table2.Rows.InsertAt(row2, 0);
+            this.comboBox4.DataSource = table2;
+            this.comboBox4.ValueMember = "modelo";
+            //puxando dados de cor
+            comando.CommandText = "select codigo,cor from tpcor";
+            dr = comando.ExecuteReader();
+            DataTable table3 = new DataTable();
+            table3.Load(dr);
+            DataRow row3 = table3.NewRow();
+            row3["cor"] = "";
+            table3.Rows.InsertAt(row3, 0);
+            this.comboBox3.DataSource = table3;
+            this.comboBox3.ValueMember = "cor";
         }
 
         private void cancelar_Click(object sender, EventArgs e)
