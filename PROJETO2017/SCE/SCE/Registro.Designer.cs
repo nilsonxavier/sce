@@ -54,18 +54,11 @@ namespace SCE
             this.cancelar = new System.Windows.Forms.Button();
             this.gravar = new System.Windows.Forms.Button();
             this.novo = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Datasaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horasaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgregistro = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgregistro)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox2
@@ -216,7 +209,7 @@ namespace SCE
             this.voltarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1086, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(986, 24);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -300,65 +293,22 @@ namespace SCE
             this.novo.UseVisualStyleBackColor = true;
             this.novo.Click += new System.EventHandler(this.novo_Click);
             // 
-            // dataGridView1
+            // dgregistro
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo,
-            this.placa,
-            this.data,
-            this.hora,
-            this.Datasaida,
-            this.horasaida,
-            this.Valor});
-            this.dataGridView1.Location = new System.Drawing.Point(284, 193);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(762, 334);
-            this.dataGridView1.TabIndex = 25;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "codigo";
-            this.codigo.Name = "codigo";
-            // 
-            // placa
-            // 
-            this.placa.HeaderText = "placa";
-            this.placa.Name = "placa";
-            // 
-            // data
-            // 
-            this.data.HeaderText = "data";
-            this.data.Name = "data";
-            // 
-            // hora
-            // 
-            this.hora.HeaderText = "hora";
-            this.hora.Name = "hora";
-            // 
-            // Datasaida
-            // 
-            this.Datasaida.HeaderText = "Data Saida";
-            this.Datasaida.Name = "Datasaida";
-            // 
-            // horasaida
-            // 
-            this.horasaida.HeaderText = "Hora Saida";
-            this.horasaida.Name = "horasaida";
-            // 
-            // Valor
-            // 
-            this.Valor.HeaderText = "Valor Geral";
-            this.Valor.Name = "Valor";
+            this.dgregistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgregistro.Location = new System.Drawing.Point(298, 193);
+            this.dgregistro.Name = "dgregistro";
+            this.dgregistro.Size = new System.Drawing.Size(679, 334);
+            this.dgregistro.TabIndex = 25;
+            this.dgregistro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgregistro_CellContentClick);
             // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1086, 541);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(986, 541);
+            this.Controls.Add(this.dgregistro);
             this.Controls.Add(this.fechar);
             this.Controls.Add(this.excluir);
             this.Controls.Add(this.cancelar);
@@ -378,7 +328,7 @@ namespace SCE
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgregistro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,9 +336,7 @@ namespace SCE
 
         private void Registro_Load(object sender, EventArgs e)
         {
-            
-             comando.Connection = conn;
-            
+            comando.Connection = conn;
             cod.Enabled = true;
             cod.Text = String.Empty;
             placaCarro.Enabled = false;
@@ -407,8 +355,11 @@ namespace SCE
             gravar.Enabled = false;
             cancelar.Enabled = false;
             excluir.Enabled = true;
-            
-            
+            listaGrid();
+
+
+
+
 
             //throw new NotImplementedException();
         }
@@ -438,13 +389,6 @@ namespace SCE
         private System.Windows.Forms.Button cancelar;
         private System.Windows.Forms.Button gravar;
         private System.Windows.Forms.Button novo;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn data;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Datasaida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horasaida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridView dgregistro;
     }
 }
