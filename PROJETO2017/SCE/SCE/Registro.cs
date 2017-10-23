@@ -134,7 +134,7 @@ namespace SCE
         private void listaGrid()
         {
             string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
-            string strsql = "select * from registro";
+            string strsql = "select placa as 'Nome Dos Produtos',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada' from registro";
             SqlConnection objconnect = null;
             SqlCommand objcomando = null;
             objconnect = new SqlConnection(_strconn);
