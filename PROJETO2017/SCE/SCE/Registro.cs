@@ -134,7 +134,7 @@ namespace SCE
         private void listaGrid()
         {
             string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
-            string strsql = "select placa as 'Nome Dos Produtos',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada' from registro";
+            string strsql = "select placa as 'Nome Dos Produtos',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada',id as 'Codigo' from registro";
             SqlConnection objconnect = null;
             SqlCommand objcomando = null;
             objconnect = new SqlConnection(_strconn);
@@ -269,6 +269,70 @@ namespace SCE
         }
 
         private void dgregistro_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (cod.Text == "") {
+
+                MessageBox.Show("Informe o Codigo da Entrada!");
+            }
+            else
+            {
+                string x = "";
+                string y = "";
+                string z = "";
+                string h = "";
+                string a = "";
+                string v = "";
+                string t = "";
+                string q = "";
+                conn.Open();
+                //puxando dados tipo de veiculos
+                comando.CommandText = "select * from registro where id='"+cod.Text+"'";
+                dr = comando.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        x = dr[0].ToString();
+                        placaCarro.Text = x;
+                        y = dr[1].ToString();
+                        comboBox2.Text = y;
+                        z = dr[2].ToString();
+                        comboBox4.Text = z;
+                        h = dr[3].ToString();
+                        comboBox3.Text = h;
+                        t = dr[4].ToString();
+                        dataEntrada.Text = t;
+                        q = dr[5].ToString();
+                        horaentrada.Text = q;
+
+                        cod.Enabled = false;
+                        placaCarro.Enabled = false;
+                        comboBox2.Enabled = false;
+                        comboBox4.Enabled = false;
+                        comboBox3.Enabled = false;
+                        dataEntrada.Enabled = false;
+                        horaentrada.Enabled = false;
+                        datasaida.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                        horasaida.Text = DateTime.Now.ToString("HH:mm:ss");
+                        datasaida.Enabled = false;
+                        horasaida.Enabled = false;
+                        total.Enabled = true;
+                        valorpago.Enabled = false;
+                    }
+
+                }
+                conn.Close();
+
+                
+            }
+        }
+
+        private void valorpago_TextChanged(object sender, EventArgs e)
         {
 
         }

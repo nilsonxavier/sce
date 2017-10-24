@@ -32,14 +32,13 @@
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Abertura = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.fechar = new System.Windows.Forms.Button();
-            this.excluir = new System.Windows.Forms.Button();
-            this.cancelar = new System.Windows.Forms.Button();
-            this.gravar = new System.Windows.Forms.Button();
-            this.novo = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.horaentrada = new System.Windows.Forms.TextBox();
+            this.cod = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.placaCarro = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,18 +47,12 @@
             this.Datasaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horasaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.horaentrada = new System.Windows.Forms.TextBox();
-            this.cod = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.placaCarro = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.fechar = new System.Windows.Forms.Button();
+            this.excluir = new System.Windows.Forms.Button();
+            this.cancelar = new System.Windows.Forms.Button();
+            this.gravar = new System.Windows.Forms.Button();
+            this.novo = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,14 +61,21 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.Abertura.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -121,88 +121,67 @@
             this.tabPage1.Text = "Abertura de Caixa";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // panel1
             // 
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.button3);
-            this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(632, 281);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Movimento de Caixa";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.horaentrada);
+            this.panel1.Controls.Add(this.cod);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.placaCarro);
+            this.panel1.Location = new System.Drawing.Point(15, 98);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(198, 150);
+            this.panel1.TabIndex = 37;
             // 
-            // pictureBox1
+            // label7
             // 
-            this.pictureBox1.Image = global::SCE.Properties.Resources.cars_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(185, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 13);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Hora Entrada";
             // 
-            // label3
+            // horaentrada
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(291, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 16);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Caixa";
+            this.horaentrada.Location = new System.Drawing.Point(84, 97);
+            this.horaentrada.Name = "horaentrada";
+            this.horaentrada.Size = new System.Drawing.Size(100, 20);
+            this.horaentrada.TabIndex = 41;
             // 
-            // fechar
+            // cod
             // 
-            this.fechar.Image = global::SCE.Properties.Resources.saida;
-            this.fechar.Location = new System.Drawing.Point(287, 38);
-            this.fechar.Name = "fechar";
-            this.fechar.Size = new System.Drawing.Size(45, 43);
-            this.fechar.TabIndex = 29;
-            this.fechar.UseVisualStyleBackColor = true;
+            this.cod.Location = new System.Drawing.Point(84, 37);
+            this.cod.Name = "cod";
+            this.cod.Size = new System.Drawing.Size(68, 20);
+            this.cod.TabIndex = 38;
             // 
-            // excluir
+            // label1
             // 
-            this.excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.excluir.Image = global::SCE.Properties.Resources.Excluir;
-            this.excluir.Location = new System.Drawing.Point(236, 38);
-            this.excluir.Name = "excluir";
-            this.excluir.Size = new System.Drawing.Size(45, 43);
-            this.excluir.TabIndex = 28;
-            this.excluir.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Codigo";
             // 
-            // cancelar
+            // label2
             // 
-            this.cancelar.Image = global::SCE.Properties.Resources.cancelar;
-            this.cancelar.Location = new System.Drawing.Point(185, 39);
-            this.cancelar.Name = "cancelar";
-            this.cancelar.Size = new System.Drawing.Size(45, 42);
-            this.cancelar.TabIndex = 27;
-            this.cancelar.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(38, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Nome";
             // 
-            // gravar
+            // placaCarro
             // 
-            this.gravar.Image = global::SCE.Properties.Resources.salvar;
-            this.gravar.Location = new System.Drawing.Point(134, 39);
-            this.gravar.Name = "gravar";
-            this.gravar.Size = new System.Drawing.Size(45, 43);
-            this.gravar.TabIndex = 26;
-            this.gravar.UseVisualStyleBackColor = true;
-            // 
-            // novo
-            // 
-            this.novo.Image = global::SCE.Properties.Resources.botão;
-            this.novo.Location = new System.Drawing.Point(83, 39);
-            this.novo.Name = "novo";
-            this.novo.Size = new System.Drawing.Size(45, 43);
-            this.novo.TabIndex = 25;
-            this.novo.UseVisualStyleBackColor = true;
+            this.placaCarro.Location = new System.Drawing.Point(84, 63);
+            this.placaCarro.Name = "placaCarro";
+            this.placaCarro.Size = new System.Drawing.Size(100, 20);
+            this.placaCarro.TabIndex = 39;
             // 
             // dataGridView1
             // 
@@ -255,113 +234,67 @@
             this.Valor.HeaderText = "Valor Geral";
             this.Valor.Name = "Valor";
             // 
-            // panel1
+            // fechar
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.horaentrada);
-            this.panel1.Controls.Add(this.cod);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.placaCarro);
-            this.panel1.Location = new System.Drawing.Point(15, 98);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 150);
-            this.panel1.TabIndex = 37;
+            this.fechar.Image = global::SCE.Properties.Resources.saida;
+            this.fechar.Location = new System.Drawing.Point(287, 38);
+            this.fechar.Name = "fechar";
+            this.fechar.Size = new System.Drawing.Size(45, 43);
+            this.fechar.TabIndex = 29;
+            this.fechar.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // excluir
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 97);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 13);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "Hora Entrada";
+            this.excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.excluir.Image = global::SCE.Properties.Resources.Excluir;
+            this.excluir.Location = new System.Drawing.Point(236, 38);
+            this.excluir.Name = "excluir";
+            this.excluir.Size = new System.Drawing.Size(45, 43);
+            this.excluir.TabIndex = 28;
+            this.excluir.UseVisualStyleBackColor = true;
             // 
-            // horaentrada
+            // cancelar
             // 
-            this.horaentrada.Location = new System.Drawing.Point(84, 97);
-            this.horaentrada.Name = "horaentrada";
-            this.horaentrada.Size = new System.Drawing.Size(100, 20);
-            this.horaentrada.TabIndex = 41;
+            this.cancelar.Image = global::SCE.Properties.Resources.cancelar;
+            this.cancelar.Location = new System.Drawing.Point(185, 39);
+            this.cancelar.Name = "cancelar";
+            this.cancelar.Size = new System.Drawing.Size(45, 42);
+            this.cancelar.TabIndex = 27;
+            this.cancelar.UseVisualStyleBackColor = true;
             // 
-            // cod
+            // gravar
             // 
-            this.cod.Location = new System.Drawing.Point(84, 37);
-            this.cod.Name = "cod";
-            this.cod.Size = new System.Drawing.Size(68, 20);
-            this.cod.TabIndex = 38;
+            this.gravar.Image = global::SCE.Properties.Resources.salvar;
+            this.gravar.Location = new System.Drawing.Point(134, 39);
+            this.gravar.Name = "gravar";
+            this.gravar.Size = new System.Drawing.Size(45, 43);
+            this.gravar.TabIndex = 26;
+            this.gravar.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // novo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Codigo";
+            this.novo.Image = global::SCE.Properties.Resources.botão;
+            this.novo.Location = new System.Drawing.Point(83, 39);
+            this.novo.Name = "novo";
+            this.novo.Size = new System.Drawing.Size(45, 43);
+            this.novo.TabIndex = 25;
+            this.novo.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // tabPage2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Placa";
-            // 
-            // placaCarro
-            // 
-            this.placaCarro.Location = new System.Drawing.Point(84, 63);
-            this.placaCarro.Name = "placaCarro";
-            this.placaCarro.Size = new System.Drawing.Size(100, 20);
-            this.placaCarro.TabIndex = 39;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::SCE.Properties.Resources.saida;
-            this.button1.Location = new System.Drawing.Point(354, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 43);
-            this.button1.TabIndex = 34;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::SCE.Properties.Resources.Excluir;
-            this.button2.Location = new System.Drawing.Point(303, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 43);
-            this.button2.TabIndex = 33;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::SCE.Properties.Resources.cancelar;
-            this.button3.Location = new System.Drawing.Point(252, 15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 42);
-            this.button3.TabIndex = 32;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::SCE.Properties.Resources.salvar;
-            this.button4.Location = new System.Drawing.Point(201, 15);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(45, 43);
-            this.button4.TabIndex = 31;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Image = global::SCE.Properties.Resources.botão;
-            this.button5.Location = new System.Drawing.Point(150, 15);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 43);
-            this.button5.TabIndex = 30;
-            this.button5.UseVisualStyleBackColor = true;
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.button5);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(632, 281);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Movimento de Caixa";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
             // 
@@ -414,6 +347,73 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Valor Geral";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
+            // button1
+            // 
+            this.button1.Image = global::SCE.Properties.Resources.saida;
+            this.button1.Location = new System.Drawing.Point(354, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(45, 43);
+            this.button1.TabIndex = 34;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::SCE.Properties.Resources.Excluir;
+            this.button2.Location = new System.Drawing.Point(303, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(45, 43);
+            this.button2.TabIndex = 33;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Image = global::SCE.Properties.Resources.cancelar;
+            this.button3.Location = new System.Drawing.Point(252, 15);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(45, 42);
+            this.button3.TabIndex = 32;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Image = global::SCE.Properties.Resources.salvar;
+            this.button4.Location = new System.Drawing.Point(201, 15);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(45, 43);
+            this.button4.TabIndex = 31;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Image = global::SCE.Properties.Resources.botão;
+            this.button5.Location = new System.Drawing.Point(150, 15);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(45, 43);
+            this.button5.TabIndex = 30;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SCE.Properties.Resources.cars_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(185, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.Location = new System.Drawing.Point(291, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 16);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Caixa";
+            // 
             // caixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,12 +431,12 @@
             this.menuStrip1.PerformLayout();
             this.Abertura.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

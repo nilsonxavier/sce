@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SCE
 {
     public partial class menu : Form
     {
+        //string de Conexão
+        // conexao online azure
+        SqlConnection conn = new SqlConnection("Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264");
+        SqlCommand comando = new SqlCommand();
+        SqlDataReader dr;
         public menu()
         {
             InitializeComponent();
@@ -31,7 +37,7 @@ namespace SCE
 
         private void menu_Load(object sender, EventArgs e)
         {
-
+            comando.Connection = conn;
         }
 
         private void tiposDeVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,8 +60,31 @@ namespace SCE
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Registro frm = new Registro();
-            frm.Show();
+            String x = "";
+            String y = "";
+            x = DateTime.Now.ToString("dd/MM/yyyy");
+            
+            conn.Open();
+            comando.CommandText = "select * FROM caixa where datacaixa='" + x + "'";
+            dr = comando.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    y = dr[3].ToString();
+                }
+            }
+            if (x != y) {
+                MessageBox.Show("Não Existe Caixa Aberto!");
+                caixa frm = new caixa();
+                frm.Show();
+            }
+            else
+            {
+                Registro frm = new Registro();
+                frm.Show();
+            }
+            
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -101,8 +130,31 @@ namespace SCE
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Registro frm = new Registro();
-            frm.Show();
+            String x = "";
+            String y = "";
+            x = DateTime.Now.ToString("dd/MM/yyyy");
+
+            conn.Open();
+            comando.CommandText = "select * FROM caixa where datacaixa='" + x + "'";
+            dr = comando.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    y = dr[3].ToString();
+                }
+            }
+            if (x != y)
+            {
+                MessageBox.Show("Não Existe Caixa Aberto!");
+                caixa frm = new caixa();
+                frm.Show();
+            }
+            else
+            {
+                Registro frm = new Registro();
+                frm.Show();
+            }
         }
 
         private void registroDeSaidaToolStripMenuItem_Click(object sender, EventArgs e)
