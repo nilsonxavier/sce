@@ -16,7 +16,7 @@ namespace SCE
     {
 
         //string de Conexão
-        
+
         SqlConnection conn = new SqlConnection("Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264;");
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
@@ -157,27 +157,36 @@ namespace SCE
 
         }
 
-    
-    private void novo_Click(object sender, EventArgs e)
-    {
-        cod.Enabled = false;
-        cod.Text = String.Empty;
-        placaCarro.Enabled = true;
-        placaCarro.Text = String.Empty;
-        comboBox2.Enabled = true;
-        comboBox2.Text = String.Empty;
-        comboBox4.Enabled = true;
-        comboBox4.Text = String.Empty;
-        comboBox3.Enabled = true;
-        comboBox3.Text = String.Empty;
-        dataEntrada.Enabled = false;
-        horaentrada.Enabled = false;
-        novo.Enabled = false;
-        gravar.Enabled = true;
-        cancelar.Enabled = true;
-        excluir.Enabled = false;
-        dataEntrada.Text = DateTime.Now.ToString("dd/MM/yyyy");
-        horaentrada.Text = DateTime.Now.ToString("HH:mm:ss");
+
+        private void novo_Click(object sender, EventArgs e)
+        {
+            cod.Enabled = false;
+            cod.Text = String.Empty;
+            placaCarro.Enabled = true;
+            placaCarro.Text = String.Empty;
+            comboBox2.Enabled = true;
+            comboBox2.Text = String.Empty;
+            comboBox4.Enabled = true;
+            comboBox4.Text = String.Empty;
+            comboBox3.Enabled = true;
+            comboBox3.Text = String.Empty;
+            dataEntrada.Enabled = false;
+            horaentrada.Enabled = false;
+            novo.Enabled = false;
+            gravar.Enabled = true;
+            cancelar.Enabled = true;
+            excluir.Enabled = false;
+            datasaida.Enabled = false;
+            datasaida.Text = String.Empty;
+            horasaida.Enabled = false;
+            horasaida.Text = String.Empty;
+            total.Enabled = false;
+            total.Text = String.Empty;
+            valorpago.Enabled = false;
+            valorpago.Text = String.Empty;
+
+            dataEntrada.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            horaentrada.Text = DateTime.Now.ToString("HH:mm:ss");
             conn.Open();
             //puxando dados tipo de veiculos
             comando.CommandText = "select codigo,tipo from tpveiculos";
@@ -210,9 +219,9 @@ namespace SCE
             this.comboBox3.DataSource = table3;
             this.comboBox3.ValueMember = "cor";
             conn.Close();
-       
 
-    } 
+
+        }
 
 
 
@@ -245,6 +254,14 @@ namespace SCE
             gravar.Enabled = false;
             cancelar.Enabled = false;
             excluir.Enabled = true;
+            datasaida.Enabled = false;
+            datasaida.Text = String.Empty;
+            horasaida.Enabled = false;
+            horasaida.Text = String.Empty;
+            total.Enabled = false;
+            total.Text = String.Empty;
+            valorpago.Enabled = false;
+            valorpago.Text = String.Empty;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -254,7 +271,39 @@ namespace SCE
 
         private void fechar_Click(object sender, EventArgs e)
         {
-
+            cod.Enabled = true;
+            cod.Text = String.Empty;
+            placaCarro.Enabled = false;
+            placaCarro.Text = String.Empty;
+            comboBox2.Enabled = false;
+            comboBox2.Text = String.Empty;
+            comboBox4.Enabled = false;
+            comboBox4.Text = String.Empty;
+            comboBox3.Enabled = false;
+            comboBox3.Text = String.Empty;
+            dataEntrada.Enabled = false;
+            dataEntrada.Text = String.Empty;
+            horaentrada.Enabled = false;
+            horaentrada.Text = String.Empty;
+            datasaida.Enabled = false;
+            horasaida.Text = String.Empty;
+            datasaida.Enabled = false;
+            horasaida.Text = String.Empty;
+            total.Enabled = false;
+            total.Text = String.Empty;
+            novo.Enabled = true;
+            gravar.Enabled = false;
+            cancelar.Enabled = false;
+            excluir.Enabled = true;
+            datasaida.Enabled = false;
+            datasaida.Text = String.Empty;
+            horasaida.Enabled = false;
+            horasaida.Text = String.Empty;
+            total.Enabled = false;
+            total.Text = String.Empty;
+            valorpago.Enabled = false;
+            valorpago.Text = String.Empty;
+            Dispose();
         }
 
         private void excluir_Click(object sender, EventArgs e)
@@ -295,7 +344,7 @@ namespace SCE
                 string q = "";
                 conn.Open();
                 //puxando dados tipo de veiculos
-                comando.CommandText = "select * from registro where codigo='"+cod.Text+"'";
+                comando.CommandText = "select * from registro where codigo='" + cod.Text + "'";
                 dr = comando.ExecuteReader();
                 if (dr.HasRows)
                 {
@@ -337,7 +386,7 @@ namespace SCE
                 }
                 conn.Close();
 
-                
+
             }
         }
 
@@ -348,25 +397,36 @@ namespace SCE
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string x = "";
-            string y = "";
-            x = DateTime.Now.ToString("dd/MM/yyyy");
-            conn.Open();
-            //puxando dados tipo de veiculos
-            comando.CommandText = "select * from caixa where datacaixa='" + x + "'";
-            dr = comando.ExecuteReader();
-            if (dr.HasRows)
+            if (total.Text == "")
             {
-                while (dr.Read())
-                {
-                    y = dr[1].ToString();
-      
-                    x = dr[2].ToString();
-                }
+
+                MessageBox.Show("Informe o Total do Estacionamento!");
             }
-            conn.Close();
-            if (x != "" && y != "" && valorpago.Text != "" && total.Text != "")
+            else if (valorpago.Text == "")
             {
+
+                MessageBox.Show("Informe o Valor de Faturamento!");
+            }
+            
+            else
+            {
+                string x = "";
+                string y = "";
+                string z = "";
+                x = DateTime.Now.ToString("dd/MM/yyyy");
+                conn.Open();
+                //puxando dados tipo de veiculos
+                comando.CommandText = "select * from caixa where datacaixa='" + x + "'";
+                dr = comando.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        y = dr[1].ToString();
+
+                        z = dr[2].ToString();
+                    }
+                }
                 conn.Open();
                 comando.CommandText = "update registro set datasaida ='" + datasaida.Text + "'where codigo = '" + cod.Text + "'";
                 comando.ExecuteNonQuery();
@@ -383,27 +443,58 @@ namespace SCE
                 comando.CommandText = "update registro set codigocaixa ='" + y + "'where codigo = '" + cod.Text + "'";
                 comando.ExecuteNonQuery();
 
-                comando.CommandText = "update registro set datacaixa ='" + x + "'where codigo = '" + cod.Text + "'";
+                comando.CommandText = "update registro set datacaixa ='" + z + "'where codigo = '" + cod.Text + "'";
                 comando.ExecuteNonQuery();
 
                 conn.Close();
                 MessageBox.Show("Pago Com Sucesso!");
 
+                listaGrid();
+                cod.Enabled = true;
+                cod.Text = String.Empty;
+                placaCarro.Enabled = false;
+                placaCarro.Text = String.Empty;
+                comboBox2.Enabled = false;
+                comboBox2.Text = String.Empty;
+                comboBox4.Enabled = false;
+                comboBox4.Text = String.Empty;
+                comboBox3.Enabled = false;
+                comboBox3.Text = String.Empty;
+                dataEntrada.Enabled = false;
+                dataEntrada.Text = String.Empty;
+                horaentrada.Enabled = false;
+                horaentrada.Text = String.Empty;
+                datasaida.Enabled = false;
+                horasaida.Text = String.Empty;
+                datasaida.Enabled = false;
+                horasaida.Text = String.Empty;
+                total.Enabled = false;
+                total.Text = String.Empty;
+                novo.Enabled = true;
+                gravar.Enabled = false;
+                cancelar.Enabled = false;
+                excluir.Enabled = true;
+                datasaida.Enabled = false;
+                datasaida.Text = String.Empty;
+                horasaida.Enabled = false;
+                horasaida.Text = String.Empty;
+                total.Enabled = false;
+                total.Text = String.Empty;
+                valorpago.Enabled = false;
+                valorpago.Text = String.Empty;
 
             }
-            else {
-                MessageBox.Show("Erro no Pagamento!");
+
+       }
+
+            private void horasaida_TextChanged(object sender, EventArgs e)
+            {
+
             }
-            listaGrid();
 
-
-
-
-        }
-
-                private void horasaida_TextChanged(object sender, EventArgs e)
+        private void total_TextChanged(object sender, EventArgs e)
         {
 
         }
     }
-}
+    } 

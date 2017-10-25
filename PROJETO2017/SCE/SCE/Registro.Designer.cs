@@ -327,6 +327,7 @@ namespace SCE
             this.total.Name = "total";
             this.total.Size = new System.Drawing.Size(100, 20);
             this.total.TabIndex = 27;
+            this.total.TextChanged += new System.EventHandler(this.total_TextChanged);
             // 
             // label11
             // 
