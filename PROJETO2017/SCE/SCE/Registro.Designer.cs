@@ -49,9 +49,9 @@ namespace SCE
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.fatura = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.saida = new System.Windows.Forms.Button();
             this.valorpago = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@ namespace SCE
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(104, 98);
+            this.comboBox2.Location = new System.Drawing.Point(89, 91);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 16;
@@ -85,7 +85,7 @@ namespace SCE
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(104, 152);
+            this.comboBox3.Location = new System.Drawing.Point(89, 145);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 18;
@@ -93,7 +93,7 @@ namespace SCE
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(104, 125);
+            this.comboBox4.Location = new System.Drawing.Point(89, 118);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
             this.comboBox4.TabIndex = 17;
@@ -101,7 +101,7 @@ namespace SCE
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 53);
+            this.label1.Location = new System.Drawing.Point(43, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 4;
@@ -111,7 +111,7 @@ namespace SCE
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 79);
+            this.label2.Location = new System.Drawing.Point(49, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 5;
@@ -120,7 +120,7 @@ namespace SCE
             // 
             // placaCarro
             // 
-            this.placaCarro.Location = new System.Drawing.Point(104, 72);
+            this.placaCarro.Location = new System.Drawing.Point(89, 65);
             this.placaCarro.Name = "placaCarro";
             this.placaCarro.Size = new System.Drawing.Size(100, 20);
             this.placaCarro.TabIndex = 15;
@@ -129,7 +129,7 @@ namespace SCE
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 106);
+            this.label3.Location = new System.Drawing.Point(17, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 7;
@@ -139,7 +139,7 @@ namespace SCE
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 133);
+            this.label4.Location = new System.Drawing.Point(31, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 8;
@@ -148,7 +148,7 @@ namespace SCE
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(75, 160);
+            this.label5.Location = new System.Drawing.Point(60, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(23, 13);
             this.label5.TabIndex = 9;
@@ -157,7 +157,7 @@ namespace SCE
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 181);
+            this.label6.Location = new System.Drawing.Point(-2, 174);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 10;
@@ -165,14 +165,14 @@ namespace SCE
             // 
             // dataEntrada
             // 
-            this.dataEntrada.Location = new System.Drawing.Point(104, 178);
+            this.dataEntrada.Location = new System.Drawing.Point(89, 171);
             this.dataEntrada.Name = "dataEntrada";
             this.dataEntrada.Size = new System.Drawing.Size(100, 20);
             this.dataEntrada.TabIndex = 19;
             // 
             // horaentrada
             // 
-            this.horaentrada.Location = new System.Drawing.Point(104, 204);
+            this.horaentrada.Location = new System.Drawing.Point(89, 197);
             this.horaentrada.Name = "horaentrada";
             this.horaentrada.Size = new System.Drawing.Size(100, 20);
             this.horaentrada.TabIndex = 20;
@@ -180,7 +180,7 @@ namespace SCE
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 204);
+            this.label7.Location = new System.Drawing.Point(13, 197);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 13);
             this.label7.TabIndex = 13;
@@ -188,7 +188,7 @@ namespace SCE
             // 
             // cod
             // 
-            this.cod.Location = new System.Drawing.Point(104, 46);
+            this.cod.Location = new System.Drawing.Point(89, 39);
             this.cod.Name = "cod";
             this.cod.Size = new System.Drawing.Size(68, 20);
             this.cod.TabIndex = 14;
@@ -234,9 +234,9 @@ namespace SCE
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.fatura);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.saida);
             this.panel1.Controls.Add(this.valorpago);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
@@ -262,41 +262,42 @@ namespace SCE
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(12, 193);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(770, 243);
+            this.panel1.Size = new System.Drawing.Size(877, 226);
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button2
+            // fatura
             // 
-            this.button2.Location = new System.Drawing.Point(538, 125);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(65, 23);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Faturar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.fatura.Location = new System.Drawing.Point(484, 92);
+            this.fatura.Name = "fatura";
+            this.fatura.Size = new System.Drawing.Size(65, 23);
+            this.fatura.TabIndex = 27;
+            this.fatura.Text = "Faturar";
+            this.fatura.UseVisualStyleBackColor = true;
+            this.fatura.Click += new System.EventHandler(this.button2_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(358, 160);
+            this.label14.Location = new System.Drawing.Point(304, 127);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 13);
             this.label14.TabIndex = 29;
             this.label14.Text = "Valor Pago";
             // 
-            // button1
+            // saida
             // 
-            this.button1.Location = new System.Drawing.Point(181, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Saida De Veiculos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.saida.Location = new System.Drawing.Point(166, 37);
+            this.saida.Name = "saida";
+            this.saida.Size = new System.Drawing.Size(106, 23);
+            this.saida.TabIndex = 26;
+            this.saida.Text = "Saida De Veiculos";
+            this.saida.UseVisualStyleBackColor = true;
+            this.saida.Click += new System.EventHandler(this.button1_Click);
             // 
             // valorpago
             // 
-            this.valorpago.Location = new System.Drawing.Point(432, 157);
+            this.valorpago.Location = new System.Drawing.Point(378, 124);
             this.valorpago.Name = "valorpago";
             this.valorpago.Size = new System.Drawing.Size(100, 20);
             this.valorpago.TabIndex = 30;
@@ -305,7 +306,7 @@ namespace SCE
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(91, 20);
+            this.label13.Location = new System.Drawing.Point(76, 13);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(95, 13);
             this.label13.TabIndex = 28;
@@ -314,7 +315,7 @@ namespace SCE
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(386, 130);
+            this.label12.Location = new System.Drawing.Point(332, 97);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 26;
@@ -322,7 +323,7 @@ namespace SCE
             // 
             // total
             // 
-            this.total.Location = new System.Drawing.Point(432, 127);
+            this.total.Location = new System.Drawing.Point(378, 94);
             this.total.Name = "total";
             this.total.Size = new System.Drawing.Size(100, 20);
             this.total.TabIndex = 27;
@@ -330,7 +331,7 @@ namespace SCE
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(429, 46);
+            this.label11.Location = new System.Drawing.Point(375, 13);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(85, 13);
             this.label11.TabIndex = 25;
@@ -339,7 +340,7 @@ namespace SCE
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(357, 104);
+            this.label8.Location = new System.Drawing.Point(303, 71);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 13);
             this.label8.TabIndex = 22;
@@ -347,14 +348,15 @@ namespace SCE
             // 
             // horasaida
             // 
-            this.horasaida.Location = new System.Drawing.Point(433, 101);
+            this.horasaida.Location = new System.Drawing.Point(379, 68);
             this.horasaida.Name = "horasaida";
             this.horasaida.Size = new System.Drawing.Size(100, 20);
             this.horasaida.TabIndex = 24;
+            this.horasaida.TextChanged += new System.EventHandler(this.horasaida_TextChanged);
             // 
             // datasaida
             // 
-            this.datasaida.Location = new System.Drawing.Point(433, 75);
+            this.datasaida.Location = new System.Drawing.Point(379, 42);
             this.datasaida.Name = "datasaida";
             this.datasaida.Size = new System.Drawing.Size(100, 20);
             this.datasaida.TabIndex = 23;
@@ -362,7 +364,7 @@ namespace SCE
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(342, 78);
+            this.label10.Location = new System.Drawing.Point(288, 45);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(75, 13);
             this.label10.TabIndex = 21;
@@ -421,10 +423,14 @@ namespace SCE
             // 
             // dgregistro
             // 
+            this.dgregistro.AllowUserToAddRows = false;
+            this.dgregistro.AllowUserToDeleteRows = false;
+            this.dgregistro.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgregistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgregistro.Location = new System.Drawing.Point(12, 442);
+            this.dgregistro.Location = new System.Drawing.Point(12, 425);
             this.dgregistro.Name = "dgregistro";
-            this.dgregistro.Size = new System.Drawing.Size(721, 133);
+            this.dgregistro.ReadOnly = true;
+            this.dgregistro.Size = new System.Drawing.Size(877, 185);
             this.dgregistro.TabIndex = 25;
             this.dgregistro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgregistro_CellContentClick);
             // 
@@ -433,7 +439,7 @@ namespace SCE
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(986, 602);
+            this.ClientSize = new System.Drawing.Size(986, 622);
             this.Controls.Add(this.dgregistro);
             this.Controls.Add(this.fechar);
             this.Controls.Add(this.excluir);
@@ -481,6 +487,7 @@ namespace SCE
             gravar.Enabled = false;
             cancelar.Enabled = false;
             excluir.Enabled = true;
+            fatura.Enabled = false;
             listaGrid();
 
 
@@ -516,9 +523,9 @@ namespace SCE
         private System.Windows.Forms.Button gravar;
         private System.Windows.Forms.Button novo;
         private System.Windows.Forms.DataGridView dgregistro;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button fatura;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button saida;
         private System.Windows.Forms.TextBox valorpago;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;

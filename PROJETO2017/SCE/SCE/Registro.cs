@@ -134,7 +134,7 @@ namespace SCE
         private void listaGrid()
         {
             string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
-            string strsql = "select placa as 'Nome Dos Produtos',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada',id as 'Codigo' from registro";
+            string strsql = "select Codigo as 'Codigo', placa as 'Placa Veiculo',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada',datasaida as 'Data Saida',horasaida as 'Hora Saida',valor as 'Valor do Estacionamento',valorpago as 'Valor Fatura' from registro";
             SqlConnection objconnect = null;
             SqlCommand objcomando = null;
             objconnect = new SqlConnection(_strconn);
@@ -160,8 +160,6 @@ namespace SCE
     
     private void novo_Click(object sender, EventArgs e)
     {
-
-
         cod.Enabled = false;
         cod.Text = String.Empty;
         placaCarro.Enabled = true;
@@ -237,6 +235,12 @@ namespace SCE
             dataEntrada.Text = String.Empty;
             horaentrada.Enabled = false;
             horaentrada.Text = String.Empty;
+            datasaida.Enabled = false;
+            horasaida.Text = String.Empty;
+            datasaida.Enabled = false;
+            horasaida.Text = String.Empty;
+            total.Enabled = false;
+            total.Text = String.Empty;
             novo.Enabled = true;
             gravar.Enabled = false;
             cancelar.Enabled = false;
@@ -291,23 +295,23 @@ namespace SCE
                 string q = "";
                 conn.Open();
                 //puxando dados tipo de veiculos
-                comando.CommandText = "select * from registro where id='"+cod.Text+"'";
+                comando.CommandText = "select * from registro where codigo='"+cod.Text+"'";
                 dr = comando.ExecuteReader();
                 if (dr.HasRows)
                 {
                     while (dr.Read())
                     {
-                        x = dr[0].ToString();
+                        x = dr[1].ToString();
                         placaCarro.Text = x;
-                        y = dr[1].ToString();
+                        y = dr[2].ToString();
                         comboBox2.Text = y;
-                        z = dr[2].ToString();
+                        z = dr[3].ToString();
                         comboBox4.Text = z;
-                        h = dr[3].ToString();
+                        h = dr[4].ToString();
                         comboBox3.Text = h;
-                        t = dr[4].ToString();
+                        t = dr[5].ToString();
                         dataEntrada.Text = t;
-                        q = dr[5].ToString();
+                        q = dr[6].ToString();
                         horaentrada.Text = q;
 
                         cod.Enabled = false;
@@ -322,7 +326,12 @@ namespace SCE
                         datasaida.Enabled = false;
                         horasaida.Enabled = false;
                         total.Enabled = true;
-                        valorpago.Enabled = false;
+                        valorpago.Enabled = true;
+                        cancelar.Enabled = true;
+                        novo.Enabled = false;
+                        excluir.Enabled = false;
+                        fatura.Enabled = true;
+                        saida.Enabled = false;
                     }
 
                 }
@@ -333,6 +342,65 @@ namespace SCE
         }
 
         private void valorpago_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string x = "";
+            string y = "";
+            x = DateTime.Now.ToString("dd/MM/yyyy");
+            conn.Open();
+            //puxando dados tipo de veiculos
+            comando.CommandText = "select * from caixa where datacaixa='" + x + "'";
+            dr = comando.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    y = dr[1].ToString();
+                    x = dr[2].ToString();
+                }
+            }
+            conn.Close();
+            if (x != "")
+            {
+                conn.Open();
+                comando.CommandText = "update registro set datasaida ='" + datasaida.Text + "'where codigo = '" + cod.Text + "'";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText = "update registro set horasaida ='" + horasaida.Text + "'where codigo = '" + cod.Text + "'";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText = "update registro set valor ='" + total.Text + "'where codigo = '" + cod.Text + "'";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText = "update registro set valorpago ='" + valorpago.Text + "'where codigo = '" + cod.Text + "'";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText = "update registro set codigocaixa ='" + y + "'where codigo = '" + cod.Text + "'";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText = "update registro set datacaixa ='" + x + "'where codigo = '" + cod.Text + "'";
+                comando.ExecuteNonQuery();
+
+                conn.Close();
+                MessageBox.Show("Pago Com Sucesso!");
+
+
+            }
+            else {
+                MessageBox.Show("Erro no Pagamento!");
+            }
+            listaGrid();
+
+
+
+
+        }
+
+                private void horasaida_TextChanged(object sender, EventArgs e)
         {
 
         }
