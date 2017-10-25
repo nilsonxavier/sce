@@ -134,7 +134,7 @@ namespace SCE
         private void listaGrid()
         {
             string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
-            string strsql = "select Codigo as 'Codigo', placa as 'Placa Veiculo',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada',datasaida as 'Data Saida',horasaida as 'Hora Saida',valor as 'Valor do Estacionamento',valorpago as 'Valor Fatura' from registro";
+            string strsql = "select Codigo as 'Codigo', placa as 'Placa Veiculo',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada',datasaida as 'Data Saida',horasaida as 'Hora Saida',valor as 'Valor do Estacionamento',valorpago as 'Valor Faturado' from registro";
             SqlConnection objconnect = null;
             SqlCommand objcomando = null;
             objconnect = new SqlConnection(_strconn);
@@ -308,7 +308,45 @@ namespace SCE
 
         private void excluir_Click(object sender, EventArgs e)
         {
+            //Excluir tipo de veiculos
+            String x = "";
+            String y = "";
+            conn.Open();
+            comando.CommandText = "select * FROM registro where codigo='" + cod.Text + "'";
+            dr = comando.ExecuteReader();
 
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    x = dr[0].ToString();
+                    y = dr[10].ToString();
+                }
+
+            }
+            conn.Close();
+            if (x != "" && y == "")
+            {
+                conn.Open();
+                comando.CommandText = "DELETE FROM registro where codigo='" + cod.Text + "'";
+                comando.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show("Registro de Veiculo Excluido com Sucesso!");
+                cod.Text = String.Empty;
+                cod.Focus();
+                listaGrid();
+            }
+            else if (cod.Text == "")
+            {
+                MessageBox.Show("Prencha o Dados do Campo Codigo!");
+                cod.Focus();
+
+            }
+            else
+            {
+                MessageBox.Show("Dados do Movimento ja faturado!");
+                cod.Focus();
+            }
         }
 
         private void toolStripComboBox1_Click(object sender, EventArgs e)
@@ -422,11 +460,12 @@ namespace SCE
                 {
                     while (dr.Read())
                     {
-                        y = dr[1].ToString();
+                        y = dr[0].ToString();
 
                         z = dr[2].ToString();
                     }
                 }
+                conn.Close();
                 conn.Open();
                 comando.CommandText = "update registro set datasaida ='" + datasaida.Text + "'where codigo = '" + cod.Text + "'";
                 comando.ExecuteNonQuery();
@@ -440,12 +479,11 @@ namespace SCE
                 comando.CommandText = "update registro set valorpago ='" + valorpago.Text + "'where codigo = '" + cod.Text + "'";
                 comando.ExecuteNonQuery();
 
-                comando.CommandText = "update registro set codigocaixa ='" + y + "'where codigo = '" + cod.Text + "'";
-                comando.ExecuteNonQuery();
-
                 comando.CommandText = "update registro set datacaixa ='" + z + "'where codigo = '" + cod.Text + "'";
                 comando.ExecuteNonQuery();
 
+                comando.CommandText = "update registro set codigocaixa ='" + y + "'where codigo = '" + cod.Text + "'";
+                comando.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Pago Com Sucesso!");
 

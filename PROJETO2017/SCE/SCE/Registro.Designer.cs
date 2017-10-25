@@ -489,6 +489,14 @@ namespace SCE
             cancelar.Enabled = false;
             excluir.Enabled = true;
             fatura.Enabled = false;
+            datasaida.Enabled = false;
+            datasaida.Text = String.Empty;
+            horasaida.Enabled = false;
+            horasaida.Text = String.Empty;
+            total.Enabled = false;
+            total.Text = String.Empty;
+            valorpago.Enabled = false;
+            valorpago.Text = String.Empty;
             listaGrid();
 
 
