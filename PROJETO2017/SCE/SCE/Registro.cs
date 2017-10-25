@@ -360,11 +360,12 @@ namespace SCE
                 while (dr.Read())
                 {
                     y = dr[1].ToString();
+      
                     x = dr[2].ToString();
                 }
             }
             conn.Close();
-            if (x != "")
+            if (x != "" && y != "" && valorpago.Text != "" && total.Text != "")
             {
                 conn.Open();
                 comando.CommandText = "update registro set datasaida ='" + datasaida.Text + "'where codigo = '" + cod.Text + "'";
