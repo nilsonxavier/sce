@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SCE
 {
@@ -24,13 +25,71 @@ namespace SCE
             Visible = false;
         }
 
+        private void listaGrid()
+        {
+            string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
+            string strsql = "select codigo as 'Codigo', tipo as 'Tipo de Veiculos' from tpveiculos";
+            SqlConnection objconnect = null;
+            SqlCommand objcomando = null;
+            objconnect = new SqlConnection(_strconn);
+            objcomando = new SqlCommand(strsql, objconnect);
+
+            try
+            {
+                SqlDataAdapter objAdp = new SqlDataAdapter(objcomando);
+                DataTable drlista = new DataTable();
+                objAdp.Fill(drlista);
+                dgtipo.DataSource = drlista;
+            }
+            catch
+            {
+                MessageBox.Show("Deu erro!");
+            }
+        }
+        private void listaGrid2()
+        {
+            string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
+            string strsql = "select codigo as 'Codigo', tipo as 'Tipo de Veiculos' from tpveiculos where tipo='"+ nome .Text+ "'";
+            SqlConnection objconnect = null;
+            SqlCommand objcomando = null;
+            objconnect = new SqlConnection(_strconn);
+            objcomando = new SqlCommand(strsql, objconnect);
+
+            try
+            {
+                SqlDataAdapter objAdp = new SqlDataAdapter(objcomando);
+                DataTable drlista = new DataTable();
+                objAdp.Fill(drlista);
+                dgtipo.DataSource = drlista;
+            }
+            catch
+            {
+                MessageBox.Show("Deu erro!");
+            }
+        }
+
         private void consultipoveic_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'sGBDDataSet.tpveiculos'. Você pode movê-la ou removê-la conforme necessário.
-            this.tpveiculosTableAdapter.Fill(this.sGBDDataSet.tpveiculos);
-            // TODO: esta linha de código carrega dados na tabela 'sGBDDataSet.usuario'. Você pode movê-la ou removê-la conforme necessário.
-            this.usuarioTableAdapter.Fill(this.sGBDDataSet.usuario);
+            listaGrid();
+        }
 
+        private void TODOS_Click(object sender, EventArgs e)
+        {
+            listaGrid();
+        }
+
+        private void ok1_Click(object sender, EventArgs e)
+        {
+            if (nome.Text == "")
+            {
+                MessageBox.Show("Preencha o Campo!");
+                nome.Focus();
+            }
+            else
+            {
+                listaGrid2();
+            }
+            
         }
     }
 }
