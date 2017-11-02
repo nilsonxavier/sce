@@ -504,6 +504,7 @@ namespace SCE
                 string v = "";
                 string t = "";
                 string q = "";
+                String k = "";
                 conn.Open();
                 //puxando dados tipo de veiculos
                 comando.CommandText = "select * from registro where codigo='" + cod.Text + "'";
@@ -545,13 +546,28 @@ namespace SCE
                         excluir.Enabled = false;
                         fatura.Enabled = true;
                         saida.Enabled = false;
+                        conn.Close();
+                        conn.Open();
+                        //puxando dados tipo de veiculos
+                        comando.CommandText = "select * from conf where codigo= 1";
+                        dr = comando.ExecuteReader();
+                        if (dr.HasRows)
+                        {
+                            while (dr.Read())
+                            {
+
+                                x = dr[3].ToString();
+                                k = x;
+                            }
+                        }
+
                         // calculando as horas
                         var dtsaida = xtrsaida.Subtract(xtrentrada).TotalHours;
                         // Convertendo a exibição dos calculos das horas
                         Double dtsaida2 = Convert.ToDouble(dtsaida);
                         tt.Text = String.Format("{0:n}", dtsaida2);
                         //calculando os valores
-                        Double valor_estacionamento = 5.50;
+                        Double valor_estacionamento = Convert.ToDouble(k);
                         Double total_hora = Convert.ToDouble(tt.Text);
                         // Convertendo a exibição dos valores
                         Double total2 = total_hora * valor_estacionamento;

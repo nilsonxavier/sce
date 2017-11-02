@@ -27,14 +27,12 @@ namespace SCE
 
         private void Gravar_Click(object sender, EventArgs e)
         {
-            String z = "";
+            
             conn.Open();
-            var x = valor.Text;
-            Double y = Convert.ToDouble(x);
-            z = String.Format("{0:n}", y);
-
             comando.CommandText = "update conf set vaga ='" + vaga.Text + "'where codigo = 1";
-            comando.CommandText = "update conf set valor ='" + z + "'where codigo = 1";
+            comando.ExecuteNonQuery();
+
+            comando.CommandText = "update conf set valor ='" + valor.Text + "'where codigo = 1";
             comando.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("Salvo Com Sucesso!");
@@ -55,7 +53,7 @@ namespace SCE
                 {
                     x = dr[1].ToString();
                     vaga.Text = x;
-                     v = dr[3].ToString();
+                    v = dr[3].ToString();
                     valor.Text =v;
                 }
                 
