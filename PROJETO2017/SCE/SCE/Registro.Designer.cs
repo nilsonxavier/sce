@@ -49,6 +49,8 @@ namespace SCE
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tt = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.fatura = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.saida = new System.Windows.Forms.Button();
@@ -234,6 +236,8 @@ namespace SCE
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.tt);
+            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.fatura);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.saida);
@@ -265,6 +269,23 @@ namespace SCE
             this.panel1.Size = new System.Drawing.Size(877, 226);
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // tt
+            // 
+            this.tt.AutoSize = true;
+            this.tt.Location = new System.Drawing.Point(552, 72);
+            this.tt.Name = "tt";
+            this.tt.Size = new System.Drawing.Size(0, 13);
+            this.tt.TabIndex = 32;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(485, 72);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(61, 13);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Total  hora:";
             // 
             // fatura
             // 
@@ -326,7 +347,7 @@ namespace SCE
             this.total.Location = new System.Drawing.Point(378, 94);
             this.total.Name = "total";
             this.total.Size = new System.Drawing.Size(100, 20);
-            this.total.TabIndex = 27;
+            this.total.TabIndex = 24;
             this.total.TextChanged += new System.EventHandler(this.total_TextChanged);
             // 
             // label11
@@ -544,5 +565,7 @@ namespace SCE
         private System.Windows.Forms.TextBox horasaida;
         private System.Windows.Forms.TextBox datasaida;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label tt;
+        private System.Windows.Forms.Label label15;
     }
 }
