@@ -26,11 +26,20 @@ namespace SCE
             InitializeComponent();
             this.Text = "Login SCE";
             nome.Select();   // iniciar com o foco no nome.
+   
         }
         
         private void login_Load(object sender, EventArgs e)
         {
             comando.Connection = conn;
+        }
+
+        private void KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) // aqui ele reconhece que foi apertado o ENTER, isso sei que está funcionando
+            {
+                entrar_Click(sender, e);
+            }
         }
 
         private void entrar_Click(object sender, EventArgs e){
@@ -81,7 +90,5 @@ namespace SCE
             nome.Text = String.Empty;
             senha.Text = String.Empty;
         }
-
     }
-
 }
