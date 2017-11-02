@@ -401,7 +401,7 @@ namespace SCE
                         dataEntrada.Text = t;
                         q = dr[6].ToString();
                         horaentrada.Text = q;
-                        
+
                         cod.Enabled = false;
                         placaCarro.Enabled = false;
                         comboBox2.Enabled = false;
@@ -426,13 +426,14 @@ namespace SCE
                         var dtsaida = xtrsaida.Subtract(xtrentrada).TotalHours;
                         // Convertendo a exibição dos calculos das horas
                         Double dtsaida2 = Convert.ToDouble(dtsaida);
-                        tt.Text = Convert.ToString(dtsaida2);
+                        tt.Text = String.Format("{0:n}", dtsaida2);
                         //calculando os valores
                         Double valor_estacionamento = 5.50;
-                         Double total_hora = Convert.ToDouble(tt.Text);
-                         // Convertendo a exibição dos valores
-                         Double total2 = total_hora * valor_estacionamento;
-                         total.Text = Convert.ToString(total2).SequenceEqual('0.00');
+                        Double total_hora = Convert.ToDouble(tt.Text);
+                        // Convertendo a exibição dos valores
+                        Double total2 = total_hora * valor_estacionamento;
+                        total.Text = Convert.ToString(total2);
+                        total.Text = String.Format("{0:n}", total2);
                     }
 
                 }
