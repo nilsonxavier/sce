@@ -130,11 +130,133 @@ namespace SCE
         {
 
         }
+        private void listbbox() {
+            conn.Open();
+            //puxando dados tipo de veiculos
+            comando.CommandText = "select codigo,tipo from tpveiculos";
+            dr = comando.ExecuteReader();
+            DataTable table = new DataTable();
+            table.Load(dr);
+            DataRow row = table.NewRow();
+            row["tipo"] = "";
+            table.Rows.InsertAt(row, 0);
+            this.ptipo.DataSource = table;
+            this.ptipo.ValueMember = "tipo";
+            conn.Close();
 
+
+        }
         private void listaGrid()
         {
             string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
             string strsql = "select Codigo as 'Codigo', placa as 'Placa Veiculo',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada',datasaida as 'Data Saida',horasaida as 'Hora Saida',valor as 'Valor do Estacionamento',valorpago as 'Valor Faturado' from registro";
+            SqlConnection objconnect = null;
+            SqlCommand objcomando = null;
+            objconnect = new SqlConnection(_strconn);
+            objcomando = new SqlCommand(strsql, objconnect);
+
+            try
+            {
+                SqlDataAdapter objAdp = new SqlDataAdapter(objcomando);
+                DataTable drlista = new DataTable();
+                objAdp.Fill(drlista);
+                dgregistro.DataSource = drlista;
+            }
+            catch
+            {
+                MessageBox.Show("Deu erro!");
+            }
+        }
+        private void listaGrid2()
+        {
+            string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
+            string strsql = "select Codigo as 'Codigo', placa as 'Placa Veiculo',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada',datasaida as 'Data Saida',horasaida as 'Hora Saida',valor as 'Valor do Estacionamento',valorpago as 'Valor Faturado' from registro where valorpago is null";
+            SqlConnection objconnect = null;
+            SqlCommand objcomando = null;
+            objconnect = new SqlConnection(_strconn);
+            objcomando = new SqlCommand(strsql, objconnect);
+
+            try
+            {
+                SqlDataAdapter objAdp = new SqlDataAdapter(objcomando);
+                DataTable drlista = new DataTable();
+                objAdp.Fill(drlista);
+                dgregistro.DataSource = drlista;
+            }
+            catch
+            {
+                MessageBox.Show("Deu erro!");
+            }
+        }
+        private void listaGrid3()
+        {
+            string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
+            string strsql = "select Codigo as 'Codigo', placa as 'Placa Veiculo',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada',datasaida as 'Data Saida',horasaida as 'Hora Saida',valor as 'Valor do Estacionamento',valorpago as 'Valor Faturado' from registro where valorpago is not null";
+            SqlConnection objconnect = null;
+            SqlCommand objcomando = null;
+            objconnect = new SqlConnection(_strconn);
+            objcomando = new SqlCommand(strsql, objconnect);
+
+            try
+            {
+                SqlDataAdapter objAdp = new SqlDataAdapter(objcomando);
+                DataTable drlista = new DataTable();
+                objAdp.Fill(drlista);
+                dgregistro.DataSource = drlista;
+            }
+            catch
+            {
+                MessageBox.Show("Deu erro!");
+            }
+        }
+        private void listaGrid4()
+        {
+            string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
+            string strsql = "select Codigo as 'Codigo', placa as 'Placa Veiculo',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada',datasaida as 'Data Saida',horasaida as 'Hora Saida',valor as 'Valor do Estacionamento',valorpago as 'Valor Faturado' from registro where Codigo='"+pcodigo.Text+"'";
+            SqlConnection objconnect = null;
+            SqlCommand objcomando = null;
+            objconnect = new SqlConnection(_strconn);
+            objcomando = new SqlCommand(strsql, objconnect);
+
+            try
+            {
+                SqlDataAdapter objAdp = new SqlDataAdapter(objcomando);
+                DataTable drlista = new DataTable();
+                objAdp.Fill(drlista);
+                dgregistro.DataSource = drlista;
+            }
+            catch
+            {
+                MessageBox.Show("Deu erro!");
+            }
+        }
+
+        private void listaGrid5()
+        {
+            string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
+            string strsql = "select Codigo as 'Codigo', placa as 'Placa Veiculo',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada',datasaida as 'Data Saida',horasaida as 'Hora Saida',valor as 'Valor do Estacionamento',valorpago as 'Valor Faturado' from registro where placa='" + pplaca.Text + "'";
+            SqlConnection objconnect = null;
+            SqlCommand objcomando = null;
+            objconnect = new SqlConnection(_strconn);
+            objcomando = new SqlCommand(strsql, objconnect);
+
+            try
+            {
+                SqlDataAdapter objAdp = new SqlDataAdapter(objcomando);
+                DataTable drlista = new DataTable();
+                objAdp.Fill(drlista);
+                dgregistro.DataSource = drlista;
+            }
+            catch
+            {
+                MessageBox.Show("Deu erro!");
+            }
+        }
+
+        private void listaGrid6()
+        {
+            string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
+            string strsql = "select Codigo as 'Codigo', placa as 'Placa Veiculo',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada',datasaida as 'Data Saida',horasaida as 'Hora Saida',valor as 'Valor do Estacionamento',valorpago as 'Valor Faturado' from registro where tpveiculos='" + ptipo.Text + "'";
             SqlConnection objconnect = null;
             SqlCommand objcomando = null;
             objconnect = new SqlConnection(_strconn);
@@ -230,6 +352,7 @@ namespace SCE
 
         private void cancelar_Click(object sender, EventArgs e)
         {
+            fatura.Enabled = false;
             cod.Enabled = true;
             cod.Text = String.Empty;
             placaCarro.Enabled = false;
@@ -548,6 +671,36 @@ namespace SCE
         private void total_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void todos_Click(object sender, EventArgs e)
+        {
+            listaGrid();
+        }
+
+        private void Aberto_Click(object sender, EventArgs e)
+        {
+            listaGrid2();
+        }
+        
+        private void fechado_Click(object sender, EventArgs e)
+        {
+            listaGrid3();
+        }
+
+        private void busccodigo_Click(object sender, EventArgs e)
+        {
+            listaGrid4();
+        }
+
+        private void buscplaca_Click(object sender, EventArgs e)
+        {
+            listaGrid5();
+        }
+
+        private void busctipo_Click(object sender, EventArgs e)
+        {
+            listaGrid6();
         }
     }
     } 
