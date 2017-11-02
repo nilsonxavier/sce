@@ -45,6 +45,8 @@
             this.gravar = new System.Windows.Forms.Button();
             this.novo = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.valor = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,27 +96,29 @@
             // consultarTiposDeVeiculosToolStripMenuItem
             // 
             this.consultarTiposDeVeiculosToolStripMenuItem.Name = "consultarTiposDeVeiculosToolStripMenuItem";
-            this.consultarTiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.consultarTiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.consultarTiposDeVeiculosToolStripMenuItem.Text = "Consultar Tipo de Veiculos";
             this.consultarTiposDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.consultarTiposDeVeiculosToolStripMenuItem_Click);
             // 
             // voltarToolStripMenuItem
             // 
             this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
-            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.voltarToolStripMenuItem.Text = "Voltar";
             this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.valor);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.tipo);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.codigo);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(0, 111);
+            this.panel1.Location = new System.Drawing.Point(12, 111);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(330, 79);
+            this.panel1.Size = new System.Drawing.Size(330, 108);
             this.panel1.TabIndex = 4;
             // 
             // tipo
@@ -153,7 +157,7 @@
             // fechar
             // 
             this.fechar.Image = global::SCE.Properties.Resources.saida;
-            this.fechar.Location = new System.Drawing.Point(248, 207);
+            this.fechar.Location = new System.Drawing.Point(251, 238);
             this.fechar.Name = "fechar";
             this.fechar.Size = new System.Drawing.Size(45, 43);
             this.fechar.TabIndex = 9;
@@ -164,7 +168,7 @@
             // 
             this.excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.excluir.Image = global::SCE.Properties.Resources.Excluir;
-            this.excluir.Location = new System.Drawing.Point(197, 208);
+            this.excluir.Location = new System.Drawing.Point(200, 239);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(45, 43);
             this.excluir.TabIndex = 8;
@@ -174,7 +178,7 @@
             // cancelar
             // 
             this.cancelar.Image = global::SCE.Properties.Resources.cancelar;
-            this.cancelar.Location = new System.Drawing.Point(146, 208);
+            this.cancelar.Location = new System.Drawing.Point(149, 239);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(45, 42);
             this.cancelar.TabIndex = 7;
@@ -184,7 +188,7 @@
             // gravar
             // 
             this.gravar.Image = global::SCE.Properties.Resources.salvar;
-            this.gravar.Location = new System.Drawing.Point(95, 208);
+            this.gravar.Location = new System.Drawing.Point(98, 239);
             this.gravar.Name = "gravar";
             this.gravar.Size = new System.Drawing.Size(45, 43);
             this.gravar.TabIndex = 6;
@@ -194,7 +198,7 @@
             // novo
             // 
             this.novo.Image = global::SCE.Properties.Resources.botão;
-            this.novo.Location = new System.Drawing.Point(44, 208);
+            this.novo.Location = new System.Drawing.Point(47, 239);
             this.novo.Name = "novo";
             this.novo.Size = new System.Drawing.Size(45, 42);
             this.novo.TabIndex = 5;
@@ -211,12 +215,28 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // valor
+            // 
+            this.valor.Location = new System.Drawing.Point(61, 73);
+            this.valor.Name = "valor";
+            this.valor.Size = new System.Drawing.Size(134, 20);
+            this.valor.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 76);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Valor:";
+            // 
             // cadastrotipoveiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(361, 268);
+            this.ClientSize = new System.Drawing.Size(361, 302);
             this.Controls.Add(this.fechar);
             this.Controls.Add(this.excluir);
             this.Controls.Add(this.cancelar);
@@ -261,5 +281,7 @@
         private System.Windows.Forms.Button excluir;
         private System.Windows.Forms.Button fechar;
         private System.Windows.Forms.ToolStripMenuItem consultarTiposDeVeiculosToolStripMenuItem;
+        private System.Windows.Forms.TextBox valor;
+        private System.Windows.Forms.Label label5;
     }
 }

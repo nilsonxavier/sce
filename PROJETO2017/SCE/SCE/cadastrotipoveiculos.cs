@@ -27,6 +27,8 @@ namespace SCE
         private void cadastrotipoveiculos_Load(object sender, EventArgs e)
         {
             comando.Connection = conn;
+            valor.Text = String.Empty;
+            valor.Enabled = false;
             codigo.Enabled = true;
             tipo.Enabled = false;
             novo.Enabled = true;
@@ -47,6 +49,9 @@ namespace SCE
             cancelar.Enabled = true;
             excluir.Enabled = false;
             codigo.Enabled = false;
+            valor.Text = String.Empty;
+            valor.Enabled = true;
+
             tipo.Focus();
         }
 
@@ -64,6 +69,9 @@ namespace SCE
                 tipo.Enabled = false;
                 codigo.Text = String.Empty;
                 tipo.Text = String.Empty;
+                valor.Text = String.Empty;
+                valor.Enabled = false;
+
             }
             else
             {
@@ -77,8 +85,11 @@ namespace SCE
                 tipo.Enabled = false;
                 codigo.Text = String.Empty;
                 tipo.Text = String.Empty;
+                valor.Text = String.Empty;
+                valor.Enabled = false;
+
             }
-                          
+
 
         }
 
@@ -132,16 +143,24 @@ namespace SCE
                 tipo.Focus();
                 return;
             }
+            if (valor.Text == "")
+            {
+                MessageBox.Show("O campo Valor não pode estar Vazio, Erro Ao Salvar!");
+                valor.Focus();
+                return;
+            }
             else
             {
                 conn.Open();
 
-                comando.CommandText = "INSERT INTO tpveiculos (tipo) VALUES ('" + tipo.Text + "')";
+                comando.CommandText = "INSERT INTO tpveiculos (tipo, acrescismo) VALUES ('" + tipo.Text + "','"+ valor.Text+ "')";
                 comando.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Salvo Com Sucesso!");
                 codigo.Text = String.Empty;
                 tipo.Text = String.Empty;
+                valor.Text = String.Empty;
+                valor.Enabled = false;
                 codigo.Enabled = true;
                 tipo.Enabled = false;
                 novo.Enabled = true;
@@ -149,6 +168,9 @@ namespace SCE
                 cancelar.Enabled = false;
                 excluir.Enabled = true;
                 
+
+
+
             }
         }
 
