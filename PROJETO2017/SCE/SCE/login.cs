@@ -25,6 +25,7 @@ namespace SCE
         {
             InitializeComponent();
             this.Text = "Login SCE";
+            nome.Select();   // iniciar com o foco no nome.
         }
         
         private void login_Load(object sender, EventArgs e)
