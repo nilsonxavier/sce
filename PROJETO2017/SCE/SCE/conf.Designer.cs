@@ -36,6 +36,8 @@
             this.Gravar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.vaga = new System.Windows.Forms.TextBox();
+            this.valor = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sgbdDataSet1)).BeginInit();
@@ -85,7 +87,7 @@
             // 
             // Gravar
             // 
-            this.Gravar.Location = new System.Drawing.Point(124, 193);
+            this.Gravar.Location = new System.Drawing.Point(126, 259);
             this.Gravar.Name = "Gravar";
             this.Gravar.Size = new System.Drawing.Size(75, 23);
             this.Gravar.TabIndex = 17;
@@ -109,12 +111,30 @@
             this.vaga.Size = new System.Drawing.Size(137, 20);
             this.vaga.TabIndex = 19;
             // 
+            // valor
+            // 
+            this.valor.Location = new System.Drawing.Point(37, 210);
+            this.valor.Name = "valor";
+            this.valor.Size = new System.Drawing.Size(102, 20);
+            this.valor.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(34, 184);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Valor da Hora:";
+            // 
             // conf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(348, 262);
+            this.ClientSize = new System.Drawing.Size(348, 288);
+            this.Controls.Add(this.valor);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.vaga);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Gravar);
@@ -143,5 +163,7 @@
         private System.Windows.Forms.Button Gravar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox vaga;
+        private System.Windows.Forms.TextBox valor;
+        private System.Windows.Forms.Label label3;
     }
 }
