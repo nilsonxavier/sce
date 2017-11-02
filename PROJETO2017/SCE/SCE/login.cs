@@ -38,7 +38,9 @@ namespace SCE
         {
             if (e.KeyCode == Keys.Enter) // aqui ele reconhece que foi apertado o ENTER, isso sei que está funcionando
             {
+
                 entrar_Click(sender, e);
+
             }
         }
 
