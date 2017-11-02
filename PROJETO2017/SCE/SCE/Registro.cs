@@ -262,6 +262,7 @@ namespace SCE
             total.Text = String.Empty;
             valorpago.Enabled = false;
             valorpago.Text = String.Empty;
+            saida.Enabled = true;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -410,6 +411,8 @@ namespace SCE
                         horaentrada.Enabled = false;
                         datasaida.Text = DateTime.Now.ToString("dd/MM/yyyy");
                         horasaida.Text = DateTime.Now.ToString("HH:mm:ss");
+                        var xtrsaida = Convert.ToDateTime(horasaida.Text);
+                        var xtrentrada = Convert.ToDateTime(horaentrada.Text);
                         datasaida.Enabled = false;
                         horasaida.Enabled = false;
                         total.Enabled = true;
@@ -419,6 +422,18 @@ namespace SCE
                         excluir.Enabled = false;
                         fatura.Enabled = true;
                         saida.Enabled = false;
+                        // calculando as horas
+                        var dtsaida = xtrsaida.Subtract(xtrentrada).TotalHours;
+                        // Convertendo a exibição dos calculos das horas
+                        Double dtsaida2 = Convert.ToDouble(dtsaida);
+                        tt.Text = String.Format("{0:n}", dtsaida2);
+                        //calculando os valores
+                        Double valor_estacionamento = 5.50;
+                        Double total_hora = Convert.ToDouble(tt.Text);
+                        // Convertendo a exibição dos valores
+                        Double total2 = total_hora * valor_estacionamento;
+                        total.Text = Convert.ToString(total2);
+                        total.Text = String.Format("{0:n}", total2);
                     }
 
                 }

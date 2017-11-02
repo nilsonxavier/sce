@@ -65,7 +65,6 @@ C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.ConsCliente.
 C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.consultarcor.resources
 C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.consultipoveic.resources
 C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.consusuario.resources
-C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.Entradav.resources
 C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.login.resources
 C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.menu.resources
 C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.Properties.Resources.resources
@@ -164,3 +163,14 @@ C:\Users\wisley\Source\Repos\sce5\PROJETO2017\SCE\SCE\obj\Debug\SCE.exe
 C:\Users\wisley\Source\Repos\sce5\PROJETO2017\SCE\SCE\obj\Debug\SCE.pdb
 C:\Users\wisley\Source\Repos\sce2\PROJETO2017\SCE\SCE\obj\Debug\SCE.caixa.resources
 C:\Users\wisley\Source\Repos\sce2\PROJETO2017\SCE\SCE\obj\Debug\SCE.csproj.CoreCompileInputs.cache
+C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\bin\Debug\SCE.exe.config
+C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\bin\Debug\SCE.exe.manifest
+C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\bin\Debug\SCE.application
+C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\bin\Debug\SCE.exe
+C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\bin\Debug\SCE.pdb
+C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.caixa.resources
+C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.constamanho.resources
+C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.saida.resources
+C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.TrustInfo.xml
+C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.exe.manifest
+C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.application
