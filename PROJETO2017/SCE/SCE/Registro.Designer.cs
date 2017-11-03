@@ -294,7 +294,7 @@ namespace SCE
             this.panel2.Controls.Add(this.pplaca);
             this.panel2.Location = new System.Drawing.Point(3, 207);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1122, 305);
+            this.panel2.Size = new System.Drawing.Size(1122, 292);
             this.panel2.TabIndex = 0;
             // 
             // label17
@@ -484,12 +484,12 @@ namespace SCE
             // 
             this.dgregistro.AllowUserToAddRows = false;
             this.dgregistro.AllowUserToDeleteRows = false;
-            this.dgregistro.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgregistro.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgregistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgregistro.Location = new System.Drawing.Point(3, 53);
             this.dgregistro.Name = "dgregistro";
             this.dgregistro.ReadOnly = true;
-            this.dgregistro.Size = new System.Drawing.Size(1114, 252);
+            this.dgregistro.Size = new System.Drawing.Size(1114, 239);
             this.dgregistro.TabIndex = 25;
             this.dgregistro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgregistro_CellContentClick);
             // 
