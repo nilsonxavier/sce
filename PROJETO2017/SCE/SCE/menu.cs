@@ -13,6 +13,8 @@ namespace SCE
 {
     public partial class menu : Form
     {
+        
+
         //string de Conexão
         // conexao online azure
         SqlConnection conn = new SqlConnection("Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264");
@@ -80,7 +82,15 @@ namespace SCE
                }
             else
             {
-                Registro frm = new Registro();
+                
+                Registro frm = new Registro()
+                {
+                    TopLevel = false,
+                    FormBorderStyle = FormBorderStyle.None,
+                    Dock = DockStyle.Fill
+                };
+                panel1.Controls.Add(frm);
+                               
                 frm.Show();
             }
             conn.Close();

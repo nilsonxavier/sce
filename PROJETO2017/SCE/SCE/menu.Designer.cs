@@ -63,6 +63,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -98,28 +99,28 @@
             // tiposDeVeiculosToolStripMenuItem
             // 
             this.tiposDeVeiculosToolStripMenuItem.Name = "tiposDeVeiculosToolStripMenuItem";
-            this.tiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.tiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.tiposDeVeiculosToolStripMenuItem.Text = "Tipos de Veiculos";
             this.tiposDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeVeiculosToolStripMenuItem_Click);
             // 
             // corDeVeiculosToolStripMenuItem
             // 
             this.corDeVeiculosToolStripMenuItem.Name = "corDeVeiculosToolStripMenuItem";
-            this.corDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.corDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.corDeVeiculosToolStripMenuItem.Text = "Cor de Veiculos";
             this.corDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.corDeVeiculosToolStripMenuItem_Click);
             // 
             // tamanhoVeiculosToolStripMenuItem
             // 
             this.tamanhoVeiculosToolStripMenuItem.Name = "tamanhoVeiculosToolStripMenuItem";
-            this.tamanhoVeiculosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.tamanhoVeiculosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.tamanhoVeiculosToolStripMenuItem.Text = "Tamanho Veiculos";
             this.tamanhoVeiculosToolStripMenuItem.Click += new System.EventHandler(this.tamanhoVeiculosToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
@@ -187,19 +188,19 @@
             // relatorioDeFluxoDeCaixaToolStripMenuItem
             // 
             this.relatorioDeFluxoDeCaixaToolStripMenuItem.Name = "relatorioDeFluxoDeCaixaToolStripMenuItem";
-            this.relatorioDeFluxoDeCaixaToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.relatorioDeFluxoDeCaixaToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.relatorioDeFluxoDeCaixaToolStripMenuItem.Text = "Relatorio de Fluxo de Caixa";
             // 
             // relatorioDeEntradaDeVeiculosToolStripMenuItem
             // 
             this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Name = "relatorioDeEntradaDeVeiculosToolStripMenuItem";
-            this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Text = "Relatorio de Entrada de Veiculos";
             // 
             // relatorioDeSaidaDeVeiculosToolStripMenuItem
             // 
             this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Name = "relatorioDeSaidaDeVeiculosToolStripMenuItem";
-            this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
             this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Text = "Relatorio de Saida de Veiculos";
             // 
             // utilitariosToolStripMenuItem
@@ -373,12 +374,21 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Location = new System.Drawing.Point(169, 117);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1129, 484);
+            this.panel1.TabIndex = 15;
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1264, 695);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -446,5 +456,6 @@
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuraçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tamanhoVeiculosToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }

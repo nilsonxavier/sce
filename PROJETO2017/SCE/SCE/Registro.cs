@@ -718,5 +718,15 @@ namespace SCE
         {
             listaGrid6();
         }
+
+        private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
     } 

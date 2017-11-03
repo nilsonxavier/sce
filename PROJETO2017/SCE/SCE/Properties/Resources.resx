@@ -124,40 +124,43 @@
   <data name="salvar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salvar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="saida" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ok2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ok2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cars-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cars-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="system-database-add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\system-database-add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="marca registrada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marca registrada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botão" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botão.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logomarca sistema" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logomarca sistema.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="marca registrada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\marca registrada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logomarca equipe2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logomarca equipe2.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botão" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botão.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cars-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cars-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="caixa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\caixa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Excluir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Excluir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ok2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ok2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Excluir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Excluir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="saida" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
