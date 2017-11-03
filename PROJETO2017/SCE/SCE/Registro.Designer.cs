@@ -92,7 +92,7 @@ namespace SCE
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(106, 70);
+            this.comboBox2.Location = new System.Drawing.Point(99, 82);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 16;
@@ -101,7 +101,7 @@ namespace SCE
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(106, 124);
+            this.comboBox3.Location = new System.Drawing.Point(99, 136);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 18;
@@ -109,7 +109,7 @@ namespace SCE
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(106, 97);
+            this.comboBox4.Location = new System.Drawing.Point(99, 109);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
             this.comboBox4.TabIndex = 17;
@@ -117,7 +117,7 @@ namespace SCE
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 25);
+            this.label1.Location = new System.Drawing.Point(53, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 4;
@@ -127,7 +127,7 @@ namespace SCE
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(66, 51);
+            this.label2.Location = new System.Drawing.Point(59, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 5;
@@ -136,7 +136,7 @@ namespace SCE
             // 
             // placaCarro
             // 
-            this.placaCarro.Location = new System.Drawing.Point(106, 44);
+            this.placaCarro.Location = new System.Drawing.Point(99, 56);
             this.placaCarro.Name = "placaCarro";
             this.placaCarro.Size = new System.Drawing.Size(100, 20);
             this.placaCarro.TabIndex = 15;
@@ -145,7 +145,7 @@ namespace SCE
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 78);
+            this.label3.Location = new System.Drawing.Point(27, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 7;
@@ -155,7 +155,7 @@ namespace SCE
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 105);
+            this.label4.Location = new System.Drawing.Point(41, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 8;
@@ -164,7 +164,7 @@ namespace SCE
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(77, 132);
+            this.label5.Location = new System.Drawing.Point(70, 144);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(23, 13);
             this.label5.TabIndex = 9;
@@ -173,7 +173,7 @@ namespace SCE
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 153);
+            this.label6.Location = new System.Drawing.Point(8, 165);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 10;
@@ -181,14 +181,14 @@ namespace SCE
             // 
             // dataEntrada
             // 
-            this.dataEntrada.Location = new System.Drawing.Point(106, 150);
+            this.dataEntrada.Location = new System.Drawing.Point(99, 162);
             this.dataEntrada.Name = "dataEntrada";
             this.dataEntrada.Size = new System.Drawing.Size(82, 20);
             this.dataEntrada.TabIndex = 19;
             // 
             // horaentrada
             // 
-            this.horaentrada.Location = new System.Drawing.Point(271, 150);
+            this.horaentrada.Location = new System.Drawing.Point(264, 162);
             this.horaentrada.Name = "horaentrada";
             this.horaentrada.Size = new System.Drawing.Size(83, 20);
             this.horaentrada.TabIndex = 20;
@@ -196,7 +196,7 @@ namespace SCE
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(195, 150);
+            this.label7.Location = new System.Drawing.Point(188, 162);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 13);
             this.label7.TabIndex = 13;
@@ -204,7 +204,7 @@ namespace SCE
             // 
             // cod
             // 
-            this.cod.Location = new System.Drawing.Point(106, 18);
+            this.cod.Location = new System.Drawing.Point(99, 30);
             this.cod.Name = "cod";
             this.cod.Size = new System.Drawing.Size(68, 20);
             this.cod.TabIndex = 14;
@@ -259,16 +259,16 @@ namespace SCE
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1136, 491);
+            this.panel1.Size = new System.Drawing.Size(1136, 515);
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::SCE.Properties.Resources.fechar;
-            this.pictureBox3.Location = new System.Drawing.Point(1073, 17);
+            this.pictureBox3.Location = new System.Drawing.Point(1066, 29);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(47, 47);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -292,7 +292,7 @@ namespace SCE
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.buscplaca);
             this.panel2.Controls.Add(this.pplaca);
-            this.panel2.Location = new System.Drawing.Point(3, 176);
+            this.panel2.Location = new System.Drawing.Point(3, 207);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1122, 305);
             this.panel2.TabIndex = 0;
@@ -310,7 +310,7 @@ namespace SCE
             // tt
             // 
             this.tt.AutoSize = true;
-            this.tt.Location = new System.Drawing.Point(569, 51);
+            this.tt.Location = new System.Drawing.Point(562, 63);
             this.tt.Name = "tt";
             this.tt.Size = new System.Drawing.Size(0, 13);
             this.tt.TabIndex = 32;
@@ -318,7 +318,7 @@ namespace SCE
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(502, 51);
+            this.label15.Location = new System.Drawing.Point(495, 63);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(61, 13);
             this.label15.TabIndex = 31;
@@ -326,7 +326,7 @@ namespace SCE
             // 
             // fatura
             // 
-            this.fatura.Location = new System.Drawing.Point(501, 71);
+            this.fatura.Location = new System.Drawing.Point(494, 83);
             this.fatura.Name = "fatura";
             this.fatura.Size = new System.Drawing.Size(65, 23);
             this.fatura.TabIndex = 27;
@@ -337,7 +337,7 @@ namespace SCE
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(321, 106);
+            this.label14.Location = new System.Drawing.Point(314, 118);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 13);
             this.label14.TabIndex = 29;
@@ -345,7 +345,7 @@ namespace SCE
             // 
             // saida
             // 
-            this.saida.Location = new System.Drawing.Point(183, 16);
+            this.saida.Location = new System.Drawing.Point(176, 28);
             this.saida.Name = "saida";
             this.saida.Size = new System.Drawing.Size(106, 23);
             this.saida.TabIndex = 26;
@@ -355,7 +355,7 @@ namespace SCE
             // 
             // valorpago
             // 
-            this.valorpago.Location = new System.Drawing.Point(395, 103);
+            this.valorpago.Location = new System.Drawing.Point(388, 115);
             this.valorpago.Name = "valorpago";
             this.valorpago.Size = new System.Drawing.Size(100, 20);
             this.valorpago.TabIndex = 30;
@@ -364,7 +364,7 @@ namespace SCE
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(93, 0);
+            this.label13.Location = new System.Drawing.Point(86, 12);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(95, 13);
             this.label13.TabIndex = 28;
@@ -373,7 +373,7 @@ namespace SCE
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(349, 76);
+            this.label12.Location = new System.Drawing.Point(342, 88);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 26;
@@ -381,7 +381,7 @@ namespace SCE
             // 
             // total
             // 
-            this.total.Location = new System.Drawing.Point(395, 73);
+            this.total.Location = new System.Drawing.Point(388, 85);
             this.total.Name = "total";
             this.total.Size = new System.Drawing.Size(100, 20);
             this.total.TabIndex = 24;
@@ -390,7 +390,7 @@ namespace SCE
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(392, 0);
+            this.label11.Location = new System.Drawing.Point(385, 12);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(85, 13);
             this.label11.TabIndex = 25;
@@ -399,7 +399,7 @@ namespace SCE
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(320, 50);
+            this.label8.Location = new System.Drawing.Point(313, 62);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 13);
             this.label8.TabIndex = 22;
@@ -407,7 +407,7 @@ namespace SCE
             // 
             // horasaida
             // 
-            this.horasaida.Location = new System.Drawing.Point(396, 47);
+            this.horasaida.Location = new System.Drawing.Point(389, 59);
             this.horasaida.Name = "horasaida";
             this.horasaida.Size = new System.Drawing.Size(100, 20);
             this.horasaida.TabIndex = 24;
@@ -416,7 +416,7 @@ namespace SCE
             // fechar
             // 
             this.fechar.Image = global::SCE.Properties.Resources.saida;
-            this.fechar.Location = new System.Drawing.Point(833, 15);
+            this.fechar.Location = new System.Drawing.Point(826, 27);
             this.fechar.Name = "fechar";
             this.fechar.Size = new System.Drawing.Size(45, 43);
             this.fechar.TabIndex = 24;
@@ -425,7 +425,7 @@ namespace SCE
             // 
             // datasaida
             // 
-            this.datasaida.Location = new System.Drawing.Point(396, 21);
+            this.datasaida.Location = new System.Drawing.Point(389, 33);
             this.datasaida.Name = "datasaida";
             this.datasaida.Size = new System.Drawing.Size(100, 20);
             this.datasaida.TabIndex = 23;
@@ -434,7 +434,7 @@ namespace SCE
             // 
             this.excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.excluir.Image = global::SCE.Properties.Resources.Excluir;
-            this.excluir.Location = new System.Drawing.Point(782, 15);
+            this.excluir.Location = new System.Drawing.Point(775, 27);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(45, 43);
             this.excluir.TabIndex = 23;
@@ -444,7 +444,7 @@ namespace SCE
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(305, 24);
+            this.label10.Location = new System.Drawing.Point(298, 36);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(75, 13);
             this.label10.TabIndex = 21;
@@ -453,7 +453,7 @@ namespace SCE
             // cancelar
             // 
             this.cancelar.Image = global::SCE.Properties.Resources.cancelar;
-            this.cancelar.Location = new System.Drawing.Point(731, 16);
+            this.cancelar.Location = new System.Drawing.Point(724, 28);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(45, 42);
             this.cancelar.TabIndex = 22;
@@ -463,7 +463,7 @@ namespace SCE
             // gravar
             // 
             this.gravar.Image = global::SCE.Properties.Resources.salvar;
-            this.gravar.Location = new System.Drawing.Point(680, 16);
+            this.gravar.Location = new System.Drawing.Point(673, 28);
             this.gravar.Name = "gravar";
             this.gravar.Size = new System.Drawing.Size(45, 43);
             this.gravar.TabIndex = 21;
@@ -473,7 +473,7 @@ namespace SCE
             // novo
             // 
             this.novo.Image = global::SCE.Properties.Resources.botão;
-            this.novo.Location = new System.Drawing.Point(629, 16);
+            this.novo.Location = new System.Drawing.Point(622, 28);
             this.novo.Name = "novo";
             this.novo.Size = new System.Drawing.Size(45, 43);
             this.novo.TabIndex = 20;
