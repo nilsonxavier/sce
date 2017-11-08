@@ -18,6 +18,7 @@ namespace SCE
         // SqlConnection conn = new SqlConnection("Data Source=wisley-pc;Initial Catalog=SGBD;Persist Security Info=True;User ID=sa;Password=123;");
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
+
         public cadastrotipoveiculos()
         {
             InitializeComponent();
