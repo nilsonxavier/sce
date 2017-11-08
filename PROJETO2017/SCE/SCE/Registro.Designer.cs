@@ -48,6 +48,19 @@ namespace SCE
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgregistro = new System.Windows.Forms.DataGridView();
+            this.ptipo = new System.Windows.Forms.ComboBox();
+            this.todos = new System.Windows.Forms.Button();
+            this.kkk = new System.Windows.Forms.Label();
+            this.fechado = new System.Windows.Forms.Button();
+            this.busccodigo = new System.Windows.Forms.Button();
+            this.Aberto = new System.Windows.Forms.Button();
+            this.pcodigo = new System.Windows.Forms.TextBox();
+            this.busctipo = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.buscplaca = new System.Windows.Forms.Button();
+            this.pplaca = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.tt = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -68,19 +81,6 @@ namespace SCE
             this.cancelar = new System.Windows.Forms.Button();
             this.gravar = new System.Windows.Forms.Button();
             this.novo = new System.Windows.Forms.Button();
-            this.dgregistro = new System.Windows.Forms.DataGridView();
-            this.kkk = new System.Windows.Forms.Label();
-            this.busccodigo = new System.Windows.Forms.Button();
-            this.pcodigo = new System.Windows.Forms.TextBox();
-            this.pplaca = new System.Windows.Forms.TextBox();
-            this.buscplaca = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.busctipo = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.Aberto = new System.Windows.Forms.Button();
-            this.fechado = new System.Windows.Forms.Button();
-            this.todos = new System.Windows.Forms.Button();
-            this.ptipo = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -222,6 +222,9 @@ namespace SCE
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.panel2);
@@ -278,6 +281,9 @@ namespace SCE
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.dgregistro);
             this.panel2.Controls.Add(this.ptipo);
@@ -296,6 +302,131 @@ namespace SCE
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1122, 292);
             this.panel2.TabIndex = 0;
+            // 
+            // dgregistro
+            // 
+            this.dgregistro.AllowUserToAddRows = false;
+            this.dgregistro.AllowUserToDeleteRows = false;
+            this.dgregistro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgregistro.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgregistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgregistro.Location = new System.Drawing.Point(3, 53);
+            this.dgregistro.Name = "dgregistro";
+            this.dgregistro.ReadOnly = true;
+            this.dgregistro.Size = new System.Drawing.Size(1114, 239);
+            this.dgregistro.TabIndex = 25;
+            this.dgregistro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgregistro_CellContentClick);
+            // 
+            // ptipo
+            // 
+            this.ptipo.FormattingEnabled = true;
+            this.ptipo.Location = new System.Drawing.Point(325, 24);
+            this.ptipo.Name = "ptipo";
+            this.ptipo.Size = new System.Drawing.Size(149, 21);
+            this.ptipo.TabIndex = 39;
+            // 
+            // todos
+            // 
+            this.todos.Location = new System.Drawing.Point(719, 22);
+            this.todos.Name = "todos";
+            this.todos.Size = new System.Drawing.Size(75, 23);
+            this.todos.TabIndex = 38;
+            this.todos.Text = "Todos";
+            this.todos.UseVisualStyleBackColor = true;
+            this.todos.Click += new System.EventHandler(this.todos_Click);
+            // 
+            // kkk
+            // 
+            this.kkk.AutoSize = true;
+            this.kkk.Location = new System.Drawing.Point(17, 11);
+            this.kkk.Name = "kkk";
+            this.kkk.Size = new System.Drawing.Size(43, 13);
+            this.kkk.TabIndex = 27;
+            this.kkk.Text = "Codigo:";
+            // 
+            // fechado
+            // 
+            this.fechado.Location = new System.Drawing.Point(638, 22);
+            this.fechado.Name = "fechado";
+            this.fechado.Size = new System.Drawing.Size(75, 23);
+            this.fechado.TabIndex = 37;
+            this.fechado.Text = "Fechado";
+            this.fechado.UseVisualStyleBackColor = true;
+            this.fechado.Click += new System.EventHandler(this.fechado_Click);
+            // 
+            // busccodigo
+            // 
+            this.busccodigo.Location = new System.Drawing.Point(103, 24);
+            this.busccodigo.Name = "busccodigo";
+            this.busccodigo.Size = new System.Drawing.Size(36, 23);
+            this.busccodigo.TabIndex = 28;
+            this.busccodigo.Text = "OK";
+            this.busccodigo.UseVisualStyleBackColor = true;
+            this.busccodigo.Click += new System.EventHandler(this.busccodigo_Click);
+            // 
+            // Aberto
+            // 
+            this.Aberto.Location = new System.Drawing.Point(554, 22);
+            this.Aberto.Name = "Aberto";
+            this.Aberto.Size = new System.Drawing.Size(75, 23);
+            this.Aberto.TabIndex = 36;
+            this.Aberto.Text = "Aberto";
+            this.Aberto.UseVisualStyleBackColor = true;
+            this.Aberto.Click += new System.EventHandler(this.Aberto_Click);
+            // 
+            // pcodigo
+            // 
+            this.pcodigo.Location = new System.Drawing.Point(17, 27);
+            this.pcodigo.Name = "pcodigo";
+            this.pcodigo.Size = new System.Drawing.Size(80, 20);
+            this.pcodigo.TabIndex = 29;
+            // 
+            // busctipo
+            // 
+            this.busctipo.Location = new System.Drawing.Point(484, 22);
+            this.busctipo.Name = "busctipo";
+            this.busctipo.Size = new System.Drawing.Size(31, 23);
+            this.busctipo.TabIndex = 34;
+            this.busctipo.Text = "OK";
+            this.busctipo.UseVisualStyleBackColor = true;
+            this.busctipo.Click += new System.EventHandler(this.busctipo_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(169, 11);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(37, 13);
+            this.label18.TabIndex = 30;
+            this.label18.Text = "Placa:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(321, 11);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(69, 13);
+            this.label19.TabIndex = 33;
+            this.label19.Text = "Tipo Veiculo:";
+            // 
+            // buscplaca
+            // 
+            this.buscplaca.Location = new System.Drawing.Point(279, 24);
+            this.buscplaca.Name = "buscplaca";
+            this.buscplaca.Size = new System.Drawing.Size(38, 23);
+            this.buscplaca.TabIndex = 31;
+            this.buscplaca.Text = "OK";
+            this.buscplaca.UseVisualStyleBackColor = true;
+            this.buscplaca.Click += new System.EventHandler(this.buscplaca_Click);
+            // 
+            // pplaca
+            // 
+            this.pplaca.Location = new System.Drawing.Point(169, 26);
+            this.pplaca.Name = "pplaca";
+            this.pplaca.Size = new System.Drawing.Size(94, 20);
+            this.pplaca.TabIndex = 32;
             // 
             // label17
             // 
@@ -480,128 +611,6 @@ namespace SCE
             this.novo.UseVisualStyleBackColor = true;
             this.novo.Click += new System.EventHandler(this.novo_Click);
             // 
-            // dgregistro
-            // 
-            this.dgregistro.AllowUserToAddRows = false;
-            this.dgregistro.AllowUserToDeleteRows = false;
-            this.dgregistro.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgregistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgregistro.Location = new System.Drawing.Point(3, 53);
-            this.dgregistro.Name = "dgregistro";
-            this.dgregistro.ReadOnly = true;
-            this.dgregistro.Size = new System.Drawing.Size(1114, 239);
-            this.dgregistro.TabIndex = 25;
-            this.dgregistro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgregistro_CellContentClick);
-            // 
-            // kkk
-            // 
-            this.kkk.AutoSize = true;
-            this.kkk.Location = new System.Drawing.Point(17, 11);
-            this.kkk.Name = "kkk";
-            this.kkk.Size = new System.Drawing.Size(43, 13);
-            this.kkk.TabIndex = 27;
-            this.kkk.Text = "Codigo:";
-            // 
-            // busccodigo
-            // 
-            this.busccodigo.Location = new System.Drawing.Point(103, 24);
-            this.busccodigo.Name = "busccodigo";
-            this.busccodigo.Size = new System.Drawing.Size(36, 23);
-            this.busccodigo.TabIndex = 28;
-            this.busccodigo.Text = "OK";
-            this.busccodigo.UseVisualStyleBackColor = true;
-            this.busccodigo.Click += new System.EventHandler(this.busccodigo_Click);
-            // 
-            // pcodigo
-            // 
-            this.pcodigo.Location = new System.Drawing.Point(17, 27);
-            this.pcodigo.Name = "pcodigo";
-            this.pcodigo.Size = new System.Drawing.Size(80, 20);
-            this.pcodigo.TabIndex = 29;
-            // 
-            // pplaca
-            // 
-            this.pplaca.Location = new System.Drawing.Point(169, 26);
-            this.pplaca.Name = "pplaca";
-            this.pplaca.Size = new System.Drawing.Size(94, 20);
-            this.pplaca.TabIndex = 32;
-            // 
-            // buscplaca
-            // 
-            this.buscplaca.Location = new System.Drawing.Point(279, 24);
-            this.buscplaca.Name = "buscplaca";
-            this.buscplaca.Size = new System.Drawing.Size(38, 23);
-            this.buscplaca.TabIndex = 31;
-            this.buscplaca.Text = "OK";
-            this.buscplaca.UseVisualStyleBackColor = true;
-            this.buscplaca.Click += new System.EventHandler(this.buscplaca_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(169, 11);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(37, 13);
-            this.label18.TabIndex = 30;
-            this.label18.Text = "Placa:";
-            // 
-            // busctipo
-            // 
-            this.busctipo.Location = new System.Drawing.Point(484, 22);
-            this.busctipo.Name = "busctipo";
-            this.busctipo.Size = new System.Drawing.Size(31, 23);
-            this.busctipo.TabIndex = 34;
-            this.busctipo.Text = "OK";
-            this.busctipo.UseVisualStyleBackColor = true;
-            this.busctipo.Click += new System.EventHandler(this.busctipo_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(321, 11);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(69, 13);
-            this.label19.TabIndex = 33;
-            this.label19.Text = "Tipo Veiculo:";
-            // 
-            // Aberto
-            // 
-            this.Aberto.Location = new System.Drawing.Point(554, 22);
-            this.Aberto.Name = "Aberto";
-            this.Aberto.Size = new System.Drawing.Size(75, 23);
-            this.Aberto.TabIndex = 36;
-            this.Aberto.Text = "Aberto";
-            this.Aberto.UseVisualStyleBackColor = true;
-            this.Aberto.Click += new System.EventHandler(this.Aberto_Click);
-            // 
-            // fechado
-            // 
-            this.fechado.Location = new System.Drawing.Point(638, 22);
-            this.fechado.Name = "fechado";
-            this.fechado.Size = new System.Drawing.Size(75, 23);
-            this.fechado.TabIndex = 37;
-            this.fechado.Text = "Fechado";
-            this.fechado.UseVisualStyleBackColor = true;
-            this.fechado.Click += new System.EventHandler(this.fechado_Click);
-            // 
-            // todos
-            // 
-            this.todos.Location = new System.Drawing.Point(719, 22);
-            this.todos.Name = "todos";
-            this.todos.Size = new System.Drawing.Size(75, 23);
-            this.todos.TabIndex = 38;
-            this.todos.Text = "Todos";
-            this.todos.UseVisualStyleBackColor = true;
-            this.todos.Click += new System.EventHandler(this.todos_Click);
-            // 
-            // ptipo
-            // 
-            this.ptipo.FormattingEnabled = true;
-            this.ptipo.Location = new System.Drawing.Point(325, 24);
-            this.ptipo.Name = "ptipo";
-            this.ptipo.Size = new System.Drawing.Size(149, 21);
-            this.ptipo.TabIndex = 39;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SCE.Properties.Resources.cars_icon;
@@ -618,7 +627,7 @@ namespace SCE
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1132, 511);
+            this.ClientSize = new System.Drawing.Size(1137, 552);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);

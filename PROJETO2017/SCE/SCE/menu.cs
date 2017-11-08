@@ -62,10 +62,11 @@ namespace SCE
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             String x = "";
             String y = "";
             x = DateTime.Now.ToString("dd/MM/yyyy");
-            
+
             conn.Open();
             comando.CommandText = "select * FROM caixa where datacaixa='" + x + "'";
             dr = comando.ExecuteReader();
@@ -74,26 +75,20 @@ namespace SCE
                 while (dr.Read())
                 {
                     y = dr[2].ToString();
-                    
+
                 }
             }
-            if (y != x) {
+            if (x != y)
+            {
                 MessageBox.Show("Não Existe Caixa Aberto!");
-               }
+            }
             else
             {
-                
-                Registro frm = new Registro()
-                {
-                    TopLevel = false,
-                    FormBorderStyle = FormBorderStyle.None,
-                    Dock = DockStyle.Fill
-                };
-                panel1.Controls.Add(frm);
-                               
+                Registro frm = new Registro();
                 frm.Show();
             }
             conn.Close();
+
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
