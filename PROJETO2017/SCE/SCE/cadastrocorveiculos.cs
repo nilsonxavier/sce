@@ -19,7 +19,6 @@ namespace SCE
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
 
-
         public cadastrocorveiculos()
         {
             InitializeComponent();
@@ -139,10 +138,10 @@ namespace SCE
 
         private void cadastrocorveiculos_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'sGBDDataSet.tpcor'. Você pode movê-la ou removê-la conforme necessário.
-            this.tpcorTableAdapter.Fill(this.sGBDDataSet.tpcor);
-            // TODO: esta linha de código carrega dados na tabela 'sGBDDataSet.tpveiculos'. Você pode movê-la ou removê-la conforme necessário.
-            this.tpveiculosTableAdapter.Fill(this.sGBDDataSet.tpveiculos);
+            //// TODO: esta linha de código carrega dados na tabela 'sGBDDataSet.tpcor'. Você pode movê-la ou removê-la conforme necessário.
+            //this.tpcorTableAdapter.Fill(this.sGBDDataSet.tpcor);
+            //// TODO: esta linha de código carrega dados na tabela 'sGBDDataSet.tpveiculos'. Você pode movê-la ou removê-la conforme necessário.
+            //this.tpveiculosTableAdapter.Fill(this.sGBDDataSet.tpveiculos);
             comando.Connection = conn;
             codigo.Enabled = true;
             cor.Enabled = false;

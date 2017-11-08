@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SCE
 {
@@ -23,17 +24,6 @@ namespace SCE
             frm.Show();
             Visible = false;
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void consultarcor_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'sGBDDataSet.tpcor'. Você pode movê-la ou removê-la conforme necessário.
-            this.tpcorTableAdapter.Fill(this.sGBDDataSet.tpcor);
-
-        }
+        
     }
 }
