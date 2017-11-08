@@ -186,8 +186,10 @@ namespace SCE
 
         private void consultarTiposDeVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            consultipoveic frm = new consultipoveic();
-            frm.Show();
+            var consultipoveic = new consultipoveic();
+            consultipoveic.ShowDialog();
+            //consultipoveic frm = new consultipoveic();
+            //frm.Show();
             Visible = false;
         }
 

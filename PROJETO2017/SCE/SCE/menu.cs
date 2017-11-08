@@ -46,20 +46,26 @@ namespace SCE
 
         private void tiposDeVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadastrotipoveiculos frm = new cadastrotipoveiculos();
-            frm.Show();
+            var cadastrotipoveiculos = new cadastrotipoveiculos();
+            cadastrotipoveiculos.ShowDialog();
+            //cadastrotipoveiculos frm = new cadastrotipoveiculos();
+           // frm.Show();
         }
 
         private void corDeVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadastrocorveiculos frm = new cadastrocorveiculos();
-            frm.Show();
+            var cadastrocorveiculos = new cadastrocorveiculos();
+            cadastrocorveiculos.ShowDialog();
+            //cadastrocorveiculos frm = new cadastrocorveiculos();
+            //frm.Show();
         }
 
         private void tamanhoVeiculoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadtamanho frm = new cadtamanho();
-            frm.Show();
+            var cadtamanho = new cadtamanho();
+            cadtamanho.ShowDialog();
+            //cadtamanho frm = new cadtamanho();
+            //frm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,8 +92,10 @@ namespace SCE
             }
             else
             {
-                Registro frm = new Registro();
-                frm.Show();
+                var Registro = new Registro();
+                Registro.ShowDialog();
+                //Registro frm = new Registro();
+                //frm.Show();
             }
             conn.Close();
 
@@ -95,8 +103,10 @@ namespace SCE
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadcliente frm = new cadcliente();
-            frm.Show();
+            var cadcliente = new cadcliente();
+            cadcliente.ShowDialog();
+            //cadcliente frm = new cadcliente();
+            //frm.Show();
         }
 
         private void utilitariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -106,20 +116,26 @@ namespace SCE
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            usuario frm = new usuario();
-            frm.Show();
+            var usuario = new usuario();
+            usuario.ShowDialog();
+            //usuario frm = new usuario();
+            // frm.Show();
         }
 
         private void configuraçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            conf frm = new conf();
-            frm.Show();
+            var conf = new conf();
+            conf.ShowDialog();
+            //conf frm = new conf();
+            //frm.Show();
         }
 
         private void tamanhoVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadtamanho frm = new cadtamanho();
-            frm.Show();
+            var cadtamanho = new cadtamanho();
+            cadtamanho.ShowDialog();
+            //cadtamanho frm = new cadtamanho();
+            //frm.Show();
         }
 
         private void registroDeEntradaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -146,16 +162,21 @@ namespace SCE
             }
             else
             {
-                Registro frm = new Registro();
-                frm.Show();
+                var Registro = new Registro();
+                Registro.ShowDialog();
+                //Registro frm = new Registro();
+                //frm.Show();
             }
             conn.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            caixa frm = new caixa();
-            frm.Show();
+            var caixa = new caixa();
+            caixa.ShowDialog();
+            //caixa frm = new caixa();
+            //frm.Show();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -181,8 +202,10 @@ namespace SCE
                 }
             else
             {
-                Registro frm = new Registro();
-                frm.Show();
+                var Registro = new Registro();
+                Registro.ShowDialog();
+                //Registro frm = new Registro();
+                //frm.Show();
             }
             conn.Close();
 
@@ -213,8 +236,10 @@ namespace SCE
             }
             else
             {
-                Registro frm = new Registro();
-                frm.Show();
+                var Registro = new Registro();
+                Registro.ShowDialog();
+                //Registro frm = new Registro();
+                //frm.Show();
             }
             conn.Close();
         }
@@ -285,8 +310,10 @@ namespace SCE
 
         private void controleDeCaixaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            caixa frm = new caixa();
-            frm.Show();
+            var caixa = new caixa();
+            caixa.ShowDialog();
+            //caixa frm = new caixa();
+           // frm.Show();
             
         }
     }

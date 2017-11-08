@@ -20,8 +20,10 @@ namespace SCE
 
         private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadastrotipoveiculos frm = new cadastrotipoveiculos();
-            frm.Show();
+            var cadastrotipoveiculos = new cadastrotipoveiculos();
+            cadastrotipoveiculos.ShowDialog();
+            //cadastrotipoveiculos frm = new cadastrotipoveiculos();
+            //frm.Show();
             Visible = false;
         }
 
