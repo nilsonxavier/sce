@@ -39,6 +39,8 @@ namespace SCE
 
         private void menu_Load(object sender, EventArgs e)
         {
+            listaGrid2();
+            listaGrid3();
             comando.Connection = conn;
         }
 
@@ -215,6 +217,77 @@ namespace SCE
                 frm.Show();
             }
             conn.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            }
+        private void listaGrid2()
+        {
+            string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
+            string strsql = "select Codigo as 'Codigo', placa as 'Placa Veiculo',tpveiculos as 'Tipo de Veiculo',categoria as 'Categoria do Veiculo',cor as 'Cor do Veiculo',dataentrada as 'Data Entrada',horaentrada as 'Hora Entrada' from registro where valorpago is null";
+            SqlConnection objconnect = null;
+            SqlCommand objcomando = null;
+            objconnect = new SqlConnection(_strconn);
+            objcomando = new SqlCommand(strsql, objconnect);
+
+            try
+            {
+                SqlDataAdapter objAdp = new SqlDataAdapter(objcomando);
+                DataTable drlista = new DataTable();
+                objAdp.Fill(drlista);
+                dgpendentes.DataSource = drlista;
+            }
+            catch
+            {
+                MessageBox.Show("Deu erro!");
+            }
+        }
+        private void listaGrid3()
+        {
+            string x = "";
+            x = DateTime.Now.ToString("dd/MM/yyyy");
+            string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
+            string strsql = "select codigo as 'Codigo',placa as 'Placa Veiculo',datasaida as 'Data Saida Veiculo',valorpago as 'Valor' from registro where datasaida='" + x + "'";
+            SqlConnection objconnect = null;
+            SqlCommand objcomando = null;
+            objconnect = new SqlConnection(_strconn);
+            objcomando = new SqlCommand(strsql, objconnect);
+
+            try
+            {
+                SqlDataAdapter objAdp = new SqlDataAdapter(objcomando);
+                DataTable drlista = new DataTable();
+                objAdp.Fill(drlista);
+                dgcaixa.DataSource = drlista;
+            }
+            catch
+            {
+                MessageBox.Show("Deu erro!");
+            }
+        }
+
+        private void dgpendentes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgcaixa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listaGrid3();
+            listaGrid2();
+        }
+
+        private void controleDeCaixaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            caixa frm = new caixa();
+            frm.Show();
+            
         }
     }
 }

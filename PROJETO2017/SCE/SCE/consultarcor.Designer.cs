@@ -35,17 +35,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.sGBDDataSet = new SCE.SGBDDataSet();
-            this.tpcorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tpcorTableAdapter = new SCE.SGBDDataSetTableAdapters.tpcorTableAdapter();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.corDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tpcorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sGBDDataSet = new SCE.SGBDDataSet();
+            this.tpcorTableAdapter = new SCE.SGBDDataSetTableAdapters.tpcorTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sGBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpcorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sGBDDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -54,7 +54,7 @@
             this.voltarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(392, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(436, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -115,20 +115,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(392, 166);
             this.dataGridView2.TabIndex = 11;
             // 
-            // sGBDDataSet
-            // 
-            this.sGBDDataSet.DataSetName = "SGBDDataSet";
-            this.sGBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tpcorBindingSource
-            // 
-            this.tpcorBindingSource.DataMember = "tpcor";
-            this.tpcorBindingSource.DataSource = this.sGBDDataSet;
-            // 
-            // tpcorTableAdapter
-            // 
-            this.tpcorTableAdapter.ClearBeforeFill = true;
-            // 
             // codigoDataGridViewTextBoxColumn
             // 
             this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
@@ -145,12 +131,26 @@
             this.corDataGridViewTextBoxColumn.ReadOnly = true;
             this.corDataGridViewTextBoxColumn.Width = 245;
             // 
+            // tpcorBindingSource
+            // 
+            this.tpcorBindingSource.DataMember = "tpcor";
+            this.tpcorBindingSource.DataSource = this.sGBDDataSet;
+            // 
+            // sGBDDataSet
+            // 
+            this.sGBDDataSet.DataSetName = "SGBDDataSet";
+            this.sGBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tpcorTableAdapter
+            // 
+            this.tpcorTableAdapter.ClearBeforeFill = true;
+            // 
             // consultarcor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(392, 265);
+            this.ClientSize = new System.Drawing.Size(436, 319);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
@@ -166,8 +166,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sGBDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpcorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sGBDDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -63,11 +63,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgpendentes = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dgcaixa = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgpendentes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcaixa)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -99,29 +105,30 @@
             // tiposDeVeiculosToolStripMenuItem
             // 
             this.tiposDeVeiculosToolStripMenuItem.Name = "tiposDeVeiculosToolStripMenuItem";
-            this.tiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.tiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.tiposDeVeiculosToolStripMenuItem.Text = "Tipos de Veiculos";
             this.tiposDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeVeiculosToolStripMenuItem_Click);
             // 
             // corDeVeiculosToolStripMenuItem
             // 
             this.corDeVeiculosToolStripMenuItem.Name = "corDeVeiculosToolStripMenuItem";
-            this.corDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.corDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.corDeVeiculosToolStripMenuItem.Text = "Cor de Veiculos";
             this.corDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.corDeVeiculosToolStripMenuItem_Click);
             // 
             // tamanhoVeiculosToolStripMenuItem
             // 
             this.tamanhoVeiculosToolStripMenuItem.Name = "tamanhoVeiculosToolStripMenuItem";
-            this.tamanhoVeiculosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.tamanhoVeiculosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.tamanhoVeiculosToolStripMenuItem.Text = "Tamanho Veiculos";
             this.tamanhoVeiculosToolStripMenuItem.Click += new System.EventHandler(this.tamanhoVeiculosToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Visible = false;
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // controleOperacionalToolStripMenuItem
@@ -162,18 +169,21 @@
             this.entradaToolStripMenuItem.Name = "entradaToolStripMenuItem";
             this.entradaToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.entradaToolStripMenuItem.Text = "Entrada";
+            this.entradaToolStripMenuItem.Visible = false;
             // 
             // sangriaToolStripMenuItem
             // 
             this.sangriaToolStripMenuItem.Name = "sangriaToolStripMenuItem";
             this.sangriaToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.sangriaToolStripMenuItem.Text = "Sangria";
+            this.sangriaToolStripMenuItem.Visible = false;
             // 
             // controleDeCaixaToolStripMenuItem
             // 
             this.controleDeCaixaToolStripMenuItem.Name = "controleDeCaixaToolStripMenuItem";
             this.controleDeCaixaToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.controleDeCaixaToolStripMenuItem.Text = "Controle De Caixa";
+            this.controleDeCaixaToolStripMenuItem.Click += new System.EventHandler(this.controleDeCaixaToolStripMenuItem_Click);
             // 
             // relatorioToolStripMenuItem
             // 
@@ -188,19 +198,19 @@
             // relatorioDeFluxoDeCaixaToolStripMenuItem
             // 
             this.relatorioDeFluxoDeCaixaToolStripMenuItem.Name = "relatorioDeFluxoDeCaixaToolStripMenuItem";
-            this.relatorioDeFluxoDeCaixaToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.relatorioDeFluxoDeCaixaToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.relatorioDeFluxoDeCaixaToolStripMenuItem.Text = "Relatorio de Fluxo de Caixa";
             // 
             // relatorioDeEntradaDeVeiculosToolStripMenuItem
             // 
             this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Name = "relatorioDeEntradaDeVeiculosToolStripMenuItem";
-            this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Text = "Relatorio de Entrada de Veiculos";
             // 
             // relatorioDeSaidaDeVeiculosToolStripMenuItem
             // 
             this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Name = "relatorioDeSaidaDeVeiculosToolStripMenuItem";
-            this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Text = "Relatorio de Saida de Veiculos";
             // 
             // utilitariosToolStripMenuItem
@@ -239,7 +249,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(33, 141);
+            this.label1.Location = new System.Drawing.Point(33, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 20);
             this.label1.TabIndex = 2;
@@ -249,7 +259,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(46, 194);
+            this.label2.Location = new System.Drawing.Point(46, 211);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 13);
             this.label2.TabIndex = 6;
@@ -259,7 +269,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(46, 330);
+            this.label3.Location = new System.Drawing.Point(46, 347);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 7;
@@ -347,7 +357,7 @@
             // button2
             // 
             this.button2.Image = global::SCE.Properties.Resources.saida;
-            this.button2.Location = new System.Drawing.Point(49, 345);
+            this.button2.Location = new System.Drawing.Point(49, 362);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 69);
             this.button2.TabIndex = 4;
@@ -357,7 +367,7 @@
             // button1
             // 
             this.button1.Image = global::SCE.Properties.Resources.ok2;
-            this.button1.Location = new System.Drawing.Point(49, 210);
+            this.button1.Location = new System.Drawing.Point(49, 227);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 70);
             this.button1.TabIndex = 3;
@@ -374,13 +384,55 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // dgpendentes
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel1.Location = new System.Drawing.Point(169, 117);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1129, 484);
-            this.panel1.TabIndex = 15;
+            this.dgpendentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgpendentes.Location = new System.Drawing.Point(220, 180);
+            this.dgpendentes.Name = "dgpendentes";
+            this.dgpendentes.Size = new System.Drawing.Size(762, 209);
+            this.dgpendentes.TabIndex = 15;
+            this.dgpendentes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgpendentes_CellContentClick);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label9.Location = new System.Drawing.Point(215, 140);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(204, 25);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Veiculos Pendentes";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label10.Location = new System.Drawing.Point(215, 392);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(209, 25);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Movimento de Caixa";
+            // 
+            // dgcaixa
+            // 
+            this.dgcaixa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgcaixa.Location = new System.Drawing.Point(220, 432);
+            this.dgcaixa.Name = "dgcaixa";
+            this.dgcaixa.Size = new System.Drawing.Size(469, 262);
+            this.dgcaixa.TabIndex = 17;
+            this.dgcaixa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgcaixa_CellContentClick);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(467, 141);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 19;
+            this.button4.Text = "ATUALIZAR";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // menu
             // 
@@ -388,7 +440,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1264, 695);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.dgcaixa);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.dgpendentes);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -414,6 +470,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgpendentes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcaixa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,6 +514,10 @@
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuraçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tamanhoVeiculosToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dgpendentes;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dgcaixa;
+        private System.Windows.Forms.Button button4;
     }
 }
