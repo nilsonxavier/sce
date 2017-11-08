@@ -174,3 +174,4 @@ C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.saida.resour
 C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.TrustInfo.xml
 C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.exe.manifest
 C:\Users\wisley\Source\Repos\sce3\PROJETO2017\SCE\SCE\obj\Debug\SCE.application
+C:\Users\wisley\Source\Repos\sce5\PROJETO2017\SCE\SCE\obj\Debug\SCE.csproj.CoreCompileInputs.cache

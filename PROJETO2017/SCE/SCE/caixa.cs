@@ -261,5 +261,10 @@ namespace SCE
         {
             Dispose();
         }
+
+        private void movcaixa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

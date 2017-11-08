@@ -87,7 +87,7 @@
             // 
             // Gravar
             // 
-            this.Gravar.Location = new System.Drawing.Point(126, 259);
+            this.Gravar.Location = new System.Drawing.Point(121, 201);
             this.Gravar.Name = "Gravar";
             this.Gravar.Size = new System.Drawing.Size(75, 23);
             this.Gravar.TabIndex = 17;
@@ -98,22 +98,24 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 122);
+            this.label2.Location = new System.Drawing.Point(166, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "Quantida Maxima de Vagas:";
+            this.label2.Visible = false;
             // 
             // vaga
             // 
-            this.vaga.Location = new System.Drawing.Point(37, 148);
+            this.vaga.Location = new System.Drawing.Point(169, 150);
             this.vaga.Name = "vaga";
             this.vaga.Size = new System.Drawing.Size(137, 20);
             this.vaga.TabIndex = 19;
+            this.vaga.Visible = false;
             // 
             // valor
             // 
-            this.valor.Location = new System.Drawing.Point(37, 210);
+            this.valor.Location = new System.Drawing.Point(33, 150);
             this.valor.Name = "valor";
             this.valor.Size = new System.Drawing.Size(102, 20);
             this.valor.TabIndex = 21;
@@ -121,7 +123,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 184);
+            this.label3.Location = new System.Drawing.Point(30, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 20;
@@ -132,7 +134,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(348, 288);
+            this.ClientSize = new System.Drawing.Size(348, 255);
             this.Controls.Add(this.valor);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.vaga);

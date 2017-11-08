@@ -257,6 +257,7 @@
             this.movcaixa.ReadOnly = true;
             this.movcaixa.Size = new System.Drawing.Size(489, 269);
             this.movcaixa.TabIndex = 0;
+            this.movcaixa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.movcaixa_CellContentClick);
             // 
             // pictureBox1
             // 
