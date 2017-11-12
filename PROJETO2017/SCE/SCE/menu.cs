@@ -132,6 +132,7 @@ namespace SCE
 
         private void tamanhoVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             var cadtamanho = new cadtamanho();
             cadtamanho.ShowDialog();
             //cadtamanho frm = new cadtamanho();

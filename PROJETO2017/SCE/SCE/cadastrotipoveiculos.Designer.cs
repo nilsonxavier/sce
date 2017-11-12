@@ -35,6 +35,8 @@
             this.consultarTiposDeVeiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.valor = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tipo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.codigo = new System.Windows.Forms.TextBox();
@@ -45,8 +47,6 @@
             this.gravar = new System.Windows.Forms.Button();
             this.novo = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.valor = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,6 +92,7 @@
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
             this.consultarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.consultarToolStripMenuItem.Text = "Consultar";
+            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
             // consultarTiposDeVeiculosToolStripMenuItem
             // 
@@ -120,6 +121,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(330, 108);
             this.panel1.TabIndex = 4;
+            // 
+            // valor
+            // 
+            this.valor.Location = new System.Drawing.Point(61, 73);
+            this.valor.Name = "valor";
+            this.valor.Size = new System.Drawing.Size(134, 20);
+            this.valor.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 76);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Valor:";
             // 
             // tipo
             // 
@@ -214,22 +231,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // valor
-            // 
-            this.valor.Location = new System.Drawing.Point(61, 73);
-            this.valor.Name = "valor";
-            this.valor.Size = new System.Drawing.Size(134, 20);
-            this.valor.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 76);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Valor:";
             // 
             // cadastrotipoveiculos
             // 

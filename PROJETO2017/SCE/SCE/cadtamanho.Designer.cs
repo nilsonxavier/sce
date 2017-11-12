@@ -73,8 +73,8 @@
             // consultarTiposDeVeiculosToolStripMenuItem
             // 
             this.consultarTiposDeVeiculosToolStripMenuItem.Name = "consultarTiposDeVeiculosToolStripMenuItem";
-            this.consultarTiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.consultarTiposDeVeiculosToolStripMenuItem.Text = "Consultar Tamanhos";
+            this.consultarTiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.consultarTiposDeVeiculosToolStripMenuItem.Text = "Consultar Categoria";
             this.consultarTiposDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.consultarTiposDeVeiculosToolStripMenuItem_Click);
             // 
             // voltarToolStripMenuItem
@@ -91,9 +91,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label2.Location = new System.Drawing.Point(129, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 16);
+            this.label2.Size = new System.Drawing.Size(98, 16);
             this.label2.TabIndex = 23;
-            this.label2.Text = "de Tamanho veiculos";
+            this.label2.Text = "de Categoria";
             // 
             // pictureBox1
             // 
@@ -138,11 +138,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 50);
+            this.label4.Location = new System.Drawing.Point(10, 50);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Cor:";
+            this.label4.Text = "Modelo:";
             // 
             // codigo
             // 

@@ -36,14 +36,16 @@
             this.tpcorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sGBDDataSet = new SCE.SGBDDataSet();
             this.tpcorTableAdapter = new SCE.SGBDDataSetTableAdapters.tpcorTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.corDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgcor = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.cor = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpcorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sGBDDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcor)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -59,7 +61,7 @@
             // voltarToolStripMenuItem
             // 
             this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
-            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.voltarToolStripMenuItem.Text = "Voltar";
             this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
             // 
@@ -98,31 +100,51 @@
             // 
             this.tpcorTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridView1
+            // button1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigoDataGridViewTextBoxColumn,
-            this.corDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tpcorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(384, 165);
-            this.dataGridView1.TabIndex = 9;
+            this.button1.Location = new System.Drawing.Point(246, 129);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "TODOS";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // codigoDataGridViewTextBoxColumn
+            // dgcor
             // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "codigo";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dgcor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgcor.Location = new System.Drawing.Point(23, 157);
+            this.dgcor.Name = "dgcor";
+            this.dgcor.Size = new System.Drawing.Size(364, 150);
+            this.dgcor.TabIndex = 11;
             // 
-            // corDataGridViewTextBoxColumn
+            // label2
             // 
-            this.corDataGridViewTextBoxColumn.DataPropertyName = "cor";
-            this.corDataGridViewTextBoxColumn.HeaderText = "cor";
-            this.corDataGridViewTextBoxColumn.Name = "corDataGridViewTextBoxColumn";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Nome da Cor:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(161, 128);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(49, 23);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "OK";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // cor
+            // 
+            this.cor.Location = new System.Drawing.Point(23, 131);
+            this.cor.Name = "cor";
+            this.cor.Size = new System.Drawing.Size(123, 20);
+            this.cor.TabIndex = 14;
+            this.cor.TextChanged += new System.EventHandler(this.cor_TextChanged);
             // 
             // consultarcor
             // 
@@ -130,7 +152,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(436, 319);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cor);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dgcor);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -138,12 +164,13 @@
             this.Name = "consultarcor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "consultarcor";
+            this.Load += new System.EventHandler(this.consultarcor_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpcorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sGBDDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,8 +185,10 @@
         private SGBDDataSet sGBDDataSet;
         private System.Windows.Forms.BindingSource tpcorBindingSource;
         private SGBDDataSetTableAdapters.tpcorTableAdapter tpcorTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn corDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgcor;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox cor;
     }
 }

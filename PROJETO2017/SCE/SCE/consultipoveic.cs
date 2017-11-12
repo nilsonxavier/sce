@@ -20,11 +20,14 @@ namespace SCE
 
         private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Visible = false;
             var cadastrotipoveiculos = new cadastrotipoveiculos();
             cadastrotipoveiculos.ShowDialog();
-            //cadastrotipoveiculos frm = new cadastrotipoveiculos();
-            //frm.Show();
-            Visible = false;
+            //Dispose();
+            
+            /*cadastrotipoveiculos frm = new cadastrotipoveiculos();
+            frm.Show();
+            Visible = false;*/
         }
 
         private void listaGrid()
@@ -51,7 +54,7 @@ namespace SCE
         private void listaGrid2()
         {
             string _strconn = @"Data Source=azuresgbd.database.windows.net;Initial Catalog=SGBD;Persist Security Info=True;User ID=nilsonxavier;Password=Nilson33213264";
-            string strsql = "select codigo as 'Codigo', tipo as 'Tipo de Veiculos' from tpveiculos where tipo='"+ nome .Text+ "'";
+            string strsql = "select codigo as 'Codigo', tipo as 'Tipo de Veiculos' from tpveiculos where tipo='"+ nome.Text+ "'";
             SqlConnection objconnect = null;
             SqlCommand objcomando = null;
             objconnect = new SqlConnection(_strconn);

@@ -28,7 +28,7 @@ namespace SCE
             //Excluir tamanho
             String x = "";
             conn.Open();
-            comando.CommandText = "select * FROM tptamanho where codigo='" + codigo.Text + "'";
+            comando.CommandText = "select * FROM categoria where codigo='" + codigo.Text + "'";
             dr = comando.ExecuteReader();
 
             if (dr.HasRows)
@@ -43,7 +43,7 @@ namespace SCE
             if (x != "")
             {
                 conn.Open();
-                comando.CommandText = "DELETE FROM tptamanho where codigo='" + codigo.Text + "'";
+                comando.CommandText = "DELETE FROM categoria where codigo='" + codigo.Text + "'";
                 comando.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Tipo de Tamanho de Veiculos Excluido com Sucesso!");
@@ -86,7 +86,7 @@ namespace SCE
             {
                 conn.Open();
 
-                comando.CommandText = "INSERT INTO tptamanho (tamanho) values ('" + cor.Text + "')";
+                comando.CommandText = "INSERT INTO categoria (modelo) values ('" + cor.Text + "')";
                 comando.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Salvo Com Sucesso!");
@@ -159,9 +159,12 @@ namespace SCE
 
         private void consultarTiposDeVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            constamanho frm = new constamanho();
-            frm.Show();
             Visible = false;
+            var constamanho = new constamanho();
+            constamanho.ShowDialog();
+            //constamanho frm = new constamanho();
+            //frm.Show();
+            
         }
     }
 }

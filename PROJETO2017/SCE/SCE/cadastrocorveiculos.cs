@@ -161,12 +161,22 @@ namespace SCE
         private void consultarTiposDeVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            consultarcor frm = new consultarcor();
-            frm.Show();
+            /* consultarcor frm = new consultarcor();
+             frm.Show();
+             Dispose();
+             Visible = false;*/
             Visible = false;
+            var consultarcor = new consultarcor();
+            consultarcor.ShowDialog();
+            //Dispose();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

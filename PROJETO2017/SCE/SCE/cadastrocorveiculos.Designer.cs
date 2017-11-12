@@ -159,6 +159,7 @@
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
             this.consultarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.consultarToolStripMenuItem.Text = "Consultar";
+            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
             // consultarTiposDeVeiculosToolStripMenuItem
             // 

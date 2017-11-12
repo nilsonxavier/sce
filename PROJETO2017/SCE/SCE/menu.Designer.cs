@@ -105,28 +105,28 @@
             // tiposDeVeiculosToolStripMenuItem
             // 
             this.tiposDeVeiculosToolStripMenuItem.Name = "tiposDeVeiculosToolStripMenuItem";
-            this.tiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.tiposDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.tiposDeVeiculosToolStripMenuItem.Text = "Tipos de Veiculos";
             this.tiposDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.tiposDeVeiculosToolStripMenuItem_Click);
             // 
             // corDeVeiculosToolStripMenuItem
             // 
             this.corDeVeiculosToolStripMenuItem.Name = "corDeVeiculosToolStripMenuItem";
-            this.corDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.corDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.corDeVeiculosToolStripMenuItem.Text = "Cor de Veiculos";
             this.corDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.corDeVeiculosToolStripMenuItem_Click);
             // 
             // tamanhoVeiculosToolStripMenuItem
             // 
             this.tamanhoVeiculosToolStripMenuItem.Name = "tamanhoVeiculosToolStripMenuItem";
-            this.tamanhoVeiculosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.tamanhoVeiculosToolStripMenuItem.Text = "Tamanho Veiculos";
+            this.tamanhoVeiculosToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.tamanhoVeiculosToolStripMenuItem.Text = "Categoria";
             this.tamanhoVeiculosToolStripMenuItem.Click += new System.EventHandler(this.tamanhoVeiculosToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Visible = false;
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
