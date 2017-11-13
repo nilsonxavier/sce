@@ -317,5 +317,23 @@ namespace SCE
            // frm.Show();
             
         }
+
+        private void relatorioDeFluxoDeCaixaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Relatorio = new Relatorio();
+            Relatorio.ShowDialog();
+        }
+
+        private void relatorioDeEntradaDeVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Relatorio = new Relatorio();
+            Relatorio.ShowDialog();
+        }
+
+        private void relatorioDeSaidaDeVeiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Relatorio = new Relatorio();
+            Relatorio.ShowDialog();
+        }
     }
 }
