@@ -47,7 +47,7 @@ namespace SCE
             SolidBrush cor1 = new SolidBrush(Color.Black);
 
 
-            int W = 140;
+            
             //cabeçalho
             Point ponto = new Point(100, 100);
             Point ponto1 = new Point(100, 110);
@@ -58,19 +58,35 @@ namespace SCE
             Point ponto11 = new Point(320, 160);
             Point ponto12 = new Point(605, 160);
             // opção de menus
-            Point ponto6 = new Point(120, W);
-            Point ponto7 = new Point(200, W);
-            Point ponto8 = new Point(320, W);
-            Point ponto9 = new Point(605, W);
+            Point ponto6 = new Point(120, 140);
+            Point ponto7 = new Point(200, 140);
+            Point ponto8 = new Point(320, 140);
+            Point ponto9 = new Point(605, 140);
+            String k = "";
+            conn.Open();
+            //puxando dados tipo de veiculos
+            comando.CommandText = "select count(*) from registro where datasaida = '" + datacaixa.Text + "'";
+            dr = comando.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    k = dr[0].ToString();
 
-            String x = "";
-            String y = "";
-            String h = "";
-            String hh = "";
+                }
+            }
+            int kk = Convert.ToInt16(k);
+            conn.Close();
 
+            //String x = "";
+            //String y = "";
+            //String h = "";
+            //String hh = "";
             
-
-
+            String[] x = new string[kk];
+            String[] y = new string[kk];
+            String[] h = new string[kk];
+            String[] hh = new string[kk];
             conn.Open();
             //puxando dados tipo de veiculos
             comando.CommandText = "select codigo,placa,datasaida,valorpago from registro where datasaida = '" + datacaixa.Text + "'";
@@ -79,41 +95,49 @@ namespace SCE
             {
                 while (dr.Read())
                 {
-                    x = dr[0].ToString();
-                    y = dr[1].ToString();
-                    h = dr[2].ToString();
-                    hh = dr[3].ToString();
+                    for (int z = 0; z <= kk; z++) { 
+                    x[z] = dr[0].ToString();
+                    y[z] = dr[1].ToString();
+                    h[z] = dr[2].ToString();
+                    hh[z] = dr[3].ToString();
+                    }
                 }
             }
-            conn.Close();
 
+            conn.Close();
             //implementando no Relatorio
             e.Graphics.DrawString(Cabecalho, letra, cor, ponto);
             e.Graphics.DrawString(Linha, letra, cor, ponto1);
             e.Graphics.DrawString(DataRelatorio, letra, cor, ponto2);
-            e.Graphics.DrawString(x, letra, cor, ponto4);
-            e.Graphics.DrawString(y, letra, cor, ponto5);
             e.Graphics.DrawString(opcao, letra, cor, ponto6);
             e.Graphics.DrawString(opcao2, letra, cor, ponto7);
             e.Graphics.DrawString(opcao3, letra, cor, ponto8);
             e.Graphics.DrawString(opcao5, letra, cor, ponto9);
             //e.Graphics.DrawString(opcao5, letra, cor, ponto10);
-            for (int v = 0; v <= 10; v++)
+            int aqs = 0;
+            int W = 160;
+            while(aqs < kk)
             {
-                //dados
-                e.Graphics.DrawString(x, letra, cor1, ponto4);
-                e.Graphics.DrawString(y, letra, cor1, ponto5);
-                e.Graphics.DrawString(h, letra, cor1, ponto11);
-                e.Graphics.DrawString(hh, letra, cor1, ponto12);
-                W = W + 40;
+                for (int z = 0; z <= kk; z++)
+                {
+                    e.Graphics.DrawString(x[z], letra, cor1, new Point(120, W));
+                    e.Graphics.DrawString(y[z], letra, cor1, new Point(200, W));
+                    e.Graphics.DrawString(h[z], letra, cor1, new Point(320, W));
+                    e.Graphics.DrawString(hh[z], letra, cor1, new Point(605, W));
+                    e.Graphics.DrawString(Linha, letra, cor, new Point(100, W));
+                    W += 20;
+                    aqs++;
+                    
+                }
             }
 
-
+            
         }
 
         private void grelatorio_Click(object sender, EventArgs e)
         {
-            prtdoc.Print();
+           pre.Document = prtdoc;
+            
         }
 
         private void Relatorio_Load(object sender, EventArgs e)
@@ -125,6 +149,11 @@ namespace SCE
         private void prtdoc_QueryPageSettings(object sender, QueryPageSettingsEventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            prtdoc.Print();
         }
     }
 }

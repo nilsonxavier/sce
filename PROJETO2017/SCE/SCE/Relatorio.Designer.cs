@@ -44,6 +44,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.prtdoc = new System.Drawing.Printing.PrintDocument();
+            this.pre = new System.Windows.Forms.PrintPreviewControl();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,7 +79,7 @@
             this.voltarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(425, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1263, 24);
             this.menuStrip1.TabIndex = 17;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -104,12 +106,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.datacaixa);
             this.panel1.Controls.Add(this.grelatorio);
             this.panel1.Location = new System.Drawing.Point(12, 136);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(401, 107);
+            this.panel1.Size = new System.Drawing.Size(379, 90);
             this.panel1.TabIndex = 18;
             // 
             // label5
@@ -130,20 +133,20 @@
             // 
             // grelatorio
             // 
-            this.grelatorio.Location = new System.Drawing.Point(151, 17);
+            this.grelatorio.Location = new System.Drawing.Point(138, 35);
             this.grelatorio.Name = "grelatorio";
-            this.grelatorio.Size = new System.Drawing.Size(67, 40);
+            this.grelatorio.Size = new System.Drawing.Size(106, 23);
             this.grelatorio.TabIndex = 0;
-            this.grelatorio.Text = "Gerar Relatorio";
+            this.grelatorio.Text = "1.Gerar Relatorio";
             this.grelatorio.UseVisualStyleBackColor = true;
             this.grelatorio.Click += new System.EventHandler(this.grelatorio_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel2.Location = new System.Drawing.Point(12, 301);
+            this.panel2.Location = new System.Drawing.Point(12, 300);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(401, 144);
+            this.panel2.Size = new System.Drawing.Size(379, 144);
             this.panel2.TabIndex = 19;
             // 
             // panel3
@@ -151,7 +154,7 @@
             this.panel3.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel3.Location = new System.Drawing.Point(12, 464);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(401, 144);
+            this.panel3.Size = new System.Drawing.Size(379, 144);
             this.panel3.TabIndex = 20;
             // 
             // label2
@@ -192,12 +195,30 @@
             this.prtdoc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.prtdoc_PrintPage);
             this.prtdoc.QueryPageSettings += new System.Drawing.Printing.QueryPageSettingsEventHandler(this.prtdoc_QueryPageSettings);
             // 
+            // pre
+            // 
+            this.pre.Location = new System.Drawing.Point(419, 62);
+            this.pre.Name = "pre";
+            this.pre.Size = new System.Drawing.Size(832, 671);
+            this.pre.TabIndex = 24;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(250, 34);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "2.Imprimir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Relatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(425, 620);
+            this.ClientSize = new System.Drawing.Size(1263, 745);
+            this.Controls.Add(this.pre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -238,5 +259,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Drawing.Printing.PrintDocument prtdoc;
+        private System.Windows.Forms.PrintPreviewControl pre;
+        private System.Windows.Forms.Button button1;
     }
 }
