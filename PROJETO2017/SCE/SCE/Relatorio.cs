@@ -47,7 +47,7 @@ namespace SCE
             SolidBrush cor1 = new SolidBrush(Color.Black);
 
 
-            
+
             //cabeçalho
             Point ponto = new Point(100, 100);
             Point ponto1 = new Point(100, 110);
@@ -72,39 +72,47 @@ namespace SCE
                 while (dr.Read())
                 {
                     k = dr[0].ToString();
-
                 }
             }
-            int kk = Convert.ToInt16(k);
+            int kk = Convert.ToInt32(k);
             conn.Close();
 
             //String x = "";
             //String y = "";
             //String h = "";
             //String hh = "";
-            
-            String[] x = new string[kk];
+
+            String[] x = new string[2];
             String[] y = new string[kk];
             String[] h = new string[kk];
             String[] hh = new string[kk];
+
+
+
             conn.Open();
-            //puxando dados tipo de veiculos
-            comando.CommandText = "select codigo,placa,datasaida,valorpago from registro where datasaida = '" + datacaixa.Text + "'";
-            dr = comando.ExecuteReader();
-            if (dr.HasRows)
-            {
-                while (dr.Read())
+                comando.CommandText = "select codigo,placa,datasaida,valorpago from registro where datasaida = '" + datacaixa.Text + "'";
+                dr = comando.ExecuteReader();
+                if (dr.HasRows)
                 {
-                    for (int z = 0; z <= kk; z++) { 
-                    x[z] = dr[0].ToString();
-                    y[z] = dr[1].ToString();
-                    h[z] = dr[2].ToString();
-                    hh[z] = dr[3].ToString();
+                for (int z = 0; z <= kk; z++)
+                    {
+                    while (dr.Read())
+                    {
+                        x[z] = dr["codigo"].ToString();
+                        y[z] = dr["placa"].ToString();
+                        h[z] = dr["datasaida"].ToString();
+                        hh[z] = dr["valorpago"].ToString();
+                        //x = dr[0].ToString();
+                        //y = dr[1].ToString();
+                        //h = dr[2].ToString();
+                        //hh = dr[3].ToString();
                     }
                 }
+                conn.Close();
             }
 
-            conn.Close();
+
+
             //implementando no Relatorio
             e.Graphics.DrawString(Cabecalho, letra, cor, ponto);
             e.Graphics.DrawString(Linha, letra, cor, ponto1);
@@ -113,25 +121,22 @@ namespace SCE
             e.Graphics.DrawString(opcao2, letra, cor, ponto7);
             e.Graphics.DrawString(opcao3, letra, cor, ponto8);
             e.Graphics.DrawString(opcao5, letra, cor, ponto9);
-            //e.Graphics.DrawString(opcao5, letra, cor, ponto10);
             int aqs = 0;
             int W = 160;
-            while(aqs < kk)
+            for (int z = 0; z <= kk; z++)
             {
-                for (int z = 0; z <= kk; z++)
-                {
+                while (aqs < kk)
+            {
+                
                     e.Graphics.DrawString(x[z], letra, cor1, new Point(120, W));
                     e.Graphics.DrawString(y[z], letra, cor1, new Point(200, W));
                     e.Graphics.DrawString(h[z], letra, cor1, new Point(320, W));
                     e.Graphics.DrawString(hh[z], letra, cor1, new Point(605, W));
-                    e.Graphics.DrawString(Linha, letra, cor, new Point(100, W));
                     W += 20;
                     aqs++;
-                    
                 }
-            }
-
-            
+                e.Graphics.DrawString(Linha, letra, cor, new Point(100, W));
+            }            
         }
 
         private void grelatorio_Click(object sender, EventArgs e)

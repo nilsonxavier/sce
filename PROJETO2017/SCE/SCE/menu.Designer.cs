@@ -207,6 +207,7 @@
             this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Name = "relatorioDeEntradaDeVeiculosToolStripMenuItem";
             this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Text = "Relatorio de Entrada de Veiculos";
+            this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Visible = false;
             this.relatorioDeEntradaDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.relatorioDeEntradaDeVeiculosToolStripMenuItem_Click);
             // 
             // relatorioDeSaidaDeVeiculosToolStripMenuItem
@@ -214,6 +215,7 @@
             this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Name = "relatorioDeSaidaDeVeiculosToolStripMenuItem";
             this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Text = "Relatorio de Saida de Veiculos";
+            this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Visible = false;
             this.relatorioDeSaidaDeVeiculosToolStripMenuItem.Click += new System.EventHandler(this.relatorioDeSaidaDeVeiculosToolStripMenuItem_Click);
             // 
             // utilitariosToolStripMenuItem

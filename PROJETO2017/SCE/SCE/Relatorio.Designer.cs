@@ -35,6 +35,7 @@
             this.consultarTiposDeVeiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.datacaixa = new System.Windows.Forms.TextBox();
             this.grelatorio = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.prtdoc = new System.Drawing.Printing.PrintDocument();
             this.pre = new System.Windows.Forms.PrintPreviewControl();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,7 +79,7 @@
             this.voltarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1263, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1095, 24);
             this.menuStrip1.TabIndex = 17;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -112,8 +112,18 @@
             this.panel1.Controls.Add(this.grelatorio);
             this.panel1.Location = new System.Drawing.Point(12, 136);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(379, 90);
+            this.panel1.Size = new System.Drawing.Size(270, 90);
             this.panel1.TabIndex = 18;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(137, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "2.Imprimir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -133,7 +143,7 @@
             // 
             // grelatorio
             // 
-            this.grelatorio.Location = new System.Drawing.Point(138, 35);
+            this.grelatorio.Location = new System.Drawing.Point(138, 12);
             this.grelatorio.Name = "grelatorio";
             this.grelatorio.Size = new System.Drawing.Size(106, 23);
             this.grelatorio.TabIndex = 0;
@@ -148,6 +158,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(379, 144);
             this.panel2.TabIndex = 19;
+            this.panel2.Visible = false;
             // 
             // panel3
             // 
@@ -156,6 +167,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(379, 144);
             this.panel3.TabIndex = 20;
+            this.panel3.Visible = false;
             // 
             // label2
             // 
@@ -178,6 +190,7 @@
             this.label3.Size = new System.Drawing.Size(257, 16);
             this.label3.TabIndex = 22;
             this.label3.Text = "Relatorio de Movimento de Entrada:";
+            this.label3.Visible = false;
             // 
             // label4
             // 
@@ -189,6 +202,7 @@
             this.label4.Size = new System.Drawing.Size(244, 16);
             this.label4.TabIndex = 23;
             this.label4.Text = "Relatorio de Movimento de Saida:";
+            this.label4.Visible = false;
             // 
             // prtdoc
             // 
@@ -197,27 +211,17 @@
             // 
             // pre
             // 
-            this.pre.Location = new System.Drawing.Point(419, 62);
+            this.pre.Location = new System.Drawing.Point(288, 62);
             this.pre.Name = "pre";
-            this.pre.Size = new System.Drawing.Size(832, 671);
+            this.pre.Size = new System.Drawing.Size(803, 546);
             this.pre.TabIndex = 24;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(250, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "2.Imprimir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Relatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1263, 745);
+            this.ClientSize = new System.Drawing.Size(1095, 630);
             this.Controls.Add(this.pre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

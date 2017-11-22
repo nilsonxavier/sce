@@ -154,7 +154,7 @@ namespace SCE
             {
                 conn.Open();
 
-                comando.CommandText = "INSERT INTO tpveiculos (tipo, acrescismo) VALUES ('" + tipo.Text + "','"+ valor.Text+ "')";
+                comando.CommandText = "INSERT INTO tpveiculos (tipo, acrescimo) VALUES ('" + tipo.Text + "','"+ valor.Text+ "')";
                 comando.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Salvo Com Sucesso!");
